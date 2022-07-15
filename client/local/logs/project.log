@@ -3355,3 +3355,126 @@ Class ID: "485b2sC+f5DRKn/QBvMMJil"
 2022-07-15T07:37:14.921Z - verbose: [Scene] Open engine (194ms)
 2022-07-15T07:37:14.921Z - verbose: [Scene] Configure engine (0ms)
 2022-07-15T07:37:14.793Z - info: [Scene] Forward render pipeline initialized.
+2022-07-15T08:04:07.877Z - log: [Package] menu@1.0.0 enable
+2022-07-15T08:04:07.878Z - log: [Package] profile@1.0.0 enable
+2022-07-15T08:04:07.885Z - log: [Package] project@1.0.2 enable
+2022-07-15T08:04:07.888Z - log: [Package] messages@1.0.0 enable
+2022-07-15T08:04:07.890Z - log: [Package] program@1.0.0 enable
+2022-07-15T08:04:07.893Z - log: [Package] tester@1.0.0 enable
+2022-07-15T08:04:07.896Z - log: [Package] preferences@1.0.0 enable
+2022-07-15T08:04:08.255Z - log: Setup mods mgr.: 160.564ms
+2022-07-15T08:04:08.263Z - verbose: [Engine] QuickCompile engine (336ms)
+2022-07-15T08:04:08.265Z - log: [Package] engine@1.0.6 enable
+2022-07-15T08:04:08.826Z - log: [Package] programming@1.0.0 enable
+2022-07-15T08:04:09.091Z - log: [Package] device@1.0.1 enable
+2022-07-15T08:04:09.119Z - log: [Package] ui-kit@1.0.1 enable
+2022-07-15T08:04:09.144Z - log: [Package] engine-extends@1.0.0 enable
+2022-07-15T08:04:09.189Z - log: [Package] asset-db@1.0.0 enable
+2022-07-15T08:04:09.222Z - log: [Package] scene@1.0.0 enable
+2022-07-15T08:04:09.324Z - log: [Package] server@1.0.0 enable
+2022-07-15T08:04:09.349Z - log: [Package] utils@1.0.0 enable
+2022-07-15T08:04:11.272Z - log: [Package] preview@1.0.1 enable
+2022-07-15T08:04:11.299Z - log: [Package] animator@1.0.0 enable
+2022-07-15T08:04:11.916Z - log: [Package] builder@1.3.2 enable
+2022-07-15T08:04:11.945Z - log: [Package] shortcuts@1.0.1 enable
+2022-07-15T08:04:11.975Z - log: [Package] animation-graph@1.0.0 enable
+2022-07-15T08:04:11.999Z - log: [Package] runtime-dev-tools@1.0.0 enable
+2022-07-15T08:04:12.025Z - log: [Package] channel-upload-tools@1.0.0 enable
+2022-07-15T08:04:12.051Z - log: [Package] about@1.0.0 enable
+2022-07-15T08:04:12.078Z - log: [Package] assets@1.0.0 enable
+2022-07-15T08:04:12.108Z - log: [Package] console@1.0.0 enable
+2022-07-15T08:04:12.223Z - log: [Package] extension@3.0.16 enable
+2022-07-15T08:04:12.250Z - log: [Package] hierarchy@1.0.0 enable
+2022-07-15T08:04:12.281Z - log: [Package] inspector@1.0.0 enable
+2022-07-15T08:04:12.310Z - log: [Package] lightmap@1.0.4 enable
+2022-07-15T08:04:12.339Z - log: [Package] node-library@1.0.1 enable
+2022-07-15T08:04:12.351Z - verbose: [AssetDB] Require engine code (701ms)
+2022-07-15T08:04:12.362Z - log: [Package] package-asset@1.0.0 enable
+2022-07-15T08:04:12.395Z - log: [Package] process@1.0.0 enable
+2022-07-15T08:04:12.423Z - log: [Package] reference-image@1.0.0 enable
+2022-07-15T08:04:12.449Z - log: [Package] alipay-mini-game@1.0.0 enable
+2022-07-15T08:04:12.477Z - log: [Package] android@1.0.0 enable
+2022-07-15T08:04:12.504Z - log: [Package] baidu-mini-game@1.0.0 enable
+2022-07-15T08:04:12.530Z - log: [Package] bytedance-mini-game@1.0.1 enable
+2022-07-15T08:04:12.563Z - log: [Package] cocos-play@1.0.0 enable
+2022-07-15T08:04:12.591Z - log: [Package] huawei-agc@1.0.0 enable
+2022-07-15T08:04:12.614Z - log: [Package] huawei-quick-game@1.0.0 enable
+2022-07-15T08:04:12.771Z - log: [Package] ios@1.0.0 enable
+2022-07-15T08:04:12.801Z - log: [Package] ios-app-clip@1.0.0 enable
+2022-07-15T08:04:12.826Z - log: [Package] link-sure@1.0.0 enable
+2022-07-15T08:04:12.853Z - log: [Package] linux@1.0.0 enable
+2022-07-15T08:04:12.879Z - log: [Package] mac@1.0.0 enable
+2022-07-15T08:04:12.956Z - log: [Package] native@1.0.0 enable
+2022-07-15T08:04:12.979Z - log: [Package] ohos@1.0.0 enable
+2022-07-15T08:04:13.006Z - log: [Package] open-harmonyos@1.0.0 enable
+2022-07-15T08:04:13.033Z - log: [Package] oppo-mini-game@1.0.0 enable
+2022-07-15T08:04:13.059Z - log: [Package] qtt@1.0.0 enable
+2022-07-15T08:04:13.085Z - log: [Package] vivo-mini-game@1.0.0 enable
+2022-07-15T08:04:13.122Z - log: [Package] web-desktop@1.0.0 enable
+2022-07-15T08:04:13.154Z - log: [Package] web-mobile@1.0.0 enable
+2022-07-15T08:04:13.185Z - log: [Package] wechatgame@1.0.1 enable
+2022-07-15T08:04:13.210Z - log: [Package] windows@1.0.0 enable
+2022-07-15T08:04:13.236Z - log: [Package] xiaomi-quick-game@1.0.0 enable
+2022-07-15T08:04:13.391Z - log: [Package] cocos-service@3.0.3 enable
+2022-07-15T08:04:13.425Z - log: [Package] importer@1.0.0 enable
+2022-07-15T08:04:13.602Z - log: [Im-plugin] Check im-plugin version.
+2022-07-15T08:04:13.609Z - log: [Package] im-plugin@3.0.8 enable
+2022-07-15T08:04:14.943Z - log: [Im-plugin] No online info of im-plugin.
+2022-07-15T08:04:18.767Z - verbose: [Scene] Require engine code (0ms)
+2022-07-15T08:04:18.767Z - verbose: [Scene] Startup engine (0ms)
+2022-07-15T08:04:18.784Z - log: [Scene] Cocos Creator v3.5.2
+2022-07-15T08:04:18.826Z - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: Error: 以 file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/proto_js/proto.js 为起点找不到模块 "protobufjs/minimal.js"
+    at rejector (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:732:15)
+    at ExecutorSystem.resolve [as _detailResolve] (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:750:13)
+    at ExecutorSystem._resolve (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/dist/editor-systemjs/index.js:86:14)
+    at SystemJS.resolve (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/dist/editor-systemjs/index.js:28:23)
+    at /Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:355:37
+    at Array.map (<anonymous>)
+    at /Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:353:41Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: Error: 以 file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/proto_js/proto.js 为起点找不到模块 "protobufjs/minimal.js"
+    at SystemJS.resolve (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/dist/editor-systemjs/index.js:28:23)
+    at /Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:355:37
+    at Array.map (<anonymous>)
+    at /Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:353:41
+    at Logger._logHandler (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/startup/log.ccc:1:289)
+    at Logger.record (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@base/electron-logger/lib/renderer.ccc:1:458)
+    at console.error (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@base/electron-logger/lib/renderer.ccc:1:1414)
+    at ScriptManager._handleImportException (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:5116)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:3104)
+    at Executor._onModuleLoaded (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/dist/executor/index.js:253:22)
+    at SystemJS.onload (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/dist/executor/index.js:62:18)
+    at triggerOnload (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:270:10)
+    at /Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:431:7
+    at async Promise.all (index 0)
+2022-07-15T08:04:18.936Z - verbose: [Scene] Open engine (169ms)
+2022-07-15T08:04:18.936Z - verbose: [Scene] Configure engine (0ms)
+2022-07-15T08:04:18.829Z - info: [Scene] Forward render pipeline initialized.
+2022-07-15T08:04:19.180Z - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: Error: 以 file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/proto_js/proto.js 为起点找不到模块 "protobufjs/minimal.js"
+    at rejector (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:732:15)
+    at ExecutorSystem.resolve [as _detailResolve] (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:750:13)
+    at ExecutorSystem._resolve (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/dist/editor-systemjs/index.js:86:14)
+    at SystemJS.resolve (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/dist/editor-systemjs/index.js:28:23)
+    at /Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:355:37
+    at Array.map (<anonymous>)
+    at /Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:353:41Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: Error: 以 file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/proto_js/proto.js 为起点找不到模块 "protobufjs/minimal.js"
+    at SystemJS.resolve (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/dist/editor-systemjs/index.js:28:23)
+    at /Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:355:37
+    at Array.map (<anonymous>)
+    at /Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:353:41
+    at Logger._logHandler (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/startup/log.ccc:1:289)
+    at Logger.record (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@base/electron-logger/lib/renderer.ccc:1:458)
+    at console.error (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@base/electron-logger/lib/renderer.ccc:1:1414)
+    at ScriptManager._handleImportException (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:5116)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:3104)
+    at Executor._onModuleLoaded (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/dist/executor/index.js:253:22)
+    at SystemJS.onload (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/dist/executor/index.js:62:18)
+    at triggerOnload (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:270:10)
+    at /Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:431:7
+    at async Promise.all (index 0)
+2022-07-15T08:05:52.268Z - error: [Preview]Error: 以 file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/proto_js/proto.js 为起点找不到模块 "protobufjs/minimal.js"
+2022-07-15T08:05:52.269Z - error: [Preview]Error: Error: 以 file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/proto_js/proto.js 为起点找不到模块 "protobufjs/minimal.js"
+    at rejector (http://localhost:7456/scripting/systemjs/system.js:1154:13)
+    at resolve (http://localhost:7456/scripting/systemjs/system.js:1185:9)
+    at systemJSPrototype.resolve (http://localhost:7456/scripting/systemjs/system.js:1207:10)
+    at http://localhost:7456/scripting/systemjs/system.js:336:39
+    at Array.map (<anonymous>)
+    at http://localhost:7456/scripting/systemjs/system.js:334:43
