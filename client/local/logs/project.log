@@ -3158,3 +3158,200 @@ Class ID: "485b2sC+f5DRKn/QBvMMJil"
     at Generator.next (<anonymous>)
     at asyncGeneratorStep (http://localhost:7456/scripting/x/chunks/2e/2eb43f291e0ae7d0faf55388b31ab3fe5aa6237f.js:6:105)
     at _next (http://localhost:7456/scripting/x/chunks/2e/2eb43f291e0ae7d0faf55388b31ab3fe5aa6237f.js:8:196)
+2022-07-15T07:29:51.810Z - error: [Asset DB] /Users/even/workspace/github/pitaya_cocos_demo/client/library/1b/1baf0fc9-befa-459c-8bdd-af1a450a0319.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/1b/1baf0fc9-befa-459c-8bdd-af1a450a0319.json'Error: /Users/even/workspace/github/pitaya_cocos_demo/client/library/1b/1baf0fc9-befa-459c-8bdd-af1a450a0319.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/1b/1baf0fc9-befa-459c-8bdd-af1a450a0319.json'
+    at Object.openSync (fs.js:476:3)
+    at Object.func [as openSync] (electron/js2c/asar_bundle.js:5:1846)
+    at Object.readFileSync (fs.js:377:35)
+    at Object.e.readFileSync (electron/js2c/asar_bundle.js:5:8872)
+    at Object.readFileSync (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/jsonfile/index.js:61:22)
+    at Object.upgradeProperties (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/utils/material-upgrader.ccc:1:1795)
+    at async MaterialImporter.import (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/material.ccc:1:701)
+    at async ImportTask.importAsset (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/task.ccc:1:2311)
+    at async ImportTask.exec (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/task.ccc:1:596)
+    at async ParallelQueue._generate (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/asset-db.ccc:1:2730)
+2022-07-15T07:29:51.811Z - error: [Asset DB] /Users/even/workspace/github/pitaya_cocos_demo/client/library/d1/d1346436-ac96-4271-b863-1f4fdead95b0.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/d1/d1346436-ac96-4271-b863-1f4fdead95b0.json'Error: /Users/even/workspace/github/pitaya_cocos_demo/client/library/d1/d1346436-ac96-4271-b863-1f4fdead95b0.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/d1/d1346436-ac96-4271-b863-1f4fdead95b0.json'
+    at Object.openSync (fs.js:476:3)
+    at Object.func [as openSync] (electron/js2c/asar_bundle.js:5:1846)
+    at Object.readFileSync (fs.js:377:35)
+    at Object.e.readFileSync (electron/js2c/asar_bundle.js:5:8872)
+    at Object.readFileSync (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/jsonfile/index.js:61:22)
+    at Object.upgradeProperties (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/utils/material-upgrader.ccc:1:1795)
+    at async MaterialImporter.import (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/material.ccc:1:701)
+    at async ImportTask.importAsset (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/task.ccc:1:2311)
+    at async ImportTask.exec (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/task.ccc:1:596)
+    at async ParallelQueue._generate (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/asset-db.ccc:1:2730)
+2022-07-15T07:29:51.812Z - error: [Asset DB] /Users/even/workspace/github/pitaya_cocos_demo/client/library/1b/1baf0fc9-befa-459c-8bdd-af1a450a0319.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/1b/1baf0fc9-befa-459c-8bdd-af1a450a0319.json'Error: /Users/even/workspace/github/pitaya_cocos_demo/client/library/1b/1baf0fc9-befa-459c-8bdd-af1a450a0319.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/1b/1baf0fc9-befa-459c-8bdd-af1a450a0319.json'
+    at Object.openSync (fs.js:476:3)
+    at Object.func [as openSync] (electron/js2c/asar_bundle.js:5:1846)
+    at Object.readFileSync (fs.js:377:35)
+    at Object.e.readFileSync (electron/js2c/asar_bundle.js:5:8872)
+    at Object.readFileSync (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/jsonfile/index.js:61:22)
+    at Object.upgradeProperties (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/utils/material-upgrader.ccc:1:1795)
+    at runMicrotasks (<anonymous>)
+    at runNextTicks (internal/process/task_queues.js:58:5)
+    at processImmediate (internal/timers.js:434:9)
+    at async MaterialImporter.import (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/material.ccc:1:701)
+2022-07-15T07:29:51.813Z - error: [Asset DB] /Users/even/workspace/github/pitaya_cocos_demo/client/library/60/60f7195c-ec2a-45eb-ba94-8955f60e81d0.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/60/60f7195c-ec2a-45eb-ba94-8955f60e81d0.json'Error: /Users/even/workspace/github/pitaya_cocos_demo/client/library/60/60f7195c-ec2a-45eb-ba94-8955f60e81d0.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/60/60f7195c-ec2a-45eb-ba94-8955f60e81d0.json'
+    at Object.openSync (fs.js:476:3)
+    at Object.func [as openSync] (electron/js2c/asar_bundle.js:5:1846)
+    at Object.readFileSync (fs.js:377:35)
+    at Object.e.readFileSync (electron/js2c/asar_bundle.js:5:8872)
+    at Object.readFileSync (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/jsonfile/index.js:61:22)
+    at Object.upgradeProperties (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/utils/material-upgrader.ccc:1:1795)
+    at async MaterialImporter.import (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/material.ccc:1:701)
+    at async ImportTask.importAsset (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/task.ccc:1:2311)
+    at async ImportTask.exec (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/task.ccc:1:596)
+    at async ParallelQueue._generate (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/asset-db.ccc:1:2730)
+2022-07-15T07:29:51.814Z - error: [Asset DB] /Users/even/workspace/github/pitaya_cocos_demo/client/library/5d/5d45aa00-e064-4938-b314-4265f0c2258c.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/5d/5d45aa00-e064-4938-b314-4265f0c2258c.json'Error: /Users/even/workspace/github/pitaya_cocos_demo/client/library/5d/5d45aa00-e064-4938-b314-4265f0c2258c.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/5d/5d45aa00-e064-4938-b314-4265f0c2258c.json'
+    at Object.openSync (fs.js:476:3)
+    at Object.func [as openSync] (electron/js2c/asar_bundle.js:5:1846)
+    at Object.readFileSync (fs.js:377:35)
+    at Object.e.readFileSync (electron/js2c/asar_bundle.js:5:8872)
+    at Object.readFileSync (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/jsonfile/index.js:61:22)
+    at Object.upgradeProperties (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/utils/material-upgrader.ccc:1:1795)
+    at async MaterialImporter.import (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/material.ccc:1:701)
+    at async ImportTask.importAsset (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/task.ccc:1:2311)
+    at async ImportTask.exec (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/task.ccc:1:596)
+    at async ParallelQueue._generate (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/asset-db.ccc:1:2730)
+2022-07-15T07:29:51.814Z - error: [Asset DB] /Users/even/workspace/github/pitaya_cocos_demo/client/library/31/31b152ff-f689-4082-a292-3eb5a0b33014.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/31/31b152ff-f689-4082-a292-3eb5a0b33014.json'Error: /Users/even/workspace/github/pitaya_cocos_demo/client/library/31/31b152ff-f689-4082-a292-3eb5a0b33014.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/31/31b152ff-f689-4082-a292-3eb5a0b33014.json'
+    at Object.openSync (fs.js:476:3)
+    at Object.func [as openSync] (electron/js2c/asar_bundle.js:5:1846)
+    at Object.readFileSync (fs.js:377:35)
+    at Object.e.readFileSync (electron/js2c/asar_bundle.js:5:8872)
+    at Object.readFileSync (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/jsonfile/index.js:61:22)
+    at Object.upgradeProperties (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/utils/material-upgrader.ccc:1:1795)
+    at async MaterialImporter.import (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/material.ccc:1:701)
+    at async ImportTask.importAsset (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/task.ccc:1:2311)
+    at async ImportTask.exec (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/task.ccc:1:596)
+    at async ParallelQueue._generate (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/asset-db.ccc:1:2730)
+2022-07-15T07:29:51.911Z - error: [Asset DB] /Users/even/workspace/github/pitaya_cocos_demo/client/library/ec/ec8106fe-05bf-4e94-943c-e0d3b7bb5e45.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/ec/ec8106fe-05bf-4e94-943c-e0d3b7bb5e45.json'Error: /Users/even/workspace/github/pitaya_cocos_demo/client/library/ec/ec8106fe-05bf-4e94-943c-e0d3b7bb5e45.json: ENOENT: no such file or directory, open '/Users/even/workspace/github/pitaya_cocos_demo/client/library/ec/ec8106fe-05bf-4e94-943c-e0d3b7bb5e45.json'
+    at Object.openSync (fs.js:476:3)
+    at Object.func [as openSync] (electron/js2c/asar_bundle.js:5:1846)
+    at Object.readFileSync (fs.js:377:35)
+    at Object.e.readFileSync (electron/js2c/asar_bundle.js:5:8872)
+    at Object.readFileSync (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/jsonfile/index.js:61:22)
+    at Object.upgradeProperties (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/utils/material-upgrader.ccc:1:1795)
+    at async MaterialImporter.import (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/importer/importers/material.ccc:1:701)
+    at async ImportTask.importAsset (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/task.ccc:1:2311)
+    at async ImportTask.exec (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/task.ccc:1:596)
+    at async ParallelQueue._generate (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/asset-db/libs/asset-db.ccc:1:2730)
+2022-07-15T07:29:53.647Z - warn: [Scene] Missing class: 485b2sC+f5DRKn/QBvMMJilError: [Scene] Missing class: 485b2sC+f5DRKn/QBvMMJil
+    at Object.classFinder (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/missing-class-reporter.ccc:1:2218)
+    at _Deserializer.classFinder [as _classFinder] (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/resources/3d/engine/bin/.cache/dev/editor/bundled/index.js:102743:32)
+    at _Deserializer._deserializeTypeTaggedObject (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/resources/3d/engine/bin/.cache/dev/editor/bundled/index.js:111572:24)
+    at _Deserializer._deserializeObject (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/resources/3d/engine/bin/.cache/dev/editor/bundled/index.js:111513:23)
+    at _Deserializer._deserializeAndAssignField (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/resources/3d/engine/bin/.cache/dev/editor/bundled/index.js:111722:32)
+    at _Deserializer._deserializeArray (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/resources/3d/engine/bin/.cache/dev/editor/bundled/index.js:111547:34)
+    at _Deserializer._deserializeObject (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/resources/3d/engine/bin/.cache/dev/editor/bundled/index.js:111519:23)
+2022-07-15T07:29:53.649Z - error: [Scene] Script "485b2sC+f5DRKn/QBvMMJil" attached to "New Node" is missing or invalid. Detailed information:
+Node path: "Canvas/New Node"
+Script UUID: "485b2b02-f9fe-4344-a9ff-401bcc3098a5"
+Class ID: "485b2sC+f5DRKn/QBvMMJil"
+Error: [Scene] Script "485b2sC+f5DRKn/QBvMMJil" attached to "New Node" is missing or invalid. Detailed information:
+Node path: "Canvas/New Node"
+Script UUID: "485b2b02-f9fe-4344-a9ff-401bcc3098a5"
+Class ID: "485b2sC+f5DRKn/QBvMMJil"
+
+    at report (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/missing-class-reporter.ccc:1:1187)
+    at reportByWalker (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/missing-class-reporter.ccc:1:1283)
+    at /Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/missing-class-reporter.ccc:1:1979
+    at ObjectWalkerBehavior.walk (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/object-walker.ccc:1:2348)
+    at ObjectWalkerBehavior.forEach (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/object-walker.ccc:1:812)
+    at ObjectWalkerBehavior.parseObject (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/object-walker.ccc:1:306)
+    at doWalkProperties (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/object-walker.ccc:1:2143)
+2022-07-15T07:29:54.112Z - warn: [Scene] Missing class: 485b2sC+f5DRKn/QBvMMJilError: [Scene] Missing class: 485b2sC+f5DRKn/QBvMMJil
+    at Object.classFinder (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/missing-class-reporter.ccc:1:2218)
+    at _Deserializer.classFinder [as _classFinder] (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/resources/3d/engine/bin/.cache/dev/editor/bundled/index.js:102743:32)
+    at _Deserializer._deserializeTypeTaggedObject (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/resources/3d/engine/bin/.cache/dev/editor/bundled/index.js:111572:24)
+    at _Deserializer._deserializeObject (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/resources/3d/engine/bin/.cache/dev/editor/bundled/index.js:111513:23)
+    at _Deserializer._deserializeAndAssignField (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/resources/3d/engine/bin/.cache/dev/editor/bundled/index.js:111722:32)
+    at _Deserializer._deserializeArray (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/resources/3d/engine/bin/.cache/dev/editor/bundled/index.js:111547:34)
+    at _Deserializer._deserializeObject (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/resources/3d/engine/bin/.cache/dev/editor/bundled/index.js:111519:23)
+2022-07-15T07:29:54.114Z - error: [Scene] Script "485b2sC+f5DRKn/QBvMMJil" attached to "New Node" is missing or invalid. Detailed information:
+Node path: "Canvas/New Node"
+Script UUID: "485b2b02-f9fe-4344-a9ff-401bcc3098a5"
+Class ID: "485b2sC+f5DRKn/QBvMMJil"
+Error: [Scene] Script "485b2sC+f5DRKn/QBvMMJil" attached to "New Node" is missing or invalid. Detailed information:
+Node path: "Canvas/New Node"
+Script UUID: "485b2b02-f9fe-4344-a9ff-401bcc3098a5"
+Class ID: "485b2sC+f5DRKn/QBvMMJil"
+
+    at report (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/missing-class-reporter.ccc:1:1187)
+    at reportByWalker (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/missing-class-reporter.ccc:1:1283)
+    at /Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/missing-class-reporter.ccc:1:1979
+    at ObjectWalkerBehavior.walk (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/object-walker.ccc:1:2348)
+    at ObjectWalkerBehavior.forEach (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/object-walker.ccc:1:812)
+    at ObjectWalkerBehavior.parseObject (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/object-walker.ccc:1:306)
+    at doWalkProperties (/Applications/CocosCreator/Creator/3.5.2/CocosCreator.app/Contents/Resources/app.asar/builtin/engine/dist/editor-extends/missing-reporter/object-walker.ccc:1:2143)
+2022-07-15T07:29:56.655Z - warn: Metrics: no valid info
+2022-07-15T07:37:06.110Z - log: [Package] menu@1.0.0 enable
+2022-07-15T07:37:06.112Z - log: [Package] profile@1.0.0 enable
+2022-07-15T07:37:06.120Z - log: [Package] project@1.0.2 enable
+2022-07-15T07:37:06.123Z - log: [Package] messages@1.0.0 enable
+2022-07-15T07:37:06.125Z - log: [Package] program@1.0.0 enable
+2022-07-15T07:37:06.129Z - log: [Package] tester@1.0.0 enable
+2022-07-15T07:37:06.132Z - log: [Package] preferences@1.0.0 enable
+2022-07-15T07:37:06.470Z - log: Setup mods mgr.: 160.052ms
+2022-07-15T07:37:06.501Z - verbose: [Engine] QuickCompile engine (335ms)
+2022-07-15T07:37:06.502Z - log: [Package] engine@1.0.6 enable
+2022-07-15T07:37:07.057Z - log: [Package] programming@1.0.0 enable
+2022-07-15T07:37:07.328Z - log: [Package] device@1.0.1 enable
+2022-07-15T07:37:07.355Z - log: [Package] ui-kit@1.0.1 enable
+2022-07-15T07:37:07.378Z - log: [Package] engine-extends@1.0.0 enable
+2022-07-15T07:37:07.423Z - log: [Package] asset-db@1.0.0 enable
+2022-07-15T07:37:07.454Z - log: [Package] scene@1.0.0 enable
+2022-07-15T07:37:07.559Z - log: [Package] server@1.0.0 enable
+2022-07-15T07:37:07.586Z - log: [Package] utils@1.0.0 enable
+2022-07-15T07:37:09.622Z - log: [Package] preview@1.0.1 enable
+2022-07-15T07:37:09.649Z - log: [Package] animator@1.0.0 enable
+2022-07-15T07:37:10.239Z - log: [Package] builder@1.3.2 enable
+2022-07-15T07:37:10.267Z - log: [Package] shortcuts@1.0.1 enable
+2022-07-15T07:37:10.295Z - log: [Package] animation-graph@1.0.0 enable
+2022-07-15T07:37:10.321Z - log: [Package] runtime-dev-tools@1.0.0 enable
+2022-07-15T07:37:10.361Z - log: [Package] channel-upload-tools@1.0.0 enable
+2022-07-15T07:37:10.390Z - log: [Package] about@1.0.0 enable
+2022-07-15T07:37:10.421Z - log: [Package] assets@1.0.0 enable
+2022-07-15T07:37:10.450Z - log: [Package] console@1.0.0 enable
+2022-07-15T07:37:10.566Z - log: [Package] extension@3.0.16 enable
+2022-07-15T07:37:10.580Z - verbose: [AssetDB] Require engine code (621ms)
+2022-07-15T07:37:10.595Z - log: [Package] hierarchy@1.0.0 enable
+2022-07-15T07:37:10.626Z - log: [Package] inspector@1.0.0 enable
+2022-07-15T07:37:10.657Z - log: [Package] lightmap@1.0.4 enable
+2022-07-15T07:37:10.687Z - log: [Package] node-library@1.0.1 enable
+2022-07-15T07:37:10.712Z - log: [Package] package-asset@1.0.0 enable
+2022-07-15T07:37:10.742Z - log: [Package] process@1.0.0 enable
+2022-07-15T07:37:10.771Z - log: [Package] reference-image@1.0.0 enable
+2022-07-15T07:37:10.796Z - log: [Package] alipay-mini-game@1.0.0 enable
+2022-07-15T07:37:10.823Z - log: [Package] android@1.0.0 enable
+2022-07-15T07:37:10.851Z - log: [Package] baidu-mini-game@1.0.0 enable
+2022-07-15T07:37:10.876Z - log: [Package] bytedance-mini-game@1.0.1 enable
+2022-07-15T07:37:10.903Z - log: [Package] cocos-play@1.0.0 enable
+2022-07-15T07:37:10.927Z - log: [Package] huawei-agc@1.0.0 enable
+2022-07-15T07:37:10.954Z - log: [Package] huawei-quick-game@1.0.0 enable
+2022-07-15T07:37:11.084Z - log: [Package] ios@1.0.0 enable
+2022-07-15T07:37:11.110Z - log: [Package] ios-app-clip@1.0.0 enable
+2022-07-15T07:37:11.136Z - log: [Package] link-sure@1.0.0 enable
+2022-07-15T07:37:11.161Z - log: [Package] linux@1.0.0 enable
+2022-07-15T07:37:11.187Z - log: [Package] mac@1.0.0 enable
+2022-07-15T07:37:11.265Z - log: [Package] native@1.0.0 enable
+2022-07-15T07:37:11.287Z - log: [Package] ohos@1.0.0 enable
+2022-07-15T07:37:11.314Z - log: [Package] open-harmonyos@1.0.0 enable
+2022-07-15T07:37:11.340Z - log: [Package] oppo-mini-game@1.0.0 enable
+2022-07-15T07:37:11.366Z - log: [Package] qtt@1.0.0 enable
+2022-07-15T07:37:11.394Z - log: [Package] vivo-mini-game@1.0.0 enable
+2022-07-15T07:37:11.427Z - log: [Package] web-desktop@1.0.0 enable
+2022-07-15T07:37:11.457Z - log: [Package] web-mobile@1.0.0 enable
+2022-07-15T07:37:11.489Z - log: [Package] wechatgame@1.0.1 enable
+2022-07-15T07:37:11.512Z - log: [Package] windows@1.0.0 enable
+2022-07-15T07:37:11.536Z - log: [Package] xiaomi-quick-game@1.0.0 enable
+2022-07-15T07:37:11.696Z - log: [Package] cocos-service@3.0.3 enable
+2022-07-15T07:37:11.727Z - log: [Package] importer@1.0.0 enable
+2022-07-15T07:37:11.893Z - log: [Im-plugin] Check im-plugin version.
+2022-07-15T07:37:11.900Z - log: [Package] im-plugin@3.0.8 enable
+2022-07-15T07:37:12.830Z - log: [Im-plugin] No online info of im-plugin.
+2022-07-15T07:37:14.726Z - verbose: [Scene] Require engine code (0ms)
+2022-07-15T07:37:14.727Z - verbose: [Scene] Startup engine (1ms)
+2022-07-15T07:37:14.751Z - log: [Scene] Cocos Creator v3.5.2
+2022-07-15T07:37:14.921Z - verbose: [Scene] Open engine (194ms)
+2022-07-15T07:37:14.921Z - verbose: [Scene] Configure engine (0ms)
+2022-07-15T07:37:14.793Z - info: [Scene] Forward render pipeline initialized.

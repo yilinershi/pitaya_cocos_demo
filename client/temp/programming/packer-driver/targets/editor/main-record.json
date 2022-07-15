@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 5843.166167020798,
+      "mTimestamp": 5877.583667039871,
       "chunkId": "06905a76530cf57ee019d9d8bcfb507c2d037fd3",
       "imports": [
         {
@@ -493,11 +493,11 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 152749931.71579206,
+      "mTimestamp": 5886.95470905304,
       "chunkId": "f24891e8e38a2f9a13966f6e3cf69b2dabd1888a",
       "imports": [
         {
-          "value": "file:///Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginController.ts",
+          "value": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginController.ts",
           "resolved": "__unresolved_0",
           "loc": {
             "start": {
@@ -506,77 +506,77 @@
             },
             "end": {
               "line": 5,
-              "column": 143
+              "column": 154
             }
           }
         },
         {
-          "value": "file:///Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginModel.ts",
+          "value": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginModel.ts",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
               "line": 5,
-              "column": 159
+              "column": 170
             },
             "end": {
               "line": 5,
-              "column": 262
+              "column": 284
             }
           }
         },
         {
-          "value": "file:///Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginView.ts",
+          "value": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginView.ts",
           "resolved": "__unresolved_2",
           "loc": {
             "start": {
               "line": 5,
-              "column": 278
+              "column": 300
             },
             "end": {
               "line": 5,
-              "column": 380
+              "column": 413
             }
           }
         },
         {
-          "value": "file:///Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/http/Http.ts",
+          "value": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/net/http/Http.ts",
           "resolved": "__unresolved_3",
           "loc": {
             "start": {
               "line": 5,
-              "column": 396
+              "column": 429
             },
             "end": {
               "line": 5,
-              "column": 490
+              "column": 534
             }
           }
         },
         {
-          "value": "file:///Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pitaya.ts",
+          "value": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pitaya.ts",
           "resolved": "__unresolved_4",
           "loc": {
             "start": {
               "line": 5,
-              "column": 506
+              "column": 550
             },
             "end": {
               "line": 5,
-              "column": 604
+              "column": 659
             }
           }
         },
         {
-          "value": "file:///Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pomelo.ts",
+          "value": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pomelo.ts",
           "resolved": "__unresolved_5",
           "loc": {
             "start": {
               "line": 5,
-              "column": 620
+              "column": 675
             },
             "end": {
               "line": 5,
-              "column": 718
+              "column": 784
             }
           }
         }
@@ -586,42 +586,42 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginController.ts"
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginController.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginModel.ts"
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginModel.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginView.ts"
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginView.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/http/Http.ts"
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/net/http/Http.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pitaya.ts"
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pitaya.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pomelo.ts"
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pomelo.ts"
           },
           "messages": []
         }
@@ -745,7 +745,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1657710855568,
+      "mTimestamp": 1657870626583,
       "chunkId": "84741ad843cea9a440c5d8c2d379669b6551400d",
       "imports": [],
       "type": "esm",
@@ -1013,7 +1013,7 @@
       ]
     },
     "cce:/internal/ml/cjs-loader.mjs": {
-      "mTimestamp": 1657710855568,
+      "mTimestamp": 1657870626583,
       "chunkId": "5d6edb63c95512b9351b1539b146578dcb49e89b",
       "imports": [],
       "type": "esm",
@@ -2209,6 +2209,1518 @@
           "resolved": {
             "type": "module",
             "url": "file:///Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pomelo.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginController.ts": {
+      "mTimestamp": {
+        "mtime": 1657863577623.0505,
+        "uuid": "a8d697bb-f59c-4e80-a7b7-4454669392e4"
+      },
+      "chunkId": "e48b4fa51194fd9d5301723dd97ed0ba0d598d28",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../../../proto_js/proto.js",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 18
+            },
+            "end": {
+              "line": 1,
+              "column": 49
+            }
+          }
+        },
+        {
+          "value": "../../net/http/Http",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 21
+            },
+            "end": {
+              "line": 2,
+              "column": 42
+            }
+          }
+        },
+        {
+          "value": "../../net/pitaya/Pitaya",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 24
+            },
+            "end": {
+              "line": 3,
+              "column": 49
+            }
+          }
+        },
+        {
+          "value": "./LoginModel",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 24
+            },
+            "end": {
+              "line": 4,
+              "column": 38
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/proto_js/proto.mjs?cjs=&original=.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/net/http/Http.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pitaya.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginModel.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/proto_js/proto.mjs?cjs=&original=.js": {
+      "mTimestamp": 1657711716581.8386,
+      "chunkId": "eec4f2a0aa7144f04e2ef3e71efe0244296d441f",
+      "imports": [
+        {
+          "value": "./proto.js",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 19
+            },
+            "end": {
+              "line": 3,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "./proto.js",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 14
+            },
+            "end": {
+              "line": 8,
+              "column": 26
+            }
+          }
+        },
+        {
+          "value": "./proto.js",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 29
+            },
+            "end": {
+              "line": 9,
+              "column": 41
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/proto_js/proto.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/proto_js/proto.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/proto_js/proto.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/proto_js/proto.js": {
+      "mTimestamp": 1657711716581.8386,
+      "chunkId": "fd4492b6a270511adf5a3dcd3b3a93ede080f92e",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "protobufjs/minimal.js",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 59
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/minimal.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/minimal.js": {
+      "mTimestamp": 1657708070781.8743,
+      "chunkId": "a6121d2e5c28208753bad7d13f3bca4448b539c7",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "./src/index-minimal",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 57
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/index-minimal.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/index-minimal.js": {
+      "mTimestamp": 1657708070780.2104,
+      "chunkId": "561f0504872e9592ec89ae330db2a78569a70c24",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "./writer",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "./writer_buffer",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 37
+            },
+            "end": {
+              "line": 3,
+              "column": 54
+            }
+          }
+        },
+        {
+          "value": "./reader",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 37
+            },
+            "end": {
+              "line": 4,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "./reader_buffer",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 37
+            },
+            "end": {
+              "line": 5,
+              "column": 54
+            }
+          }
+        },
+        {
+          "value": "./util/minimal",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 37
+            },
+            "end": {
+              "line": 6,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "./rpc",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 37
+            },
+            "end": {
+              "line": 7,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "./roots",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 37
+            },
+            "end": {
+              "line": 8,
+              "column": 46
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/writer.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/writer_buffer.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/reader.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/reader_buffer.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/util/minimal.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/rpc.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/roots.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/writer.js": {
+      "mTimestamp": 1657708070793.14,
+      "chunkId": "850368c597f6ff8925bcddfa7a12d705483cc44d",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "./util/minimal",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 52
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/util/minimal.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/util/minimal.js": {
+      "mTimestamp": 1657708070781.921,
+      "chunkId": "9b763de77b529e77e6776e8ce25f26909ff9cfb7",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "@protobufjs/aspromise",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 59
+            }
+          }
+        },
+        {
+          "value": "@protobufjs/base64",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 37
+            },
+            "end": {
+              "line": 3,
+              "column": 57
+            }
+          }
+        },
+        {
+          "value": "@protobufjs/eventemitter",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 37
+            },
+            "end": {
+              "line": 4,
+              "column": 63
+            }
+          }
+        },
+        {
+          "value": "@protobufjs/float",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 37
+            },
+            "end": {
+              "line": 5,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "@protobufjs/inquire",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 37
+            },
+            "end": {
+              "line": 6,
+              "column": 58
+            }
+          }
+        },
+        {
+          "value": "@protobufjs/utf8",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 37
+            },
+            "end": {
+              "line": 7,
+              "column": 55
+            }
+          }
+        },
+        {
+          "value": "@protobufjs/pool",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 37
+            },
+            "end": {
+              "line": 8,
+              "column": 55
+            }
+          }
+        },
+        {
+          "value": "./longbits",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 37
+            },
+            "end": {
+              "line": 9,
+              "column": 49
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/aspromise/index.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/base64/index.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/eventemitter/index.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/float/index.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/inquire/index.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/utf8/index.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/pool/index.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/util/longbits.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/aspromise/index.js": {
+      "mTimestamp": 1657708070772.5554,
+      "chunkId": "58a53277c7ad1356d393be7b058c7fef844ce973",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/base64/index.js": {
+      "mTimestamp": 1657708070772.6057,
+      "chunkId": "7b78178398c765234fb3ffb7ae5145e4cc34a031",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/eventemitter/index.js": {
+      "mTimestamp": 1657708070772.4163,
+      "chunkId": "eb960978cecae1e331678177ddd98e990b269e48",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/float/index.js": {
+      "mTimestamp": 1657708070773.1448,
+      "chunkId": "fc0202cfc28b26d32e7ed764386fe75a40fe5712",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/inquire/index.js": {
+      "mTimestamp": 1657708070773.0752,
+      "chunkId": "9c6fdbd775beea4b9e17d7b65d19c3bcdb7e50f3",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/utf8/index.js": {
+      "mTimestamp": 1657708070772.9453,
+      "chunkId": "de8d9a97226894e8739e2063449a74647f5e0e3c",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/@protobufjs/pool/index.js": {
+      "mTimestamp": 1657708070772.9026,
+      "chunkId": "63790e65cab7a12f478a98c3572243fe9b6a511a",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/util/longbits.js": {
+      "mTimestamp": 1657708070781.4856,
+      "chunkId": "e1b965f791d24c14f041eed81c7907bed81b5818",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "../util/minimal",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 53
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/util/minimal.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/writer_buffer.js": {
+      "mTimestamp": 1657708070792.9592,
+      "chunkId": "439e8af82990f39df9834cbf96bf109e01bb6faf",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "./writer",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "./util/minimal",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 37
+            },
+            "end": {
+              "line": 3,
+              "column": 53
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/writer.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/util/minimal.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/reader.js": {
+      "mTimestamp": 1657708070790.572,
+      "chunkId": "5c0032c8c2d1057b05c3b6a50d1cb9b16eb3b503",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "./util/minimal",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 52
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/util/minimal.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/reader_buffer.js": {
+      "mTimestamp": 1657708070790.4287,
+      "chunkId": "93f66bac190ea85674b456fae0f4721ac22552f3",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "./reader",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "./util/minimal",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 37
+            },
+            "end": {
+              "line": 3,
+              "column": 53
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/reader.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/util/minimal.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/rpc.js": {
+      "mTimestamp": 1657708070790.7844,
+      "chunkId": "e071d96f568e11e6c6fdc44f88eda3340b377b4b",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "./rpc/service",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 51
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/rpc/service.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/rpc/service.js": {
+      "mTimestamp": 1657708070790.9395,
+      "chunkId": "2ad0d2bdfb4112eef802a3faeb2d6806ea7fb975",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "../util/minimal",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 53
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/util/minimal.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/node_modules/protobufjs/src/roots.js": {
+      "mTimestamp": 1657708070790.7146,
+      "chunkId": "32046336de6341f3ef49c05a5d9ea784aebcb907",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/net/http/Http.ts": {
+      "mTimestamp": {
+        "mtime": 1657721362977.1677,
+        "uuid": "bc6da0ea-a658-4f9c-af4c-68ceb2ae198c"
+      },
+      "chunkId": "1ddf17b676a14b698902778b566b4b7bbf81b757",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pitaya.ts": {
+      "mTimestamp": {
+        "mtime": 1657863247272.765,
+        "uuid": "966fe41b-8032-4a54-99d2-151daf844363"
+      },
+      "chunkId": "19de99937ace792ae10557cb173ce2121e06c887",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "./Pomelo",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 33
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pomelo.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pomelo.ts": {
+      "mTimestamp": {
+        "mtime": 1657862579307.228,
+        "uuid": "154ef413-ba0a-4306-96bb-c96d1b8a9fe5"
+      },
+      "chunkId": "bb1a60edfbdf173f004719d18a5d4d824fde74a0",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginModel.ts": {
+      "mTimestamp": {
+        "mtime": 1657857051940.4346,
+        "uuid": "57383198-3a50-463b-bef7-f271e7e0056d"
+      },
+      "chunkId": "8771cf608041f089b35c6f18fe4bd1a0ec9a3007",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginView.ts": {
+      "mTimestamp": {
+        "mtime": 1657813095667.74,
+        "uuid": "485b2b02-f9fe-4344-a9ff-401bcc3098a5"
+      },
+      "chunkId": "ef1619d59de7f769e5dc5017f284a488f21b66bb",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 78
+            },
+            "end": {
+              "line": 1,
+              "column": 82
+            }
+          }
+        },
+        {
+          "value": "./LoginController",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 32
+            },
+            "end": {
+              "line": 3,
+              "column": 51
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/even/workspace/github/yilinershi/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginController.ts"
           },
           "messages": []
         }
