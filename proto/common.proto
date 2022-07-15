@@ -1,0 +1,39 @@
+syntax = "proto3";
+package common;
+
+option go_package = "server/pb/pb_common";
+
+enum ErrorCode {
+  Default = 0; //默认值0
+  OK = 1;      //成功
+  EntryError = 2; //检验到客户端连接验证码失败（Entry模块握手失败）
+  LoginAccountUnExistent = 3; //登录账号不存在
+  LoginPasswordError = 4;     //登录密码错误
+  RegisterAccountExit = 5;    //注册账号已存在
+  AuthFailed = 6;             //授权失败（先登录再进行长连接）
+  ChangePlayerInfoFailed=7;   //更改玩家信息失败
+
+}
+
+enum Gender {
+  Unknow = 0; //春哥
+  Male = 1;   //男
+  Female = 2; //女
+}
+
+//包的系统
+enum PackSystem {
+  Web = 0; // h5包
+  Android = 1;
+  IOS = 2;
+  Win = 3;
+  HongMeng = 4;
+}
+
+//玩家基础信息，因为大量使用，所以单独列成结构体
+message PlayerBaseInfo{
+  string Guid=1;
+  string NickName = 2;
+  Gender Gender = 3;
+  string Avatar = 4;
+}

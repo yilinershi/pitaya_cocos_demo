@@ -1,0 +1,3 @@
+[submodule "superhero_protobuff"]
+	path = superhero_protobuff
+	url = https://github.com/GameDev111/superhero_protobuff.git

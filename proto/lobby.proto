@@ -1,0 +1,36 @@
+syntax = "proto3";
+package lobby;
+
+option go_package = "server/pb/pb_lobby";       //这里是go的编译选项
+import "common.proto";      //如果用到了依赖，proto3需要指定依赖哪个proto文件
+
+message ReqAuth {
+  string Token = 1; //登录返回的token，带上
+}
+
+message RespAuth {
+  common.ErrorCode ErrCode = 1;
+  common.PlayerBaseInfo BaseInfo=2;   //玩家基础信息
+}
+
+//获取大厅信息
+message ReqLobbyInfo {}
+
+message RespLobbyInfo {
+  message LobbyInfo {
+    uint32 GameId = 1;   //游戏Id
+    string GameName = 2; //游戏名称
+    bool IsOpen = 3;     //该游戏是否已开启
+  }
+  repeated LobbyInfo Infos = 1;
+}
+
+message ReqChangePlayerInfo{
+  string NickName = 1;
+  common.Gender Gender = 2;
+  string Avatar = 3;
+}
+
+message RespChangePlayerInfo{
+  common.ErrorCode ErrCode = 1;
+}

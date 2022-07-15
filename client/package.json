@@ -1,0 +1,26 @@
+{
+    "name": "client",
+    "type": "3d",
+    "uuid": "f81e2da5-55bd-4f47-8d52-2f3122bbea25",
+    "creator": {
+        "version": "3.5.2"
+    },
+    "version": "3.5.2",
+    "scripts": {
+        "build-proto": "node ./tools/clear-proto.js && npm run build-proto:pbjs && npm run build-proto:pbts",
+        "build-proto:pbjs": "pbjs --dependency protobufjs/minimal.js --target static-module --wrap commonjs --out ./proto_js/proto.js ../proto/*.proto",
+        "build-proto:pbts": "pbts --main --out ./proto_js/proto.d.ts ./proto_js/*.js && node ./Tools/wrap-pbts-result.js",
+        "eslint": "eslint assets --ext .ts"
+    },
+    "dependencies": {
+        "@protobuf-ts/runtime": "^1.0.12",
+        "protobufjs": "^6.10.2"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.30.6",
+        "@typescript-eslint/parser": "^5.30.6",
+        "eslint": "^8.19.0",
+        "fs-extra": "^9.0.1",
+        "typescript": "^4.7.4"
+    }
+}

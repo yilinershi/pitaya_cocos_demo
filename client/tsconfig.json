@@ -1,0 +1,7 @@
+{
+  "extends": "./temp/tsconfig.cocos.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true, //允许assets内部引用外部资源包
+    // "skipLibCheck": true,
+  },
+}

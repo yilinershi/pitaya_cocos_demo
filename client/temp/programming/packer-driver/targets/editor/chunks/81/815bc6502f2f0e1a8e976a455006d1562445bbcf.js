@@ -1,0 +1,458 @@
+System.register([], function (_export, _context) {
+  "use strict";
+
+  var _crd, Pomelo;
+
+  _export("Pomelo", void 0);
+
+  return {
+    setters: [],
+    execute: function () {
+      _crd = true;
+
+      (function (_Pomelo) {
+        class Events {}
+
+        Events.CONNECTED = 'pomelo.network.connected';
+        Events.RECONNECTED = 'pomelo.network.reconnected';
+        Events.CLOSED = 'pomelo.network.closed';
+        Events.ERROR = 'pomelo.network.error';
+        Events.HANDSHAKEERROR = 'pomelo.network.handshakeerror';
+        Events.HANDSHAKEOVER = 'pomelo.network.handshakeover';
+        Events.BEENKICKED = 'pomelo.network.beenkicked';
+        _Pomelo.Events = Events;
+        let PKG_HEAD_BYTES = 4;
+        let MSG_FLAG_BYTES = 1;
+        let MSG_ROUTE_CODE_BYTES = 2;
+        let MSG_ID_MAX_BYTES = 5;
+        let MSG_ROUTE_LEN_BYTES = 1;
+        let MSG_ROUTE_CODE_MAX = 0xffff;
+        let MSG_COMPRESS_ROUTE_MASK = 0x1;
+        let MSG_COMPRESS_GZIP_MASK = 0x1;
+        let MSG_COMPRESS_GZIP_ENCODE_MASK = 1 << 4;
+        let MSG_TYPE_MASK = 0x7;
+
+        class Protocol {
+          /**
+           * pomele client encode
+           * id message id;
+           * route message route
+           * msg message body
+           * socketio current support string
+           */
+          static strencode(str) {
+            let byteArray = new Uint8Array(str.length * 3);
+            let offset = 0;
+
+            for (let i = 0; i < str.length; i++) {
+              let charCode = str.charCodeAt(i);
+              let codes = null;
+
+              if (charCode <= 0x7f) {
+                codes = [charCode];
+              } else if (charCode <= 0x7ff) {
+                codes = [0xc0 | charCode >> 6, 0x80 | charCode & 0x3f];
+              } else {
+                codes = [0xe0 | charCode >> 12, 0x80 | (charCode & 0xfc0) >> 6, 0x80 | charCode & 0x3f];
+              }
+
+              for (let j = 0; j < codes.length; j++) {
+                byteArray[offset] = codes[j];
+                ++offset;
+              }
+            }
+
+            let _buffer = new Uint8Array(offset);
+
+            copyArray(_buffer, 0, byteArray, 0, offset);
+            return _buffer;
+          }
+          /**
+           * client decode
+           * msg String data
+           * return Message Object
+           */
+
+
+          static strdecode(buffer) {
+            let bytes = new Uint8Array(buffer);
+            let array = [];
+            let offset = 0;
+            let charCode = 0;
+            let end = bytes.length;
+
+            while (offset < end) {
+              if (bytes[offset] < 128) {
+                charCode = bytes[offset];
+                offset += 1;
+              } else if (bytes[offset] < 224) {
+                charCode = ((bytes[offset] & 0x1f) << 6) + (bytes[offset + 1] & 0x3f);
+                offset += 2;
+              } else {
+                charCode = ((bytes[offset] & 0x0f) << 12) + ((bytes[offset + 1] & 0x3f) << 6) + (bytes[offset + 2] & 0x3f);
+                offset += 3;
+              }
+
+              array.push(charCode);
+            }
+
+            return String.fromCharCode.apply(null, array);
+          }
+
+        }
+
+        _Pomelo.Protocol = Protocol;
+
+        class Package {
+          /**
+           * Package protocol encode.
+           *
+           * Pomelo package format:
+           * +------+-------------+------------------+
+           * | type | body length |       body       |
+           * +------+-------------+------------------+
+           *
+           * Head: 4bytes
+           *   0: package type,
+           *      1 - handshake,
+           *      2 - handshake ack,
+           *      3 - heartbeat,
+           *      4 - data
+           *      5 - kick
+           *   1 - 3: big-endian body length
+           * Body: body length bytes
+           *
+           * @param  {Number}    type   package type
+           * @param  {Uint8Array} body   body content in bytes
+           * @return {Uint8Array}        new byte array that contains encode result
+           */
+          static encode(type, body) {
+            let length = body ? body.length : 0;
+            let buffer = new Uint8Array(PKG_HEAD_BYTES + length);
+            let index = 0;
+            buffer[index++] = type & 0xff;
+            buffer[index++] = length >> 16 & 0xff;
+            buffer[index++] = length >> 8 & 0xff;
+            buffer[index++] = length & 0xff;
+
+            if (body) {
+              copyArray(buffer, index, body, 0, length);
+            }
+
+            return buffer;
+          }
+          /**
+           * Package protocol decode.
+           * See encode for package format.
+           *
+           * @param  {Uint8Array} buffer byte array containing package content
+           * @return {Object}           {type: package type, buffer: body byte array}
+           */
+          // static decode(buffer: ArrayBuffer): { type: number, body?: Uint8Array } | { type: number, body?: Uint8Array }[] {
+          //     let offset = 0;
+          //     let bytes = new Uint8Array(buffer);
+          //     let length = 0;
+          //     let rs = [];
+          //     while (offset < bytes.length) {
+          //         let type = bytes[offset++];
+          //         length = ((bytes[offset++]) << 16 | (bytes[offset++]) << 8 | bytes[offset++]) >>> 0;
+          //         let body = length ? new Uint8Array(length) : null;
+          //         if (body) {
+          //             copyArray(body, 0, bytes, offset, length);
+          //         }
+          //         offset += length;
+          //         rs.push({ 'type': type, 'body': body });
+          //     }
+          //     return rs.length === 1 ? rs[0] : rs;
+          // }
+
+          /**
+           * Package protocol decode.
+           * See encode for package format.
+           *
+           * @param  {Uint8Array} buffer byte array containing package content
+           * @return {Object}           {type: package type, buffer: body byte array}
+           */
+
+
+          static decode(buffer) {
+            let offset = 0;
+            let bytes = new Uint8Array(buffer);
+            let length = 0;
+            let rs = new Array();
+
+            while (offset < bytes.length) {
+              let type = bytes[offset++];
+              length = (bytes[offset++] << 16 | bytes[offset++] << 8 | bytes[offset++]) >>> 0;
+              let body = length ? new Uint8Array(length) : undefined;
+
+              if (body) {
+                copyArray(body, 0, bytes, offset, length);
+              }
+
+              offset += length;
+              rs.push({
+                type: type,
+                body: body
+              });
+            }
+
+            return rs.length === 1 ? rs[0] : rs;
+          }
+
+        }
+
+        Package.TYPE_HANDSHAKE = 1;
+        Package.TYPE_HANDSHAKE_ACK = 2;
+        Package.TYPE_HEARTBEAT = 3;
+        Package.TYPE_DATA = 4;
+        Package.TYPE_KICK = 5;
+        _Pomelo.Package = Package;
+
+        class Message {
+          /**
+           * Message protocol encode.
+           *
+           * @param  {Number} id            message id
+           * @param  {Number} type          message type
+           * @param  {Number} compressRoute whether compress route
+           * @param  {Number|String} route  route code or route string
+           * @param  {Buffer} msg           message body bytes
+           * @return {Buffer}               encode result
+           */
+          static encode(id, type, compressRoute, route, msg, compressGzip = 0) {
+            // caculate message max length
+            let idBytes = msgHasId(type) ? caculateMsgIdBytes(id) : 0;
+            let msgLen = MSG_FLAG_BYTES + idBytes;
+
+            if (msgHasRoute(type)) {
+              if (compressRoute) {
+                if (typeof route !== 'number') {
+                  throw new Error('error flag for number route!');
+                }
+
+                msgLen += MSG_ROUTE_CODE_BYTES;
+              } else {
+                msgLen += MSG_ROUTE_LEN_BYTES;
+
+                if (route) {
+                  let routebuf = Protocol.strencode(route);
+
+                  if (routebuf.length > 255) {
+                    throw new Error('route maxlength is overflow');
+                  }
+
+                  msgLen += routebuf.length;
+                }
+              }
+            }
+
+            if (msg) {
+              msgLen += msg.length;
+            }
+
+            let buffer = new Uint8Array(msgLen);
+            let offset = 0; // add flag
+
+            offset = encodeMsgFlag(type, compressRoute, buffer, offset, compressGzip); // add message id
+
+            if (msgHasId(type)) {
+              offset = encodeMsgId(id, buffer, offset);
+            } // add route
+
+
+            if (msgHasRoute(type)) {
+              offset = encodeMsgRoute(compressRoute, route, buffer, offset);
+            } // add body
+
+
+            if (msg) {
+              offset = encodeMsgBody(msg, buffer, offset);
+            }
+
+            return buffer;
+          }
+          /**
+           * Message protocol decode.
+           *
+           * @param  {Buffer|Uint8Array} buffer message bytes
+           * @return {Object}            message object
+           */
+
+
+          static decode(buffer) {
+            let bytes = typeof buffer == 'string' ? new TextEncoder().encode(buffer) : new Uint8Array(buffer);
+            let bytesLen = bytes.length || bytes.byteLength;
+            let offset = 0;
+            let id = 0;
+            let route = null; // parse flag
+
+            let flag = bytes[offset++];
+            let compressRoute = flag & MSG_COMPRESS_ROUTE_MASK;
+            let type = flag >> 1 & MSG_TYPE_MASK;
+            let compressGzip = flag >> 4 & MSG_COMPRESS_GZIP_MASK; // parse id
+
+            if (msgHasId(type)) {
+              let m = 0;
+              let i = 0;
+
+              do {
+                m = parseInt(bytes[offset] + '');
+                id += (m & 0x7f) << 7 * i;
+                offset++;
+                i++;
+              } while (m >= 128);
+            } // parse route
+
+
+            if (msgHasRoute(type)) {
+              if (compressRoute) {
+                route = bytes[offset++] << 8 | bytes[offset++];
+              } else {
+                let routeLen = bytes[offset++];
+
+                if (routeLen) {
+                  route = new Uint8Array(routeLen);
+                  copyArray(route, 0, bytes, offset, routeLen);
+                  route = Protocol.strdecode(route);
+                } else {
+                  route = '';
+                }
+
+                offset += routeLen;
+              }
+            } // parse body
+
+
+            let bodyLen = bytesLen - offset;
+            let body = new Uint8Array(bodyLen);
+            copyArray(body, 0, bytes, offset, bodyLen);
+            return {
+              id: id,
+              type: type,
+              compressRoute: compressRoute,
+              route: route,
+              body: body,
+              compressGzip: compressGzip
+            };
+          }
+
+        }
+
+        Message.TYPE_REQUEST = 0;
+        Message.TYPE_NOTIFY = 1;
+        Message.TYPE_RESPONSE = 2;
+        Message.TYPE_PUSH = 3;
+        _Pomelo.Message = Message;
+
+        function copyArray(dest, doffset, src, soffset, length) {
+          // Uint8Array
+          if (typeof src == 'string') {
+            for (let index = 0; index < length; index++) {
+              dest[doffset++] = parseInt(src[soffset++]);
+            }
+          } else {
+            for (let index = 0; index < length; index++) {
+              dest[doffset++] = src[soffset++];
+            }
+          }
+        }
+
+        ;
+
+        function msgHasId(type) {
+          return type === Message.TYPE_REQUEST || type === Message.TYPE_RESPONSE;
+        }
+
+        ;
+
+        function msgHasRoute(type) {
+          return type === Message.TYPE_REQUEST || type === Message.TYPE_NOTIFY || type === Message.TYPE_PUSH;
+        }
+
+        ;
+
+        function caculateMsgIdBytes(id) {
+          let len = 0;
+
+          do {
+            len += 1;
+            id >>= 7;
+          } while (id > 0);
+
+          return len;
+        }
+
+        ;
+
+        function encodeMsgFlag(type, compressRoute, buffer, offset, compressGzip) {
+          if (type !== Message.TYPE_REQUEST && type !== Message.TYPE_NOTIFY && type !== Message.TYPE_RESPONSE && type !== Message.TYPE_PUSH) {
+            throw new Error('unkonw message type: ' + type);
+          }
+
+          buffer[offset] = type << 1 | (compressRoute ? 1 : 0);
+
+          if (compressGzip) {
+            buffer[offset] = buffer[offset] | MSG_COMPRESS_GZIP_ENCODE_MASK;
+          }
+
+          return offset + MSG_FLAG_BYTES;
+        }
+
+        ;
+
+        function encodeMsgId(id, buffer, offset) {
+          do {
+            let tmp = id % 128;
+            let next = Math.floor(id / 128);
+
+            if (next !== 0) {
+              tmp = tmp + 128;
+            }
+
+            buffer[offset++] = tmp;
+            id = next;
+          } while (id !== 0);
+
+          return offset;
+        }
+
+        ;
+
+        function encodeMsgRoute(compressRoute, route, buffer, offset) {
+          if (compressRoute) {
+            if (route > MSG_ROUTE_CODE_MAX) {
+              throw new Error('route number is overflow');
+            }
+
+            buffer[offset++] = route >> 8 & 0xff;
+            buffer[offset++] = route;
+          } else {
+            if (route) {
+              buffer[offset++] = route.length & 0xff;
+              copyArray(buffer, offset, route, 0, route.length);
+              offset += route.length;
+            } else {
+              buffer[offset++] = 0;
+            }
+          }
+
+          return offset;
+        }
+
+        ;
+
+        function encodeMsgBody(msg, buffer, offset) {
+          copyArray(buffer, offset, msg, 0, msg.length);
+          return offset + msg.length;
+        }
+
+        ;
+        const CONNECT_TIMEOUT = 3;
+      })(Pomelo || _export("Pomelo", Pomelo = {}));
+
+      _crd = false;
+    }
+  };
+});
+//# sourceMappingURL=815bc6502f2f0e1a8e976a455006d1562445bbcf.js.map

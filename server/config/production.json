@@ -1,0 +1,29 @@
+{
+  "module": {
+    "mysql": {
+      "url": "root:Afewf%$^213211@tcp(xx.xx.xx.xxx:3306)/xxxx?charset=utf8mb4&parseTime=True&loc=Local",
+      "max_idle_conn": 10,
+      "max_open_conn": 100,
+      "conn_max_life_time": 3600
+    },
+    "redis": {
+      "addr": "xx.xx.xx.xxx:6379",
+      "password": "A12sdfewr^%&*",
+      "pool_size": 30,
+      "min_idle_conn": 5,
+      "db": 1,
+      "expire": 10
+    }
+  },
+  "net": {
+    "http": {
+      "ip": "192.168.1.xx",
+      "port": 8088
+    },
+    "tcp": {
+      "ip": "192.168.1.xx",
+      "port": 3250
+    }
+  }
+
+}

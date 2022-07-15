@@ -1,0 +1,27 @@
+syntax = "proto3";
+package chat;
+option go_package = "server/pb/pb_chat";       //这里是go的编译选项
+import "common.proto";
+
+//聊天的频道
+enum ChatGroup{
+  World = 0;  //世界频道
+  Club = 1; //工会频道
+}
+
+//发送聊天信息
+message InputChatInfo{
+  ChatGroup Channel = 1;
+  string Content = 2;
+}
+
+message ChatInfo{
+  common.PlayerBaseInfo From = 1; //来自玩家的发言
+  string Content = 3;
+}
+
+//同步聊天信息
+message SyncChatInfo{
+  ChatGroup Group = 1;  //聊天组
+  ChatInfo ChatInfo = 2;//聊天内容
+}

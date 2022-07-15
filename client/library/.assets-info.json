@@ -1,0 +1,218 @@
+{
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/resources": {
+    "time": 1657689599423.7715,
+    "uuid": "d9d54db7-aad4-491f-be13-7d30d3b2a913",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scene": {
+    "time": 1657700273934.0156,
+    "uuid": "819649b5-38b2-44fb-966c-08f67108b46c",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts": {
+    "time": 1657710678954.35,
+    "uuid": "99f1ab75-3a2c-46b3-88f2-3169301b164c",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/resources/LobbyPanel.prefab": {
+    "time": 1657689536503.6155,
+    "uuid": "c51762aa-9d6f-4c91-8d49-8f612a6832ee",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/resources/LoginPanel.prefab": {
+    "time": 1657700105585.9766,
+    "uuid": "23aa7b88-42d4-4db3-b5ba-cd6e5b70c215",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scene/entry.scene": {
+    "time": 1657800078221.744,
+    "uuid": "97029067-44a7-4bc8-baa3-4fef786ff312",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scene/lobby.scene": {
+    "time": 1657689839992.838,
+    "uuid": "6da7a780-af08-4785-b51b-4464fcde7909",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic": {
+    "time": 1657700594403.0667,
+    "uuid": "cff7ed52-6102-45ec-929e-67e4af2484d3",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net": {
+    "time": 1657702791296.7593,
+    "uuid": "fdbda80b-efef-44f2-813e-5cd9a67e44b1",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/lobby": {
+    "time": 1657700572691.9653,
+    "uuid": "1fb46432-1bd4-43e6-b0cc-7d16de92be30",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login": {
+    "time": 1657700564478.7634,
+    "uuid": "4f0c57f0-fe6a-46f2-a6be-b8582d79aed4",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/http": {
+    "time": 1657702791297.9038,
+    "uuid": "9e2ec467-7f38-4cd1-b6f0-8d934083d149",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/pitaya": {
+    "time": 1657862238324.82,
+    "uuid": "d9b78ecf-7fa6-4718-a4e5-42a4af2a644c",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third": {
+    "time": 1657689599426.4622,
+    "uuid": "4bf700d8-24fc-46bc-bae7-adf96ac69f30",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginController.ts": {
+    "time": 1657863577623.0505,
+    "uuid": "a8d697bb-f59c-4e80-a7b7-4454669392e4",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginModel.ts": {
+    "time": 1657857051940.4346,
+    "uuid": "57383198-3a50-463b-bef7-f271e7e0056d",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginView.ts": {
+    "time": 1657813095667.74,
+    "uuid": "485b2b02-f9fe-4344-a9ff-401bcc3098a5",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/http/Http.ts": {
+    "time": 1657721362977.1677,
+    "uuid": "bc6da0ea-a658-4f9c-af4c-68ceb2ae198c",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/long": {
+    "time": 1657703228419.1848,
+    "uuid": "96541859-5afe-4e44-9725-748b1278c3c5",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/protobuf": {
+    "time": 1657703806266.7974,
+    "uuid": "36b994d4-8f22-4696-a972-4034a755a46a",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/long/long.js": {
+    "time": 1657689579809.0557,
+    "uuid": "a5d19b68-9256-4d3d-b2ec-30d5cb8a8c4e",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/long/long.js.map": {
+    "time": 1657689579810.641,
+    "uuid": "947364e8-c5b9-4981-a51e-63449da96565",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/protobuf/index.d.ts": {
+    "time": 1657703610987.3364,
+    "uuid": "9289214a-3ac3-45b9-94f1-4d54240cadb7",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/protobuf/protobuf.js": {
+    "time": 1657689579859.3318,
+    "uuid": "716cdbd7-ec1c-442d-a20b-16a4620cfcfb",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/protobuf/protobuf.js.map": {
+    "time": 1657689579860.7722,
+    "uuid": "0b93b3dc-f6af-408b-9cb9-7370ec8e5570",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/resources.meta": {
+    "time": 1657689599428.1582
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scene.meta": {
+    "time": 1657689686053.7231
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts.meta": {
+    "time": 1657702791303.1191
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic.meta": {
+    "time": 1657700594404.942
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net.meta": {
+    "time": 1657689599428.4001
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/lobby.meta": {
+    "time": 1657700594405.32
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login.meta": {
+    "time": 1657700594405.4678
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/http.meta": {
+    "time": 1657702791303.877
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/pitaya.meta": {
+    "time": 1657689599428.9355
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third.meta": {
+    "time": 1657689599429.2175
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scene/entry.scene.meta": {
+    "time": 1657700228096.1047
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scene/lobby.scene.meta": {
+    "time": 1657689686056.2354
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/resources/LoginPanel.prefab.meta": {
+    "time": 1657689599439.4348
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/resources/LobbyPanel.prefab.meta": {
+    "time": 1657689599439.2703
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginController.ts.meta": {
+    "time": 1657700564476.4639
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginModel.ts.meta": {
+    "time": 1657700564477.8545
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/logic/login/LoginView.ts.meta": {
+    "time": 1657700564478.9045
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/long.meta": {
+    "time": 1657689599432.0022
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/protobuf.meta": {
+    "time": 1657689599434.325
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/http/Http.ts.meta": {
+    "time": 1657702791336.661
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/protobuf/index.d.ts.meta": {
+    "time": 1657703662688.7595
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/long/long.js.meta": {
+    "time": 1657703669921.95
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/protobuf/protobuf.js.meta": {
+    "time": 1657703674599.557
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/long/long.js.map.meta": {
+    "time": 1657689599443.3137
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/third/protobuf/protobuf.js.map.meta": {
+    "time": 1657689599445.3535
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pitaya.ts.meta": {
+    "time": 1657772753440.9844
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pomelo.ts.meta": {
+    "time": 1657772753441.5276
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pitaya.ts": {
+    "time": 1657863247272.765,
+    "uuid": "966fe41b-8032-4a54-99d2-151daf844363",
+    "missing": false
+  },
+  "/Users/even/workspace/github/pitaya_cocos_demo/client/assets/scripts/net/pitaya/Pomelo.ts": {
+    "time": 1657862579307.228,
+    "uuid": "154ef413-ba0a-4306-96bb-c96d1b8a9fe5",
+    "missing": false
+  }
+}
