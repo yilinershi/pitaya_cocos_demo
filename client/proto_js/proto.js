@@ -261,7 +261,7 @@ $root.chat = (function() {
          * Properties of a ChatInfo.
          * @memberof chat
          * @interface IChatInfo
-         * @property {common.IPlayerBaseInfo|null} [From] ChatInfo From
+         * @property {common.IUserBaseInfo|null} [From] ChatInfo From
          * @property {string|null} [Content] ChatInfo Content
          */
 
@@ -282,7 +282,7 @@ $root.chat = (function() {
 
         /**
          * ChatInfo From.
-         * @member {common.IPlayerBaseInfo|null|undefined} From
+         * @member {common.IUserBaseInfo|null|undefined} From
          * @memberof chat.ChatInfo
          * @instance
          */
@@ -321,7 +321,7 @@ $root.chat = (function() {
             if (!writer)
                 writer = $Writer.create();
             if (message.From != null && Object.hasOwnProperty.call(message, "From"))
-                $root.common.PlayerBaseInfo.encode(message.From, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                $root.common.UserBaseInfo.encode(message.From, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
             if (message.Content != null && Object.hasOwnProperty.call(message, "Content"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.Content);
             return writer;
@@ -359,7 +359,7 @@ $root.chat = (function() {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 1:
-                    message.From = $root.common.PlayerBaseInfo.decode(reader, reader.uint32());
+                    message.From = $root.common.UserBaseInfo.decode(reader, reader.uint32());
                     break;
                 case 3:
                     message.Content = reader.string();
@@ -400,7 +400,7 @@ $root.chat = (function() {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.From != null && message.hasOwnProperty("From")) {
-                var error = $root.common.PlayerBaseInfo.verify(message.From);
+                var error = $root.common.UserBaseInfo.verify(message.From);
                 if (error)
                     return "From." + error;
             }
@@ -425,7 +425,7 @@ $root.chat = (function() {
             if (object.From != null) {
                 if (typeof object.From !== "object")
                     throw TypeError(".chat.ChatInfo.From: object expected");
-                message.From = $root.common.PlayerBaseInfo.fromObject(object.From);
+                message.From = $root.common.UserBaseInfo.fromObject(object.From);
             }
             if (object.Content != null)
                 message.Content = String(object.Content);
@@ -450,7 +450,7 @@ $root.chat = (function() {
                 object.Content = "";
             }
             if (message.From != null && message.hasOwnProperty("From"))
-                object.From = $root.common.PlayerBaseInfo.toObject(message.From, options);
+                object.From = $root.common.UserBaseInfo.toObject(message.From, options);
             if (message.Content != null && message.hasOwnProperty("Content"))
                 object.Content = message.Content;
             return object;
@@ -772,27 +772,27 @@ $root.common = (function() {
         return values;
     })();
 
-    common.PlayerBaseInfo = (function() {
+    common.UserBaseInfo = (function() {
 
         /**
-         * Properties of a PlayerBaseInfo.
+         * Properties of a UserBaseInfo.
          * @memberof common
-         * @interface IPlayerBaseInfo
-         * @property {string|null} [Guid] PlayerBaseInfo Guid
-         * @property {string|null} [NickName] PlayerBaseInfo NickName
-         * @property {common.Gender|null} [Gender] PlayerBaseInfo Gender
-         * @property {string|null} [Avatar] PlayerBaseInfo Avatar
+         * @interface IUserBaseInfo
+         * @property {string|null} [Uid] UserBaseInfo Uid
+         * @property {string|null} [NickName] UserBaseInfo NickName
+         * @property {common.Gender|null} [Gender] UserBaseInfo Gender
+         * @property {string|null} [Avatar] UserBaseInfo Avatar
          */
 
         /**
-         * Constructs a new PlayerBaseInfo.
+         * Constructs a new UserBaseInfo.
          * @memberof common
-         * @classdesc Represents a PlayerBaseInfo.
-         * @implements IPlayerBaseInfo
+         * @classdesc Represents a UserBaseInfo.
+         * @implements IUserBaseInfo
          * @constructor
-         * @param {common.IPlayerBaseInfo=} [properties] Properties to set
+         * @param {common.IUserBaseInfo=} [properties] Properties to set
          */
-        function PlayerBaseInfo(properties) {
+        function UserBaseInfo(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -800,63 +800,63 @@ $root.common = (function() {
         }
 
         /**
-         * PlayerBaseInfo Guid.
-         * @member {string} Guid
-         * @memberof common.PlayerBaseInfo
+         * UserBaseInfo Uid.
+         * @member {string} Uid
+         * @memberof common.UserBaseInfo
          * @instance
          */
-        PlayerBaseInfo.prototype.Guid = "";
+        UserBaseInfo.prototype.Uid = "";
 
         /**
-         * PlayerBaseInfo NickName.
+         * UserBaseInfo NickName.
          * @member {string} NickName
-         * @memberof common.PlayerBaseInfo
+         * @memberof common.UserBaseInfo
          * @instance
          */
-        PlayerBaseInfo.prototype.NickName = "";
+        UserBaseInfo.prototype.NickName = "";
 
         /**
-         * PlayerBaseInfo Gender.
+         * UserBaseInfo Gender.
          * @member {common.Gender} Gender
-         * @memberof common.PlayerBaseInfo
+         * @memberof common.UserBaseInfo
          * @instance
          */
-        PlayerBaseInfo.prototype.Gender = 0;
+        UserBaseInfo.prototype.Gender = 0;
 
         /**
-         * PlayerBaseInfo Avatar.
+         * UserBaseInfo Avatar.
          * @member {string} Avatar
-         * @memberof common.PlayerBaseInfo
+         * @memberof common.UserBaseInfo
          * @instance
          */
-        PlayerBaseInfo.prototype.Avatar = "";
+        UserBaseInfo.prototype.Avatar = "";
 
         /**
-         * Creates a new PlayerBaseInfo instance using the specified properties.
+         * Creates a new UserBaseInfo instance using the specified properties.
          * @function create
-         * @memberof common.PlayerBaseInfo
+         * @memberof common.UserBaseInfo
          * @static
-         * @param {common.IPlayerBaseInfo=} [properties] Properties to set
-         * @returns {common.PlayerBaseInfo} PlayerBaseInfo instance
+         * @param {common.IUserBaseInfo=} [properties] Properties to set
+         * @returns {common.UserBaseInfo} UserBaseInfo instance
          */
-        PlayerBaseInfo.create = function create(properties) {
-            return new PlayerBaseInfo(properties);
+        UserBaseInfo.create = function create(properties) {
+            return new UserBaseInfo(properties);
         };
 
         /**
-         * Encodes the specified PlayerBaseInfo message. Does not implicitly {@link common.PlayerBaseInfo.verify|verify} messages.
+         * Encodes the specified UserBaseInfo message. Does not implicitly {@link common.UserBaseInfo.verify|verify} messages.
          * @function encode
-         * @memberof common.PlayerBaseInfo
+         * @memberof common.UserBaseInfo
          * @static
-         * @param {common.IPlayerBaseInfo} message PlayerBaseInfo message or plain object to encode
+         * @param {common.IUserBaseInfo} message UserBaseInfo message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        PlayerBaseInfo.encode = function encode(message, writer) {
+        UserBaseInfo.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.Guid != null && Object.hasOwnProperty.call(message, "Guid"))
-                writer.uint32(/* id 1, wireType 2 =*/10).string(message.Guid);
+            if (message.Uid != null && Object.hasOwnProperty.call(message, "Uid"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.Uid);
             if (message.NickName != null && Object.hasOwnProperty.call(message, "NickName"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.NickName);
             if (message.Gender != null && Object.hasOwnProperty.call(message, "Gender"))
@@ -867,38 +867,38 @@ $root.common = (function() {
         };
 
         /**
-         * Encodes the specified PlayerBaseInfo message, length delimited. Does not implicitly {@link common.PlayerBaseInfo.verify|verify} messages.
+         * Encodes the specified UserBaseInfo message, length delimited. Does not implicitly {@link common.UserBaseInfo.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof common.PlayerBaseInfo
+         * @memberof common.UserBaseInfo
          * @static
-         * @param {common.IPlayerBaseInfo} message PlayerBaseInfo message or plain object to encode
+         * @param {common.IUserBaseInfo} message UserBaseInfo message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        PlayerBaseInfo.encodeDelimited = function encodeDelimited(message, writer) {
+        UserBaseInfo.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a PlayerBaseInfo message from the specified reader or buffer.
+         * Decodes a UserBaseInfo message from the specified reader or buffer.
          * @function decode
-         * @memberof common.PlayerBaseInfo
+         * @memberof common.UserBaseInfo
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {common.PlayerBaseInfo} PlayerBaseInfo
+         * @returns {common.UserBaseInfo} UserBaseInfo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        PlayerBaseInfo.decode = function decode(reader, length) {
+        UserBaseInfo.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.common.PlayerBaseInfo();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.common.UserBaseInfo();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 1:
-                    message.Guid = reader.string();
+                    message.Uid = reader.string();
                     break;
                 case 2:
                     message.NickName = reader.string();
@@ -918,35 +918,35 @@ $root.common = (function() {
         };
 
         /**
-         * Decodes a PlayerBaseInfo message from the specified reader or buffer, length delimited.
+         * Decodes a UserBaseInfo message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof common.PlayerBaseInfo
+         * @memberof common.UserBaseInfo
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {common.PlayerBaseInfo} PlayerBaseInfo
+         * @returns {common.UserBaseInfo} UserBaseInfo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        PlayerBaseInfo.decodeDelimited = function decodeDelimited(reader) {
+        UserBaseInfo.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a PlayerBaseInfo message.
+         * Verifies a UserBaseInfo message.
          * @function verify
-         * @memberof common.PlayerBaseInfo
+         * @memberof common.UserBaseInfo
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        PlayerBaseInfo.verify = function verify(message) {
+        UserBaseInfo.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.Guid != null && message.hasOwnProperty("Guid"))
-                if (!$util.isString(message.Guid))
-                    return "Guid: string expected";
+            if (message.Uid != null && message.hasOwnProperty("Uid"))
+                if (!$util.isString(message.Uid))
+                    return "Uid: string expected";
             if (message.NickName != null && message.hasOwnProperty("NickName"))
                 if (!$util.isString(message.NickName))
                     return "NickName: string expected";
@@ -966,19 +966,19 @@ $root.common = (function() {
         };
 
         /**
-         * Creates a PlayerBaseInfo message from a plain object. Also converts values to their respective internal types.
+         * Creates a UserBaseInfo message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof common.PlayerBaseInfo
+         * @memberof common.UserBaseInfo
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {common.PlayerBaseInfo} PlayerBaseInfo
+         * @returns {common.UserBaseInfo} UserBaseInfo
          */
-        PlayerBaseInfo.fromObject = function fromObject(object) {
-            if (object instanceof $root.common.PlayerBaseInfo)
+        UserBaseInfo.fromObject = function fromObject(object) {
+            if (object instanceof $root.common.UserBaseInfo)
                 return object;
-            var message = new $root.common.PlayerBaseInfo();
-            if (object.Guid != null)
-                message.Guid = String(object.Guid);
+            var message = new $root.common.UserBaseInfo();
+            if (object.Uid != null)
+                message.Uid = String(object.Uid);
             if (object.NickName != null)
                 message.NickName = String(object.NickName);
             switch (object.Gender) {
@@ -1001,26 +1001,26 @@ $root.common = (function() {
         };
 
         /**
-         * Creates a plain object from a PlayerBaseInfo message. Also converts values to other types if specified.
+         * Creates a plain object from a UserBaseInfo message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof common.PlayerBaseInfo
+         * @memberof common.UserBaseInfo
          * @static
-         * @param {common.PlayerBaseInfo} message PlayerBaseInfo
+         * @param {common.UserBaseInfo} message UserBaseInfo
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        PlayerBaseInfo.toObject = function toObject(message, options) {
+        UserBaseInfo.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
             if (options.defaults) {
-                object.Guid = "";
+                object.Uid = "";
                 object.NickName = "";
                 object.Gender = options.enums === String ? "Unknow" : 0;
                 object.Avatar = "";
             }
-            if (message.Guid != null && message.hasOwnProperty("Guid"))
-                object.Guid = message.Guid;
+            if (message.Uid != null && message.hasOwnProperty("Uid"))
+                object.Uid = message.Uid;
             if (message.NickName != null && message.hasOwnProperty("NickName"))
                 object.NickName = message.NickName;
             if (message.Gender != null && message.hasOwnProperty("Gender"))
@@ -1031,17 +1031,17 @@ $root.common = (function() {
         };
 
         /**
-         * Converts this PlayerBaseInfo to JSON.
+         * Converts this UserBaseInfo to JSON.
          * @function toJSON
-         * @memberof common.PlayerBaseInfo
+         * @memberof common.UserBaseInfo
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        PlayerBaseInfo.prototype.toJSON = function toJSON() {
+        UserBaseInfo.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return PlayerBaseInfo;
+        return UserBaseInfo;
     })();
 
     return common;
@@ -2971,24 +2971,24 @@ $root.lobby = (function() {
      */
     var lobby = {};
 
-    lobby.ReqAuth = (function() {
+    lobby.ReqBind = (function() {
 
         /**
-         * Properties of a ReqAuth.
+         * Properties of a ReqBind.
          * @memberof lobby
-         * @interface IReqAuth
-         * @property {string|null} [Token] ReqAuth Token
+         * @interface IReqBind
+         * @property {string|null} [Token] ReqBind Token
          */
 
         /**
-         * Constructs a new ReqAuth.
+         * Constructs a new ReqBind.
          * @memberof lobby
-         * @classdesc Represents a ReqAuth.
-         * @implements IReqAuth
+         * @classdesc Represents a ReqBind.
+         * @implements IReqBind
          * @constructor
-         * @param {lobby.IReqAuth=} [properties] Properties to set
+         * @param {lobby.IReqBind=} [properties] Properties to set
          */
-        function ReqAuth(properties) {
+        function ReqBind(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -2996,35 +2996,35 @@ $root.lobby = (function() {
         }
 
         /**
-         * ReqAuth Token.
+         * ReqBind Token.
          * @member {string} Token
-         * @memberof lobby.ReqAuth
+         * @memberof lobby.ReqBind
          * @instance
          */
-        ReqAuth.prototype.Token = "";
+        ReqBind.prototype.Token = "";
 
         /**
-         * Creates a new ReqAuth instance using the specified properties.
+         * Creates a new ReqBind instance using the specified properties.
          * @function create
-         * @memberof lobby.ReqAuth
+         * @memberof lobby.ReqBind
          * @static
-         * @param {lobby.IReqAuth=} [properties] Properties to set
-         * @returns {lobby.ReqAuth} ReqAuth instance
+         * @param {lobby.IReqBind=} [properties] Properties to set
+         * @returns {lobby.ReqBind} ReqBind instance
          */
-        ReqAuth.create = function create(properties) {
-            return new ReqAuth(properties);
+        ReqBind.create = function create(properties) {
+            return new ReqBind(properties);
         };
 
         /**
-         * Encodes the specified ReqAuth message. Does not implicitly {@link lobby.ReqAuth.verify|verify} messages.
+         * Encodes the specified ReqBind message. Does not implicitly {@link lobby.ReqBind.verify|verify} messages.
          * @function encode
-         * @memberof lobby.ReqAuth
+         * @memberof lobby.ReqBind
          * @static
-         * @param {lobby.IReqAuth} message ReqAuth message or plain object to encode
+         * @param {lobby.IReqBind} message ReqBind message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        ReqAuth.encode = function encode(message, writer) {
+        ReqBind.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Token != null && Object.hasOwnProperty.call(message, "Token"))
@@ -3033,33 +3033,33 @@ $root.lobby = (function() {
         };
 
         /**
-         * Encodes the specified ReqAuth message, length delimited. Does not implicitly {@link lobby.ReqAuth.verify|verify} messages.
+         * Encodes the specified ReqBind message, length delimited. Does not implicitly {@link lobby.ReqBind.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof lobby.ReqAuth
+         * @memberof lobby.ReqBind
          * @static
-         * @param {lobby.IReqAuth} message ReqAuth message or plain object to encode
+         * @param {lobby.IReqBind} message ReqBind message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        ReqAuth.encodeDelimited = function encodeDelimited(message, writer) {
+        ReqBind.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a ReqAuth message from the specified reader or buffer.
+         * Decodes a ReqBind message from the specified reader or buffer.
          * @function decode
-         * @memberof lobby.ReqAuth
+         * @memberof lobby.ReqBind
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {lobby.ReqAuth} ReqAuth
+         * @returns {lobby.ReqBind} ReqBind
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        ReqAuth.decode = function decode(reader, length) {
+        ReqBind.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.lobby.ReqAuth();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.lobby.ReqBind();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -3075,30 +3075,30 @@ $root.lobby = (function() {
         };
 
         /**
-         * Decodes a ReqAuth message from the specified reader or buffer, length delimited.
+         * Decodes a ReqBind message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof lobby.ReqAuth
+         * @memberof lobby.ReqBind
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {lobby.ReqAuth} ReqAuth
+         * @returns {lobby.ReqBind} ReqBind
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        ReqAuth.decodeDelimited = function decodeDelimited(reader) {
+        ReqBind.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a ReqAuth message.
+         * Verifies a ReqBind message.
          * @function verify
-         * @memberof lobby.ReqAuth
+         * @memberof lobby.ReqBind
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        ReqAuth.verify = function verify(message) {
+        ReqBind.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Token != null && message.hasOwnProperty("Token"))
@@ -3108,32 +3108,32 @@ $root.lobby = (function() {
         };
 
         /**
-         * Creates a ReqAuth message from a plain object. Also converts values to their respective internal types.
+         * Creates a ReqBind message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof lobby.ReqAuth
+         * @memberof lobby.ReqBind
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {lobby.ReqAuth} ReqAuth
+         * @returns {lobby.ReqBind} ReqBind
          */
-        ReqAuth.fromObject = function fromObject(object) {
-            if (object instanceof $root.lobby.ReqAuth)
+        ReqBind.fromObject = function fromObject(object) {
+            if (object instanceof $root.lobby.ReqBind)
                 return object;
-            var message = new $root.lobby.ReqAuth();
+            var message = new $root.lobby.ReqBind();
             if (object.Token != null)
                 message.Token = String(object.Token);
             return message;
         };
 
         /**
-         * Creates a plain object from a ReqAuth message. Also converts values to other types if specified.
+         * Creates a plain object from a ReqBind message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof lobby.ReqAuth
+         * @memberof lobby.ReqBind
          * @static
-         * @param {lobby.ReqAuth} message ReqAuth
+         * @param {lobby.ReqBind} message ReqBind
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        ReqAuth.toObject = function toObject(message, options) {
+        ReqBind.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -3145,38 +3145,37 @@ $root.lobby = (function() {
         };
 
         /**
-         * Converts this ReqAuth to JSON.
+         * Converts this ReqBind to JSON.
          * @function toJSON
-         * @memberof lobby.ReqAuth
+         * @memberof lobby.ReqBind
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        ReqAuth.prototype.toJSON = function toJSON() {
+        ReqBind.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return ReqAuth;
+        return ReqBind;
     })();
 
-    lobby.RespAuth = (function() {
+    lobby.RespBind = (function() {
 
         /**
-         * Properties of a RespAuth.
+         * Properties of a RespBind.
          * @memberof lobby
-         * @interface IRespAuth
-         * @property {common.ErrorCode|null} [ErrCode] RespAuth ErrCode
-         * @property {common.IPlayerBaseInfo|null} [BaseInfo] RespAuth BaseInfo
+         * @interface IRespBind
+         * @property {common.ErrorCode|null} [ErrCode] RespBind ErrCode
          */
 
         /**
-         * Constructs a new RespAuth.
+         * Constructs a new RespBind.
          * @memberof lobby
-         * @classdesc Represents a RespAuth.
-         * @implements IRespAuth
+         * @classdesc Represents a RespBind.
+         * @implements IRespBind
          * @constructor
-         * @param {lobby.IRespAuth=} [properties] Properties to set
+         * @param {lobby.IRespBind=} [properties] Properties to set
          */
-        function RespAuth(properties) {
+        function RespBind(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -3184,88 +3183,75 @@ $root.lobby = (function() {
         }
 
         /**
-         * RespAuth ErrCode.
+         * RespBind ErrCode.
          * @member {common.ErrorCode} ErrCode
-         * @memberof lobby.RespAuth
+         * @memberof lobby.RespBind
          * @instance
          */
-        RespAuth.prototype.ErrCode = 0;
+        RespBind.prototype.ErrCode = 0;
 
         /**
-         * RespAuth BaseInfo.
-         * @member {common.IPlayerBaseInfo|null|undefined} BaseInfo
-         * @memberof lobby.RespAuth
-         * @instance
-         */
-        RespAuth.prototype.BaseInfo = null;
-
-        /**
-         * Creates a new RespAuth instance using the specified properties.
+         * Creates a new RespBind instance using the specified properties.
          * @function create
-         * @memberof lobby.RespAuth
+         * @memberof lobby.RespBind
          * @static
-         * @param {lobby.IRespAuth=} [properties] Properties to set
-         * @returns {lobby.RespAuth} RespAuth instance
+         * @param {lobby.IRespBind=} [properties] Properties to set
+         * @returns {lobby.RespBind} RespBind instance
          */
-        RespAuth.create = function create(properties) {
-            return new RespAuth(properties);
+        RespBind.create = function create(properties) {
+            return new RespBind(properties);
         };
 
         /**
-         * Encodes the specified RespAuth message. Does not implicitly {@link lobby.RespAuth.verify|verify} messages.
+         * Encodes the specified RespBind message. Does not implicitly {@link lobby.RespBind.verify|verify} messages.
          * @function encode
-         * @memberof lobby.RespAuth
+         * @memberof lobby.RespBind
          * @static
-         * @param {lobby.IRespAuth} message RespAuth message or plain object to encode
+         * @param {lobby.IRespBind} message RespBind message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        RespAuth.encode = function encode(message, writer) {
+        RespBind.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.ErrCode != null && Object.hasOwnProperty.call(message, "ErrCode"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.ErrCode);
-            if (message.BaseInfo != null && Object.hasOwnProperty.call(message, "BaseInfo"))
-                $root.common.PlayerBaseInfo.encode(message.BaseInfo, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
             return writer;
         };
 
         /**
-         * Encodes the specified RespAuth message, length delimited. Does not implicitly {@link lobby.RespAuth.verify|verify} messages.
+         * Encodes the specified RespBind message, length delimited. Does not implicitly {@link lobby.RespBind.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof lobby.RespAuth
+         * @memberof lobby.RespBind
          * @static
-         * @param {lobby.IRespAuth} message RespAuth message or plain object to encode
+         * @param {lobby.IRespBind} message RespBind message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        RespAuth.encodeDelimited = function encodeDelimited(message, writer) {
+        RespBind.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a RespAuth message from the specified reader or buffer.
+         * Decodes a RespBind message from the specified reader or buffer.
          * @function decode
-         * @memberof lobby.RespAuth
+         * @memberof lobby.RespBind
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {lobby.RespAuth} RespAuth
+         * @returns {lobby.RespBind} RespBind
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        RespAuth.decode = function decode(reader, length) {
+        RespBind.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.lobby.RespAuth();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.lobby.RespBind();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 1:
                     message.ErrCode = reader.int32();
-                    break;
-                case 2:
-                    message.BaseInfo = $root.common.PlayerBaseInfo.decode(reader, reader.uint32());
                     break;
                 default:
                     reader.skipType(tag & 7);
@@ -3276,30 +3262,30 @@ $root.lobby = (function() {
         };
 
         /**
-         * Decodes a RespAuth message from the specified reader or buffer, length delimited.
+         * Decodes a RespBind message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof lobby.RespAuth
+         * @memberof lobby.RespBind
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {lobby.RespAuth} RespAuth
+         * @returns {lobby.RespBind} RespBind
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        RespAuth.decodeDelimited = function decodeDelimited(reader) {
+        RespBind.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a RespAuth message.
+         * Verifies a RespBind message.
          * @function verify
-         * @memberof lobby.RespAuth
+         * @memberof lobby.RespBind
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        RespAuth.verify = function verify(message) {
+        RespBind.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.ErrCode != null && message.hasOwnProperty("ErrCode"))
@@ -3316,26 +3302,21 @@ $root.lobby = (function() {
                 case 7:
                     break;
                 }
-            if (message.BaseInfo != null && message.hasOwnProperty("BaseInfo")) {
-                var error = $root.common.PlayerBaseInfo.verify(message.BaseInfo);
-                if (error)
-                    return "BaseInfo." + error;
-            }
             return null;
         };
 
         /**
-         * Creates a RespAuth message from a plain object. Also converts values to their respective internal types.
+         * Creates a RespBind message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof lobby.RespAuth
+         * @memberof lobby.RespBind
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {lobby.RespAuth} RespAuth
+         * @returns {lobby.RespBind} RespBind
          */
-        RespAuth.fromObject = function fromObject(object) {
-            if (object instanceof $root.lobby.RespAuth)
+        RespBind.fromObject = function fromObject(object) {
+            if (object instanceof $root.lobby.RespBind)
                 return object;
-            var message = new $root.lobby.RespAuth();
+            var message = new $root.lobby.RespBind();
             switch (object.ErrCode) {
             case "Default":
             case 0:
@@ -3370,50 +3351,393 @@ $root.lobby = (function() {
                 message.ErrCode = 7;
                 break;
             }
-            if (object.BaseInfo != null) {
-                if (typeof object.BaseInfo !== "object")
-                    throw TypeError(".lobby.RespAuth.BaseInfo: object expected");
-                message.BaseInfo = $root.common.PlayerBaseInfo.fromObject(object.BaseInfo);
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a RespBind message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof lobby.RespBind
+         * @static
+         * @param {lobby.RespBind} message RespBind
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        RespBind.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.defaults)
+                object.ErrCode = options.enums === String ? "Default" : 0;
+            if (message.ErrCode != null && message.hasOwnProperty("ErrCode"))
+                object.ErrCode = options.enums === String ? $root.common.ErrorCode[message.ErrCode] : message.ErrCode;
+            return object;
+        };
+
+        /**
+         * Converts this RespBind to JSON.
+         * @function toJSON
+         * @memberof lobby.RespBind
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        RespBind.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return RespBind;
+    })();
+
+    lobby.ReqUserInfo = (function() {
+
+        /**
+         * Properties of a ReqUserInfo.
+         * @memberof lobby
+         * @interface IReqUserInfo
+         */
+
+        /**
+         * Constructs a new ReqUserInfo.
+         * @memberof lobby
+         * @classdesc Represents a ReqUserInfo.
+         * @implements IReqUserInfo
+         * @constructor
+         * @param {lobby.IReqUserInfo=} [properties] Properties to set
+         */
+        function ReqUserInfo(properties) {
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * Creates a new ReqUserInfo instance using the specified properties.
+         * @function create
+         * @memberof lobby.ReqUserInfo
+         * @static
+         * @param {lobby.IReqUserInfo=} [properties] Properties to set
+         * @returns {lobby.ReqUserInfo} ReqUserInfo instance
+         */
+        ReqUserInfo.create = function create(properties) {
+            return new ReqUserInfo(properties);
+        };
+
+        /**
+         * Encodes the specified ReqUserInfo message. Does not implicitly {@link lobby.ReqUserInfo.verify|verify} messages.
+         * @function encode
+         * @memberof lobby.ReqUserInfo
+         * @static
+         * @param {lobby.IReqUserInfo} message ReqUserInfo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ReqUserInfo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            return writer;
+        };
+
+        /**
+         * Encodes the specified ReqUserInfo message, length delimited. Does not implicitly {@link lobby.ReqUserInfo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof lobby.ReqUserInfo
+         * @static
+         * @param {lobby.IReqUserInfo} message ReqUserInfo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ReqUserInfo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a ReqUserInfo message from the specified reader or buffer.
+         * @function decode
+         * @memberof lobby.ReqUserInfo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {lobby.ReqUserInfo} ReqUserInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ReqUserInfo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.lobby.ReqUserInfo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
             }
             return message;
         };
 
         /**
-         * Creates a plain object from a RespAuth message. Also converts values to other types if specified.
-         * @function toObject
-         * @memberof lobby.RespAuth
+         * Decodes a ReqUserInfo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof lobby.ReqUserInfo
          * @static
-         * @param {lobby.RespAuth} message RespAuth
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {lobby.ReqUserInfo} ReqUserInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ReqUserInfo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a ReqUserInfo message.
+         * @function verify
+         * @memberof lobby.ReqUserInfo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        ReqUserInfo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            return null;
+        };
+
+        /**
+         * Creates a ReqUserInfo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof lobby.ReqUserInfo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {lobby.ReqUserInfo} ReqUserInfo
+         */
+        ReqUserInfo.fromObject = function fromObject(object) {
+            if (object instanceof $root.lobby.ReqUserInfo)
+                return object;
+            return new $root.lobby.ReqUserInfo();
+        };
+
+        /**
+         * Creates a plain object from a ReqUserInfo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof lobby.ReqUserInfo
+         * @static
+         * @param {lobby.ReqUserInfo} message ReqUserInfo
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        RespAuth.toObject = function toObject(message, options) {
+        ReqUserInfo.toObject = function toObject() {
+            return {};
+        };
+
+        /**
+         * Converts this ReqUserInfo to JSON.
+         * @function toJSON
+         * @memberof lobby.ReqUserInfo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        ReqUserInfo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return ReqUserInfo;
+    })();
+
+    lobby.RespUserInfo = (function() {
+
+        /**
+         * Properties of a RespUserInfo.
+         * @memberof lobby
+         * @interface IRespUserInfo
+         * @property {common.IUserBaseInfo|null} [BaseInfo] RespUserInfo BaseInfo
+         */
+
+        /**
+         * Constructs a new RespUserInfo.
+         * @memberof lobby
+         * @classdesc Represents a RespUserInfo.
+         * @implements IRespUserInfo
+         * @constructor
+         * @param {lobby.IRespUserInfo=} [properties] Properties to set
+         */
+        function RespUserInfo(properties) {
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * RespUserInfo BaseInfo.
+         * @member {common.IUserBaseInfo|null|undefined} BaseInfo
+         * @memberof lobby.RespUserInfo
+         * @instance
+         */
+        RespUserInfo.prototype.BaseInfo = null;
+
+        /**
+         * Creates a new RespUserInfo instance using the specified properties.
+         * @function create
+         * @memberof lobby.RespUserInfo
+         * @static
+         * @param {lobby.IRespUserInfo=} [properties] Properties to set
+         * @returns {lobby.RespUserInfo} RespUserInfo instance
+         */
+        RespUserInfo.create = function create(properties) {
+            return new RespUserInfo(properties);
+        };
+
+        /**
+         * Encodes the specified RespUserInfo message. Does not implicitly {@link lobby.RespUserInfo.verify|verify} messages.
+         * @function encode
+         * @memberof lobby.RespUserInfo
+         * @static
+         * @param {lobby.IRespUserInfo} message RespUserInfo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        RespUserInfo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.BaseInfo != null && Object.hasOwnProperty.call(message, "BaseInfo"))
+                $root.common.UserBaseInfo.encode(message.BaseInfo, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+            return writer;
+        };
+
+        /**
+         * Encodes the specified RespUserInfo message, length delimited. Does not implicitly {@link lobby.RespUserInfo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof lobby.RespUserInfo
+         * @static
+         * @param {lobby.IRespUserInfo} message RespUserInfo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        RespUserInfo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a RespUserInfo message from the specified reader or buffer.
+         * @function decode
+         * @memberof lobby.RespUserInfo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {lobby.RespUserInfo} RespUserInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        RespUserInfo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.lobby.RespUserInfo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1:
+                    message.BaseInfo = $root.common.UserBaseInfo.decode(reader, reader.uint32());
+                    break;
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a RespUserInfo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof lobby.RespUserInfo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {lobby.RespUserInfo} RespUserInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        RespUserInfo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a RespUserInfo message.
+         * @function verify
+         * @memberof lobby.RespUserInfo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        RespUserInfo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.BaseInfo != null && message.hasOwnProperty("BaseInfo")) {
+                var error = $root.common.UserBaseInfo.verify(message.BaseInfo);
+                if (error)
+                    return "BaseInfo." + error;
+            }
+            return null;
+        };
+
+        /**
+         * Creates a RespUserInfo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof lobby.RespUserInfo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {lobby.RespUserInfo} RespUserInfo
+         */
+        RespUserInfo.fromObject = function fromObject(object) {
+            if (object instanceof $root.lobby.RespUserInfo)
+                return object;
+            var message = new $root.lobby.RespUserInfo();
+            if (object.BaseInfo != null) {
+                if (typeof object.BaseInfo !== "object")
+                    throw TypeError(".lobby.RespUserInfo.BaseInfo: object expected");
+                message.BaseInfo = $root.common.UserBaseInfo.fromObject(object.BaseInfo);
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a RespUserInfo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof lobby.RespUserInfo
+         * @static
+         * @param {lobby.RespUserInfo} message RespUserInfo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        RespUserInfo.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
-            if (options.defaults) {
-                object.ErrCode = options.enums === String ? "Default" : 0;
+            if (options.defaults)
                 object.BaseInfo = null;
-            }
-            if (message.ErrCode != null && message.hasOwnProperty("ErrCode"))
-                object.ErrCode = options.enums === String ? $root.common.ErrorCode[message.ErrCode] : message.ErrCode;
             if (message.BaseInfo != null && message.hasOwnProperty("BaseInfo"))
-                object.BaseInfo = $root.common.PlayerBaseInfo.toObject(message.BaseInfo, options);
+                object.BaseInfo = $root.common.UserBaseInfo.toObject(message.BaseInfo, options);
             return object;
         };
 
         /**
-         * Converts this RespAuth to JSON.
+         * Converts this RespUserInfo to JSON.
          * @function toJSON
-         * @memberof lobby.RespAuth
+         * @memberof lobby.RespUserInfo
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        RespAuth.prototype.toJSON = function toJSON() {
+        RespUserInfo.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return RespAuth;
+        return RespUserInfo;
     })();
 
     lobby.ReqLobbyInfo = (function() {
@@ -4497,973 +4821,6 @@ $root.lobby = (function() {
     })();
 
     return lobby;
-})();
-
-$root.rpc = (function() {
-
-    /**
-     * Namespace rpc.
-     * @exports rpc
-     * @namespace
-     */
-    var rpc = {};
-
-    rpc.ReqJoinChatGroup = (function() {
-
-        /**
-         * Properties of a ReqJoinChatGroup.
-         * @memberof rpc
-         * @interface IReqJoinChatGroup
-         * @property {chat.ChatGroup|null} [Group] ReqJoinChatGroup Group
-         * @property {string|null} [Tag] ReqJoinChatGroup Tag
-         * @property {common.IPlayerBaseInfo|null} [Player] ReqJoinChatGroup Player
-         */
-
-        /**
-         * Constructs a new ReqJoinChatGroup.
-         * @memberof rpc
-         * @classdesc Represents a ReqJoinChatGroup.
-         * @implements IReqJoinChatGroup
-         * @constructor
-         * @param {rpc.IReqJoinChatGroup=} [properties] Properties to set
-         */
-        function ReqJoinChatGroup(properties) {
-            if (properties)
-                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                    if (properties[keys[i]] != null)
-                        this[keys[i]] = properties[keys[i]];
-        }
-
-        /**
-         * ReqJoinChatGroup Group.
-         * @member {chat.ChatGroup} Group
-         * @memberof rpc.ReqJoinChatGroup
-         * @instance
-         */
-        ReqJoinChatGroup.prototype.Group = 0;
-
-        /**
-         * ReqJoinChatGroup Tag.
-         * @member {string} Tag
-         * @memberof rpc.ReqJoinChatGroup
-         * @instance
-         */
-        ReqJoinChatGroup.prototype.Tag = "";
-
-        /**
-         * ReqJoinChatGroup Player.
-         * @member {common.IPlayerBaseInfo|null|undefined} Player
-         * @memberof rpc.ReqJoinChatGroup
-         * @instance
-         */
-        ReqJoinChatGroup.prototype.Player = null;
-
-        /**
-         * Creates a new ReqJoinChatGroup instance using the specified properties.
-         * @function create
-         * @memberof rpc.ReqJoinChatGroup
-         * @static
-         * @param {rpc.IReqJoinChatGroup=} [properties] Properties to set
-         * @returns {rpc.ReqJoinChatGroup} ReqJoinChatGroup instance
-         */
-        ReqJoinChatGroup.create = function create(properties) {
-            return new ReqJoinChatGroup(properties);
-        };
-
-        /**
-         * Encodes the specified ReqJoinChatGroup message. Does not implicitly {@link rpc.ReqJoinChatGroup.verify|verify} messages.
-         * @function encode
-         * @memberof rpc.ReqJoinChatGroup
-         * @static
-         * @param {rpc.IReqJoinChatGroup} message ReqJoinChatGroup message or plain object to encode
-         * @param {$protobuf.Writer} [writer] Writer to encode to
-         * @returns {$protobuf.Writer} Writer
-         */
-        ReqJoinChatGroup.encode = function encode(message, writer) {
-            if (!writer)
-                writer = $Writer.create();
-            if (message.Group != null && Object.hasOwnProperty.call(message, "Group"))
-                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.Group);
-            if (message.Tag != null && Object.hasOwnProperty.call(message, "Tag"))
-                writer.uint32(/* id 2, wireType 2 =*/18).string(message.Tag);
-            if (message.Player != null && Object.hasOwnProperty.call(message, "Player"))
-                $root.common.PlayerBaseInfo.encode(message.Player, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-            return writer;
-        };
-
-        /**
-         * Encodes the specified ReqJoinChatGroup message, length delimited. Does not implicitly {@link rpc.ReqJoinChatGroup.verify|verify} messages.
-         * @function encodeDelimited
-         * @memberof rpc.ReqJoinChatGroup
-         * @static
-         * @param {rpc.IReqJoinChatGroup} message ReqJoinChatGroup message or plain object to encode
-         * @param {$protobuf.Writer} [writer] Writer to encode to
-         * @returns {$protobuf.Writer} Writer
-         */
-        ReqJoinChatGroup.encodeDelimited = function encodeDelimited(message, writer) {
-            return this.encode(message, writer).ldelim();
-        };
-
-        /**
-         * Decodes a ReqJoinChatGroup message from the specified reader or buffer.
-         * @function decode
-         * @memberof rpc.ReqJoinChatGroup
-         * @static
-         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @param {number} [length] Message length if known beforehand
-         * @returns {rpc.ReqJoinChatGroup} ReqJoinChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        ReqJoinChatGroup.decode = function decode(reader, length) {
-            if (!(reader instanceof $Reader))
-                reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.rpc.ReqJoinChatGroup();
-            while (reader.pos < end) {
-                var tag = reader.uint32();
-                switch (tag >>> 3) {
-                case 1:
-                    message.Group = reader.int32();
-                    break;
-                case 2:
-                    message.Tag = reader.string();
-                    break;
-                case 3:
-                    message.Player = $root.common.PlayerBaseInfo.decode(reader, reader.uint32());
-                    break;
-                default:
-                    reader.skipType(tag & 7);
-                    break;
-                }
-            }
-            return message;
-        };
-
-        /**
-         * Decodes a ReqJoinChatGroup message from the specified reader or buffer, length delimited.
-         * @function decodeDelimited
-         * @memberof rpc.ReqJoinChatGroup
-         * @static
-         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {rpc.ReqJoinChatGroup} ReqJoinChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        ReqJoinChatGroup.decodeDelimited = function decodeDelimited(reader) {
-            if (!(reader instanceof $Reader))
-                reader = new $Reader(reader);
-            return this.decode(reader, reader.uint32());
-        };
-
-        /**
-         * Verifies a ReqJoinChatGroup message.
-         * @function verify
-         * @memberof rpc.ReqJoinChatGroup
-         * @static
-         * @param {Object.<string,*>} message Plain object to verify
-         * @returns {string|null} `null` if valid, otherwise the reason why it is not
-         */
-        ReqJoinChatGroup.verify = function verify(message) {
-            if (typeof message !== "object" || message === null)
-                return "object expected";
-            if (message.Group != null && message.hasOwnProperty("Group"))
-                switch (message.Group) {
-                default:
-                    return "Group: enum value expected";
-                case 0:
-                case 1:
-                    break;
-                }
-            if (message.Tag != null && message.hasOwnProperty("Tag"))
-                if (!$util.isString(message.Tag))
-                    return "Tag: string expected";
-            if (message.Player != null && message.hasOwnProperty("Player")) {
-                var error = $root.common.PlayerBaseInfo.verify(message.Player);
-                if (error)
-                    return "Player." + error;
-            }
-            return null;
-        };
-
-        /**
-         * Creates a ReqJoinChatGroup message from a plain object. Also converts values to their respective internal types.
-         * @function fromObject
-         * @memberof rpc.ReqJoinChatGroup
-         * @static
-         * @param {Object.<string,*>} object Plain object
-         * @returns {rpc.ReqJoinChatGroup} ReqJoinChatGroup
-         */
-        ReqJoinChatGroup.fromObject = function fromObject(object) {
-            if (object instanceof $root.rpc.ReqJoinChatGroup)
-                return object;
-            var message = new $root.rpc.ReqJoinChatGroup();
-            switch (object.Group) {
-            case "World":
-            case 0:
-                message.Group = 0;
-                break;
-            case "Club":
-            case 1:
-                message.Group = 1;
-                break;
-            }
-            if (object.Tag != null)
-                message.Tag = String(object.Tag);
-            if (object.Player != null) {
-                if (typeof object.Player !== "object")
-                    throw TypeError(".rpc.ReqJoinChatGroup.Player: object expected");
-                message.Player = $root.common.PlayerBaseInfo.fromObject(object.Player);
-            }
-            return message;
-        };
-
-        /**
-         * Creates a plain object from a ReqJoinChatGroup message. Also converts values to other types if specified.
-         * @function toObject
-         * @memberof rpc.ReqJoinChatGroup
-         * @static
-         * @param {rpc.ReqJoinChatGroup} message ReqJoinChatGroup
-         * @param {$protobuf.IConversionOptions} [options] Conversion options
-         * @returns {Object.<string,*>} Plain object
-         */
-        ReqJoinChatGroup.toObject = function toObject(message, options) {
-            if (!options)
-                options = {};
-            var object = {};
-            if (options.defaults) {
-                object.Group = options.enums === String ? "World" : 0;
-                object.Tag = "";
-                object.Player = null;
-            }
-            if (message.Group != null && message.hasOwnProperty("Group"))
-                object.Group = options.enums === String ? $root.chat.ChatGroup[message.Group] : message.Group;
-            if (message.Tag != null && message.hasOwnProperty("Tag"))
-                object.Tag = message.Tag;
-            if (message.Player != null && message.hasOwnProperty("Player"))
-                object.Player = $root.common.PlayerBaseInfo.toObject(message.Player, options);
-            return object;
-        };
-
-        /**
-         * Converts this ReqJoinChatGroup to JSON.
-         * @function toJSON
-         * @memberof rpc.ReqJoinChatGroup
-         * @instance
-         * @returns {Object.<string,*>} JSON object
-         */
-        ReqJoinChatGroup.prototype.toJSON = function toJSON() {
-            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-        };
-
-        return ReqJoinChatGroup;
-    })();
-
-    rpc.RespJoinChatGroup = (function() {
-
-        /**
-         * Properties of a RespJoinChatGroup.
-         * @memberof rpc
-         * @interface IRespJoinChatGroup
-         * @property {common.ErrorCode|null} [ErrCode] RespJoinChatGroup ErrCode
-         */
-
-        /**
-         * Constructs a new RespJoinChatGroup.
-         * @memberof rpc
-         * @classdesc Represents a RespJoinChatGroup.
-         * @implements IRespJoinChatGroup
-         * @constructor
-         * @param {rpc.IRespJoinChatGroup=} [properties] Properties to set
-         */
-        function RespJoinChatGroup(properties) {
-            if (properties)
-                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                    if (properties[keys[i]] != null)
-                        this[keys[i]] = properties[keys[i]];
-        }
-
-        /**
-         * RespJoinChatGroup ErrCode.
-         * @member {common.ErrorCode} ErrCode
-         * @memberof rpc.RespJoinChatGroup
-         * @instance
-         */
-        RespJoinChatGroup.prototype.ErrCode = 0;
-
-        /**
-         * Creates a new RespJoinChatGroup instance using the specified properties.
-         * @function create
-         * @memberof rpc.RespJoinChatGroup
-         * @static
-         * @param {rpc.IRespJoinChatGroup=} [properties] Properties to set
-         * @returns {rpc.RespJoinChatGroup} RespJoinChatGroup instance
-         */
-        RespJoinChatGroup.create = function create(properties) {
-            return new RespJoinChatGroup(properties);
-        };
-
-        /**
-         * Encodes the specified RespJoinChatGroup message. Does not implicitly {@link rpc.RespJoinChatGroup.verify|verify} messages.
-         * @function encode
-         * @memberof rpc.RespJoinChatGroup
-         * @static
-         * @param {rpc.IRespJoinChatGroup} message RespJoinChatGroup message or plain object to encode
-         * @param {$protobuf.Writer} [writer] Writer to encode to
-         * @returns {$protobuf.Writer} Writer
-         */
-        RespJoinChatGroup.encode = function encode(message, writer) {
-            if (!writer)
-                writer = $Writer.create();
-            if (message.ErrCode != null && Object.hasOwnProperty.call(message, "ErrCode"))
-                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.ErrCode);
-            return writer;
-        };
-
-        /**
-         * Encodes the specified RespJoinChatGroup message, length delimited. Does not implicitly {@link rpc.RespJoinChatGroup.verify|verify} messages.
-         * @function encodeDelimited
-         * @memberof rpc.RespJoinChatGroup
-         * @static
-         * @param {rpc.IRespJoinChatGroup} message RespJoinChatGroup message or plain object to encode
-         * @param {$protobuf.Writer} [writer] Writer to encode to
-         * @returns {$protobuf.Writer} Writer
-         */
-        RespJoinChatGroup.encodeDelimited = function encodeDelimited(message, writer) {
-            return this.encode(message, writer).ldelim();
-        };
-
-        /**
-         * Decodes a RespJoinChatGroup message from the specified reader or buffer.
-         * @function decode
-         * @memberof rpc.RespJoinChatGroup
-         * @static
-         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @param {number} [length] Message length if known beforehand
-         * @returns {rpc.RespJoinChatGroup} RespJoinChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        RespJoinChatGroup.decode = function decode(reader, length) {
-            if (!(reader instanceof $Reader))
-                reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.rpc.RespJoinChatGroup();
-            while (reader.pos < end) {
-                var tag = reader.uint32();
-                switch (tag >>> 3) {
-                case 1:
-                    message.ErrCode = reader.int32();
-                    break;
-                default:
-                    reader.skipType(tag & 7);
-                    break;
-                }
-            }
-            return message;
-        };
-
-        /**
-         * Decodes a RespJoinChatGroup message from the specified reader or buffer, length delimited.
-         * @function decodeDelimited
-         * @memberof rpc.RespJoinChatGroup
-         * @static
-         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {rpc.RespJoinChatGroup} RespJoinChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        RespJoinChatGroup.decodeDelimited = function decodeDelimited(reader) {
-            if (!(reader instanceof $Reader))
-                reader = new $Reader(reader);
-            return this.decode(reader, reader.uint32());
-        };
-
-        /**
-         * Verifies a RespJoinChatGroup message.
-         * @function verify
-         * @memberof rpc.RespJoinChatGroup
-         * @static
-         * @param {Object.<string,*>} message Plain object to verify
-         * @returns {string|null} `null` if valid, otherwise the reason why it is not
-         */
-        RespJoinChatGroup.verify = function verify(message) {
-            if (typeof message !== "object" || message === null)
-                return "object expected";
-            if (message.ErrCode != null && message.hasOwnProperty("ErrCode"))
-                switch (message.ErrCode) {
-                default:
-                    return "ErrCode: enum value expected";
-                case 0:
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
-                case 6:
-                case 7:
-                    break;
-                }
-            return null;
-        };
-
-        /**
-         * Creates a RespJoinChatGroup message from a plain object. Also converts values to their respective internal types.
-         * @function fromObject
-         * @memberof rpc.RespJoinChatGroup
-         * @static
-         * @param {Object.<string,*>} object Plain object
-         * @returns {rpc.RespJoinChatGroup} RespJoinChatGroup
-         */
-        RespJoinChatGroup.fromObject = function fromObject(object) {
-            if (object instanceof $root.rpc.RespJoinChatGroup)
-                return object;
-            var message = new $root.rpc.RespJoinChatGroup();
-            switch (object.ErrCode) {
-            case "Default":
-            case 0:
-                message.ErrCode = 0;
-                break;
-            case "OK":
-            case 1:
-                message.ErrCode = 1;
-                break;
-            case "EntryError":
-            case 2:
-                message.ErrCode = 2;
-                break;
-            case "LoginAccountUnExistent":
-            case 3:
-                message.ErrCode = 3;
-                break;
-            case "LoginPasswordError":
-            case 4:
-                message.ErrCode = 4;
-                break;
-            case "RegisterAccountExit":
-            case 5:
-                message.ErrCode = 5;
-                break;
-            case "AuthFailed":
-            case 6:
-                message.ErrCode = 6;
-                break;
-            case "ChangePlayerInfoFailed":
-            case 7:
-                message.ErrCode = 7;
-                break;
-            }
-            return message;
-        };
-
-        /**
-         * Creates a plain object from a RespJoinChatGroup message. Also converts values to other types if specified.
-         * @function toObject
-         * @memberof rpc.RespJoinChatGroup
-         * @static
-         * @param {rpc.RespJoinChatGroup} message RespJoinChatGroup
-         * @param {$protobuf.IConversionOptions} [options] Conversion options
-         * @returns {Object.<string,*>} Plain object
-         */
-        RespJoinChatGroup.toObject = function toObject(message, options) {
-            if (!options)
-                options = {};
-            var object = {};
-            if (options.defaults)
-                object.ErrCode = options.enums === String ? "Default" : 0;
-            if (message.ErrCode != null && message.hasOwnProperty("ErrCode"))
-                object.ErrCode = options.enums === String ? $root.common.ErrorCode[message.ErrCode] : message.ErrCode;
-            return object;
-        };
-
-        /**
-         * Converts this RespJoinChatGroup to JSON.
-         * @function toJSON
-         * @memberof rpc.RespJoinChatGroup
-         * @instance
-         * @returns {Object.<string,*>} JSON object
-         */
-        RespJoinChatGroup.prototype.toJSON = function toJSON() {
-            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-        };
-
-        return RespJoinChatGroup;
-    })();
-
-    rpc.ReqLeaveChatGroup = (function() {
-
-        /**
-         * Properties of a ReqLeaveChatGroup.
-         * @memberof rpc
-         * @interface IReqLeaveChatGroup
-         * @property {chat.ChatGroup|null} [Group] ReqLeaveChatGroup Group
-         * @property {string|null} [Tag] ReqLeaveChatGroup Tag
-         * @property {string|null} [PlayerGuid] ReqLeaveChatGroup PlayerGuid
-         */
-
-        /**
-         * Constructs a new ReqLeaveChatGroup.
-         * @memberof rpc
-         * @classdesc Represents a ReqLeaveChatGroup.
-         * @implements IReqLeaveChatGroup
-         * @constructor
-         * @param {rpc.IReqLeaveChatGroup=} [properties] Properties to set
-         */
-        function ReqLeaveChatGroup(properties) {
-            if (properties)
-                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                    if (properties[keys[i]] != null)
-                        this[keys[i]] = properties[keys[i]];
-        }
-
-        /**
-         * ReqLeaveChatGroup Group.
-         * @member {chat.ChatGroup} Group
-         * @memberof rpc.ReqLeaveChatGroup
-         * @instance
-         */
-        ReqLeaveChatGroup.prototype.Group = 0;
-
-        /**
-         * ReqLeaveChatGroup Tag.
-         * @member {string} Tag
-         * @memberof rpc.ReqLeaveChatGroup
-         * @instance
-         */
-        ReqLeaveChatGroup.prototype.Tag = "";
-
-        /**
-         * ReqLeaveChatGroup PlayerGuid.
-         * @member {string} PlayerGuid
-         * @memberof rpc.ReqLeaveChatGroup
-         * @instance
-         */
-        ReqLeaveChatGroup.prototype.PlayerGuid = "";
-
-        /**
-         * Creates a new ReqLeaveChatGroup instance using the specified properties.
-         * @function create
-         * @memberof rpc.ReqLeaveChatGroup
-         * @static
-         * @param {rpc.IReqLeaveChatGroup=} [properties] Properties to set
-         * @returns {rpc.ReqLeaveChatGroup} ReqLeaveChatGroup instance
-         */
-        ReqLeaveChatGroup.create = function create(properties) {
-            return new ReqLeaveChatGroup(properties);
-        };
-
-        /**
-         * Encodes the specified ReqLeaveChatGroup message. Does not implicitly {@link rpc.ReqLeaveChatGroup.verify|verify} messages.
-         * @function encode
-         * @memberof rpc.ReqLeaveChatGroup
-         * @static
-         * @param {rpc.IReqLeaveChatGroup} message ReqLeaveChatGroup message or plain object to encode
-         * @param {$protobuf.Writer} [writer] Writer to encode to
-         * @returns {$protobuf.Writer} Writer
-         */
-        ReqLeaveChatGroup.encode = function encode(message, writer) {
-            if (!writer)
-                writer = $Writer.create();
-            if (message.Group != null && Object.hasOwnProperty.call(message, "Group"))
-                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.Group);
-            if (message.Tag != null && Object.hasOwnProperty.call(message, "Tag"))
-                writer.uint32(/* id 2, wireType 2 =*/18).string(message.Tag);
-            if (message.PlayerGuid != null && Object.hasOwnProperty.call(message, "PlayerGuid"))
-                writer.uint32(/* id 3, wireType 2 =*/26).string(message.PlayerGuid);
-            return writer;
-        };
-
-        /**
-         * Encodes the specified ReqLeaveChatGroup message, length delimited. Does not implicitly {@link rpc.ReqLeaveChatGroup.verify|verify} messages.
-         * @function encodeDelimited
-         * @memberof rpc.ReqLeaveChatGroup
-         * @static
-         * @param {rpc.IReqLeaveChatGroup} message ReqLeaveChatGroup message or plain object to encode
-         * @param {$protobuf.Writer} [writer] Writer to encode to
-         * @returns {$protobuf.Writer} Writer
-         */
-        ReqLeaveChatGroup.encodeDelimited = function encodeDelimited(message, writer) {
-            return this.encode(message, writer).ldelim();
-        };
-
-        /**
-         * Decodes a ReqLeaveChatGroup message from the specified reader or buffer.
-         * @function decode
-         * @memberof rpc.ReqLeaveChatGroup
-         * @static
-         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @param {number} [length] Message length if known beforehand
-         * @returns {rpc.ReqLeaveChatGroup} ReqLeaveChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        ReqLeaveChatGroup.decode = function decode(reader, length) {
-            if (!(reader instanceof $Reader))
-                reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.rpc.ReqLeaveChatGroup();
-            while (reader.pos < end) {
-                var tag = reader.uint32();
-                switch (tag >>> 3) {
-                case 1:
-                    message.Group = reader.int32();
-                    break;
-                case 2:
-                    message.Tag = reader.string();
-                    break;
-                case 3:
-                    message.PlayerGuid = reader.string();
-                    break;
-                default:
-                    reader.skipType(tag & 7);
-                    break;
-                }
-            }
-            return message;
-        };
-
-        /**
-         * Decodes a ReqLeaveChatGroup message from the specified reader or buffer, length delimited.
-         * @function decodeDelimited
-         * @memberof rpc.ReqLeaveChatGroup
-         * @static
-         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {rpc.ReqLeaveChatGroup} ReqLeaveChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        ReqLeaveChatGroup.decodeDelimited = function decodeDelimited(reader) {
-            if (!(reader instanceof $Reader))
-                reader = new $Reader(reader);
-            return this.decode(reader, reader.uint32());
-        };
-
-        /**
-         * Verifies a ReqLeaveChatGroup message.
-         * @function verify
-         * @memberof rpc.ReqLeaveChatGroup
-         * @static
-         * @param {Object.<string,*>} message Plain object to verify
-         * @returns {string|null} `null` if valid, otherwise the reason why it is not
-         */
-        ReqLeaveChatGroup.verify = function verify(message) {
-            if (typeof message !== "object" || message === null)
-                return "object expected";
-            if (message.Group != null && message.hasOwnProperty("Group"))
-                switch (message.Group) {
-                default:
-                    return "Group: enum value expected";
-                case 0:
-                case 1:
-                    break;
-                }
-            if (message.Tag != null && message.hasOwnProperty("Tag"))
-                if (!$util.isString(message.Tag))
-                    return "Tag: string expected";
-            if (message.PlayerGuid != null && message.hasOwnProperty("PlayerGuid"))
-                if (!$util.isString(message.PlayerGuid))
-                    return "PlayerGuid: string expected";
-            return null;
-        };
-
-        /**
-         * Creates a ReqLeaveChatGroup message from a plain object. Also converts values to their respective internal types.
-         * @function fromObject
-         * @memberof rpc.ReqLeaveChatGroup
-         * @static
-         * @param {Object.<string,*>} object Plain object
-         * @returns {rpc.ReqLeaveChatGroup} ReqLeaveChatGroup
-         */
-        ReqLeaveChatGroup.fromObject = function fromObject(object) {
-            if (object instanceof $root.rpc.ReqLeaveChatGroup)
-                return object;
-            var message = new $root.rpc.ReqLeaveChatGroup();
-            switch (object.Group) {
-            case "World":
-            case 0:
-                message.Group = 0;
-                break;
-            case "Club":
-            case 1:
-                message.Group = 1;
-                break;
-            }
-            if (object.Tag != null)
-                message.Tag = String(object.Tag);
-            if (object.PlayerGuid != null)
-                message.PlayerGuid = String(object.PlayerGuid);
-            return message;
-        };
-
-        /**
-         * Creates a plain object from a ReqLeaveChatGroup message. Also converts values to other types if specified.
-         * @function toObject
-         * @memberof rpc.ReqLeaveChatGroup
-         * @static
-         * @param {rpc.ReqLeaveChatGroup} message ReqLeaveChatGroup
-         * @param {$protobuf.IConversionOptions} [options] Conversion options
-         * @returns {Object.<string,*>} Plain object
-         */
-        ReqLeaveChatGroup.toObject = function toObject(message, options) {
-            if (!options)
-                options = {};
-            var object = {};
-            if (options.defaults) {
-                object.Group = options.enums === String ? "World" : 0;
-                object.Tag = "";
-                object.PlayerGuid = "";
-            }
-            if (message.Group != null && message.hasOwnProperty("Group"))
-                object.Group = options.enums === String ? $root.chat.ChatGroup[message.Group] : message.Group;
-            if (message.Tag != null && message.hasOwnProperty("Tag"))
-                object.Tag = message.Tag;
-            if (message.PlayerGuid != null && message.hasOwnProperty("PlayerGuid"))
-                object.PlayerGuid = message.PlayerGuid;
-            return object;
-        };
-
-        /**
-         * Converts this ReqLeaveChatGroup to JSON.
-         * @function toJSON
-         * @memberof rpc.ReqLeaveChatGroup
-         * @instance
-         * @returns {Object.<string,*>} JSON object
-         */
-        ReqLeaveChatGroup.prototype.toJSON = function toJSON() {
-            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-        };
-
-        return ReqLeaveChatGroup;
-    })();
-
-    rpc.RespLeaveChatGroup = (function() {
-
-        /**
-         * Properties of a RespLeaveChatGroup.
-         * @memberof rpc
-         * @interface IRespLeaveChatGroup
-         * @property {common.ErrorCode|null} [ErrCode] RespLeaveChatGroup ErrCode
-         */
-
-        /**
-         * Constructs a new RespLeaveChatGroup.
-         * @memberof rpc
-         * @classdesc Represents a RespLeaveChatGroup.
-         * @implements IRespLeaveChatGroup
-         * @constructor
-         * @param {rpc.IRespLeaveChatGroup=} [properties] Properties to set
-         */
-        function RespLeaveChatGroup(properties) {
-            if (properties)
-                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                    if (properties[keys[i]] != null)
-                        this[keys[i]] = properties[keys[i]];
-        }
-
-        /**
-         * RespLeaveChatGroup ErrCode.
-         * @member {common.ErrorCode} ErrCode
-         * @memberof rpc.RespLeaveChatGroup
-         * @instance
-         */
-        RespLeaveChatGroup.prototype.ErrCode = 0;
-
-        /**
-         * Creates a new RespLeaveChatGroup instance using the specified properties.
-         * @function create
-         * @memberof rpc.RespLeaveChatGroup
-         * @static
-         * @param {rpc.IRespLeaveChatGroup=} [properties] Properties to set
-         * @returns {rpc.RespLeaveChatGroup} RespLeaveChatGroup instance
-         */
-        RespLeaveChatGroup.create = function create(properties) {
-            return new RespLeaveChatGroup(properties);
-        };
-
-        /**
-         * Encodes the specified RespLeaveChatGroup message. Does not implicitly {@link rpc.RespLeaveChatGroup.verify|verify} messages.
-         * @function encode
-         * @memberof rpc.RespLeaveChatGroup
-         * @static
-         * @param {rpc.IRespLeaveChatGroup} message RespLeaveChatGroup message or plain object to encode
-         * @param {$protobuf.Writer} [writer] Writer to encode to
-         * @returns {$protobuf.Writer} Writer
-         */
-        RespLeaveChatGroup.encode = function encode(message, writer) {
-            if (!writer)
-                writer = $Writer.create();
-            if (message.ErrCode != null && Object.hasOwnProperty.call(message, "ErrCode"))
-                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.ErrCode);
-            return writer;
-        };
-
-        /**
-         * Encodes the specified RespLeaveChatGroup message, length delimited. Does not implicitly {@link rpc.RespLeaveChatGroup.verify|verify} messages.
-         * @function encodeDelimited
-         * @memberof rpc.RespLeaveChatGroup
-         * @static
-         * @param {rpc.IRespLeaveChatGroup} message RespLeaveChatGroup message or plain object to encode
-         * @param {$protobuf.Writer} [writer] Writer to encode to
-         * @returns {$protobuf.Writer} Writer
-         */
-        RespLeaveChatGroup.encodeDelimited = function encodeDelimited(message, writer) {
-            return this.encode(message, writer).ldelim();
-        };
-
-        /**
-         * Decodes a RespLeaveChatGroup message from the specified reader or buffer.
-         * @function decode
-         * @memberof rpc.RespLeaveChatGroup
-         * @static
-         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @param {number} [length] Message length if known beforehand
-         * @returns {rpc.RespLeaveChatGroup} RespLeaveChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        RespLeaveChatGroup.decode = function decode(reader, length) {
-            if (!(reader instanceof $Reader))
-                reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.rpc.RespLeaveChatGroup();
-            while (reader.pos < end) {
-                var tag = reader.uint32();
-                switch (tag >>> 3) {
-                case 1:
-                    message.ErrCode = reader.int32();
-                    break;
-                default:
-                    reader.skipType(tag & 7);
-                    break;
-                }
-            }
-            return message;
-        };
-
-        /**
-         * Decodes a RespLeaveChatGroup message from the specified reader or buffer, length delimited.
-         * @function decodeDelimited
-         * @memberof rpc.RespLeaveChatGroup
-         * @static
-         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {rpc.RespLeaveChatGroup} RespLeaveChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        RespLeaveChatGroup.decodeDelimited = function decodeDelimited(reader) {
-            if (!(reader instanceof $Reader))
-                reader = new $Reader(reader);
-            return this.decode(reader, reader.uint32());
-        };
-
-        /**
-         * Verifies a RespLeaveChatGroup message.
-         * @function verify
-         * @memberof rpc.RespLeaveChatGroup
-         * @static
-         * @param {Object.<string,*>} message Plain object to verify
-         * @returns {string|null} `null` if valid, otherwise the reason why it is not
-         */
-        RespLeaveChatGroup.verify = function verify(message) {
-            if (typeof message !== "object" || message === null)
-                return "object expected";
-            if (message.ErrCode != null && message.hasOwnProperty("ErrCode"))
-                switch (message.ErrCode) {
-                default:
-                    return "ErrCode: enum value expected";
-                case 0:
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
-                case 6:
-                case 7:
-                    break;
-                }
-            return null;
-        };
-
-        /**
-         * Creates a RespLeaveChatGroup message from a plain object. Also converts values to their respective internal types.
-         * @function fromObject
-         * @memberof rpc.RespLeaveChatGroup
-         * @static
-         * @param {Object.<string,*>} object Plain object
-         * @returns {rpc.RespLeaveChatGroup} RespLeaveChatGroup
-         */
-        RespLeaveChatGroup.fromObject = function fromObject(object) {
-            if (object instanceof $root.rpc.RespLeaveChatGroup)
-                return object;
-            var message = new $root.rpc.RespLeaveChatGroup();
-            switch (object.ErrCode) {
-            case "Default":
-            case 0:
-                message.ErrCode = 0;
-                break;
-            case "OK":
-            case 1:
-                message.ErrCode = 1;
-                break;
-            case "EntryError":
-            case 2:
-                message.ErrCode = 2;
-                break;
-            case "LoginAccountUnExistent":
-            case 3:
-                message.ErrCode = 3;
-                break;
-            case "LoginPasswordError":
-            case 4:
-                message.ErrCode = 4;
-                break;
-            case "RegisterAccountExit":
-            case 5:
-                message.ErrCode = 5;
-                break;
-            case "AuthFailed":
-            case 6:
-                message.ErrCode = 6;
-                break;
-            case "ChangePlayerInfoFailed":
-            case 7:
-                message.ErrCode = 7;
-                break;
-            }
-            return message;
-        };
-
-        /**
-         * Creates a plain object from a RespLeaveChatGroup message. Also converts values to other types if specified.
-         * @function toObject
-         * @memberof rpc.RespLeaveChatGroup
-         * @static
-         * @param {rpc.RespLeaveChatGroup} message RespLeaveChatGroup
-         * @param {$protobuf.IConversionOptions} [options] Conversion options
-         * @returns {Object.<string,*>} Plain object
-         */
-        RespLeaveChatGroup.toObject = function toObject(message, options) {
-            if (!options)
-                options = {};
-            var object = {};
-            if (options.defaults)
-                object.ErrCode = options.enums === String ? "Default" : 0;
-            if (message.ErrCode != null && message.hasOwnProperty("ErrCode"))
-                object.ErrCode = options.enums === String ? $root.common.ErrorCode[message.ErrCode] : message.ErrCode;
-            return object;
-        };
-
-        /**
-         * Converts this RespLeaveChatGroup to JSON.
-         * @function toJSON
-         * @memberof rpc.RespLeaveChatGroup
-         * @instance
-         * @returns {Object.<string,*>} JSON object
-         */
-        RespLeaveChatGroup.prototype.toJSON = function toJSON() {
-            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-        };
-
-        return RespLeaveChatGroup;
-    })();
-
-    return rpc;
 })();
 
 module.exports = $root;

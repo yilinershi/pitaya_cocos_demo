@@ -3478,3 +3478,144 @@ Class ID: "485b2sC+f5DRKn/QBvMMJil"
     at http://localhost:7456/scripting/systemjs/system.js:336:39
     at Array.map (<anonymous>)
     at http://localhost:7456/scripting/systemjs/system.js:334:43
+2022-08-06T11:27:53.936Z - log: [Package] menu@1.0.0 enable
+2022-08-06T11:27:53.938Z - log: [Package] profile@1.0.0 enable
+2022-08-06T11:27:53.945Z - log: [Package] project@1.0.2 enable
+2022-08-06T11:27:53.948Z - log: [Package] messages@1.0.0 enable
+2022-08-06T11:27:53.950Z - log: [Package] program@1.0.0 enable
+2022-08-06T11:27:53.954Z - log: [Package] tester@1.0.0 enable
+2022-08-06T11:27:53.956Z - log: [Package] preferences@1.0.0 enable
+2022-08-06T11:27:54.300Z - log: Setup mods mgr.: 159.348ms
+2022-08-06T11:27:54.324Z - verbose: [Engine] QuickCompile engine (330ms)
+2022-08-06T11:27:54.326Z - log: [Package] engine@1.0.6 enable
+2022-08-06T11:27:54.885Z - log: [Package] programming@1.0.0 enable
+2022-08-06T11:27:55.160Z - log: [Package] device@1.0.1 enable
+2022-08-06T11:27:55.187Z - log: [Package] ui-kit@1.0.1 enable
+2022-08-06T11:27:55.212Z - log: [Package] engine-extends@1.0.0 enable
+2022-08-06T11:27:55.255Z - log: [Package] asset-db@1.0.0 enable
+2022-08-06T11:27:55.287Z - log: [Package] scene@1.0.0 enable
+2022-08-06T11:27:55.395Z - log: [Package] server@1.0.0 enable
+2022-08-06T11:27:55.419Z - log: [Package] utils@1.0.0 enable
+2022-08-06T11:27:57.570Z - log: [Package] preview@1.0.1 enable
+2022-08-06T11:27:57.600Z - log: [Package] animator@1.0.0 enable
+2022-08-06T11:27:58.200Z - log: [Package] builder@1.3.2 enable
+2022-08-06T11:27:58.229Z - log: [Package] shortcuts@1.0.1 enable
+2022-08-06T11:27:58.258Z - log: [Package] animation-graph@1.0.0 enable
+2022-08-06T11:27:58.283Z - log: [Package] runtime-dev-tools@1.0.0 enable
+2022-08-06T11:27:58.306Z - log: [Package] channel-upload-tools@1.0.0 enable
+2022-08-06T11:27:58.336Z - log: [Package] about@1.0.0 enable
+2022-08-06T11:27:58.364Z - log: [Package] assets@1.0.0 enable
+2022-08-06T11:27:58.393Z - log: [Package] console@1.0.0 enable
+2022-08-06T11:27:58.524Z - log: [Package] extension@3.0.16 enable
+2022-08-06T11:27:58.541Z - verbose: [AssetDB] Require engine code (628ms)
+2022-08-06T11:27:58.553Z - log: [Package] hierarchy@1.0.0 enable
+2022-08-06T11:27:58.582Z - log: [Package] inspector@1.0.0 enable
+2022-08-06T11:27:58.613Z - log: [Package] lightmap@1.0.4 enable
+2022-08-06T11:27:58.643Z - log: [Package] node-library@1.0.1 enable
+2022-08-06T11:27:58.667Z - log: [Package] package-asset@1.0.0 enable
+2022-08-06T11:27:58.698Z - log: [Package] process@1.0.0 enable
+2022-08-06T11:27:58.729Z - log: [Package] reference-image@1.0.0 enable
+2022-08-06T11:27:58.751Z - log: [Package] alipay-mini-game@1.0.0 enable
+2022-08-06T11:27:58.779Z - log: [Package] android@1.0.0 enable
+2022-08-06T11:27:58.804Z - log: [Package] baidu-mini-game@1.0.0 enable
+2022-08-06T11:27:58.831Z - log: [Package] bytedance-mini-game@1.0.1 enable
+2022-08-06T11:27:58.858Z - log: [Package] cocos-play@1.0.0 enable
+2022-08-06T11:27:58.882Z - log: [Package] huawei-agc@1.0.0 enable
+2022-08-06T11:27:58.909Z - log: [Package] huawei-quick-game@1.0.0 enable
+2022-08-06T11:27:59.063Z - log: [Package] ios@1.0.0 enable
+2022-08-06T11:27:59.089Z - log: [Package] ios-app-clip@1.0.0 enable
+2022-08-06T11:27:59.115Z - log: [Package] link-sure@1.0.0 enable
+2022-08-06T11:27:59.142Z - log: [Package] linux@1.0.0 enable
+2022-08-06T11:27:59.167Z - log: [Package] mac@1.0.0 enable
+2022-08-06T11:27:59.263Z - log: [Package] native@1.0.0 enable
+2022-08-06T11:27:59.291Z - log: [Package] ohos@1.0.0 enable
+2022-08-06T11:27:59.317Z - log: [Package] open-harmonyos@1.0.0 enable
+2022-08-06T11:27:59.344Z - log: [Package] oppo-mini-game@1.0.0 enable
+2022-08-06T11:27:59.371Z - log: [Package] qtt@1.0.0 enable
+2022-08-06T11:27:59.400Z - log: [Package] vivo-mini-game@1.0.0 enable
+2022-08-06T11:27:59.435Z - log: [Package] web-desktop@1.0.0 enable
+2022-08-06T11:27:59.465Z - log: [Package] web-mobile@1.0.0 enable
+2022-08-06T11:27:59.496Z - log: [Package] wechatgame@1.0.1 enable
+2022-08-06T11:27:59.521Z - log: [Package] windows@1.0.0 enable
+2022-08-06T11:27:59.547Z - log: [Package] xiaomi-quick-game@1.0.0 enable
+2022-08-06T11:27:59.710Z - log: [Package] cocos-service@3.0.3 enable
+2022-08-06T11:27:59.744Z - log: [Package] importer@1.0.0 enable
+2022-08-06T11:27:59.908Z - log: [Im-plugin] Check im-plugin version.
+2022-08-06T11:27:59.916Z - log: [Package] im-plugin@3.0.8 enable
+2022-08-06T11:28:00.773Z - log: [Im-plugin] No online info of im-plugin.
+2022-08-06T11:28:02.208Z - verbose: [Scene] Require engine code (1ms)
+2022-08-06T11:28:02.208Z - verbose: [Scene] Startup engine (0ms)
+2022-08-06T11:28:02.226Z - log: [Scene] Cocos Creator v3.5.2
+2022-08-06T11:28:02.372Z - verbose: [Scene] Open engine (164ms)
+2022-08-06T11:28:02.372Z - verbose: [Scene] Configure engine (0ms)
+2022-08-06T11:28:02.270Z - info: [Scene] Forward render pipeline initialized.
+2022-08-06T11:39:30.760Z - error: [Preview]unhandledrejection: invalid wire type 4 at offset 5
+2022-08-06T11:39:30.762Z - error: [Preview]Error: invalid wire type 4 at offset 5
+    at Reader.skipType (http://localhost:7456/scripting/x/chunks/b9/b905357424166ba04cf430981cd9e6ba9db10029.js:399:21)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:978:28)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:3788:66)
+    at http://localhost:7456/scripting/x/chunks/a3/a34388b790624f48f2832643f5ac290b36a0e8bd.js:210:52
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/chunks/a3/a34388b790624f48f2832643f5ac290b36a0e8bd.js:6:105)
+    at _next (http://localhost:7456/scripting/x/chunks/a3/a34388b790624f48f2832643f5ac290b36a0e8bd.js:8:196)
+2022-08-06T11:41:30.958Z - error: [Preview]unhandledrejection: invalid wire type 4 at offset 5
+2022-08-06T11:41:30.960Z - error: [Preview]Error: invalid wire type 4 at offset 5
+    at Reader.skipType (http://localhost:7456/scripting/x/chunks/b9/b905357424166ba04cf430981cd9e6ba9db10029.js:399:21)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:978:28)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:3788:66)
+    at http://localhost:7456/scripting/x/chunks/a3/a3c72240c9b59565cf53b17610704aa345deb54f.js:210:52
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/chunks/a3/a3c72240c9b59565cf53b17610704aa345deb54f.js:6:105)
+    at _next (http://localhost:7456/scripting/x/chunks/a3/a3c72240c9b59565cf53b17610704aa345deb54f.js:8:196)
+2022-08-06T11:44:04.757Z - error: [Preview]unhandledrejection: invalid wire type 4 at offset 5
+2022-08-06T11:44:04.759Z - error: [Preview]Error: invalid wire type 4 at offset 5
+    at Reader.skipType (http://localhost:7456/scripting/x/chunks/b9/b905357424166ba04cf430981cd9e6ba9db10029.js:399:21)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:978:28)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:3788:66)
+    at http://localhost:7456/scripting/x/chunks/b3/b3bd905e7e3f6dd6131d10d364d98ed4a53e38e4.js:212:52
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/chunks/b3/b3bd905e7e3f6dd6131d10d364d98ed4a53e38e4.js:6:105)
+    at _next (http://localhost:7456/scripting/x/chunks/b3/b3bd905e7e3f6dd6131d10d364d98ed4a53e38e4.js:8:196)
+2022-08-06T11:46:08.222Z - error: [Preview]unhandledrejection: invalid wire type 4 at offset 5
+2022-08-06T11:46:08.225Z - error: [Preview]Error: invalid wire type 4 at offset 5
+    at Reader.skipType (http://localhost:7456/scripting/x/chunks/b9/b905357424166ba04cf430981cd9e6ba9db10029.js:399:21)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:978:28)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:3788:66)
+    at http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:212:52
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:6:105)
+    at _next (http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:8:196)
+2022-08-06T11:50:00.759Z - error: [Preview]unhandledrejection: invalid wire type 4 at offset 5
+2022-08-06T11:50:00.761Z - error: [Preview]Error: invalid wire type 4 at offset 5
+    at Reader.skipType (http://localhost:7456/scripting/x/chunks/b9/b905357424166ba04cf430981cd9e6ba9db10029.js:399:21)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:978:28)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:3788:66)
+    at http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:212:52
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:6:105)
+    at _next (http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:8:196)
+2022-08-06T11:50:53.193Z - error: [Preview]unhandledrejection: invalid wire type 4 at offset 5
+2022-08-06T11:50:53.195Z - error: [Preview]Error: invalid wire type 4 at offset 5
+    at Reader.skipType (http://localhost:7456/scripting/x/chunks/b9/b905357424166ba04cf430981cd9e6ba9db10029.js:399:21)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:3382:28)
+    at http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:184:48
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:6:105)
+    at _next (http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:8:196)
+2022-08-06T11:50:59.871Z - error: [Preview]unhandledrejection: invalid wire type 4 at offset 5
+2022-08-06T11:50:59.872Z - error: [Preview]Error: invalid wire type 4 at offset 5
+    at Reader.skipType (http://localhost:7456/scripting/x/chunks/b9/b905357424166ba04cf430981cd9e6ba9db10029.js:399:21)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:3382:28)
+    at http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:184:48
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:6:105)
+    at _next (http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:8:196)
+2022-08-06T11:51:28.091Z - error: [Preview]unhandledrejection: invalid wire type 4 at offset 5
+2022-08-06T11:51:28.094Z - error: [Preview]Error: invalid wire type 4 at offset 5
+    at Reader.skipType (http://localhost:7456/scripting/x/chunks/b9/b905357424166ba04cf430981cd9e6ba9db10029.js:399:21)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:978:28)
+    at Function.decode (http://localhost:7456/scripting/x/chunks/e0/e0314b3624c46375037051bb41ceb5e91d5c2b2c.js:3788:66)
+    at http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:212:52
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:6:105)
+    at _next (http://localhost:7456/scripting/x/chunks/c2/c293c2e85fa2b727304265b074aa8c2b67b20bf6.js:8:196)

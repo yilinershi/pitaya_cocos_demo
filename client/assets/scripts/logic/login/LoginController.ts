@@ -74,26 +74,27 @@ export class LoginController {
     }
 
 
-    public static async OnConnectorAuth() {
-        await Pitaya.Init(Session.WsUrl.Host, Session.WsUrl.Port)
-        let reqByte = proto.lobby.ReqAuth.encode({ Token: Session.Account.token }).finish()
-        let respByte = await Pitaya.Call("Connector.Handler.CallAuth", reqByte)
-        if (reqByte) {
-            let resp = proto.lobby.RespAuth.decode(respByte)
-            if (resp.ErrCode != proto.common.ErrorCode.OK) {
-                return
-            }
-            Session.PlayerData.NickName = resp.BaseInfo?.NickName as string;
-            Session.PlayerData.Gender = resp.BaseInfo?.Gender as number;
-            Session.PlayerData.Avatar = resp.BaseInfo?.Avatar as string;
-            Session.PlayerData.Guid = resp.BaseInfo?.Guid as string;
-            console.log("session.playerData =", Session.PlayerData)
+    public static async OnCallBind() {
+        let req: proto.lobby.IReqBind = {
+            Token: Session.Account.token
         }
-
-        this.TestChat()
+        let reqByte = proto.lobby.ReqBind.encode(req).finish()
+        let respByte = await Pitaya.Call("Lobby.Handler.CallBind", reqByte)
+        let resp = proto.lobby.RespBind.decode(respByte)
+        console.log("OnCallBind resp=", resp)
+        if (resp.ErrCode != proto.common.ErrorCode.OK) {
+            return
+        }
     }
 
 
+    public static async GetUserInfo() {
+        let req: proto.lobby.IReqUserInfo = {}
+        let reqByte = proto.lobby.ReqUserInfo.encode(req).finish()
+        let respByte = await Pitaya.Call("Lobby.Handler.CallGetUserInfo", reqByte)
+        let resp = proto.lobby.RespUserInfo.decode(respByte)
+        console.log("GetUserInfo resp=", resp)
+    }
 
     //测试notify/push消息 -> chat
     private static TestChat() {

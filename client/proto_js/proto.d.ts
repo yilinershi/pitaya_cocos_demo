@@ -111,7 +111,7 @@ export namespace chat {
     interface IChatInfo {
 
         /** ChatInfo From */
-        From?: (common.IPlayerBaseInfo|null);
+        From?: (common.IUserBaseInfo|null);
 
         /** ChatInfo Content */
         Content?: (string|null);
@@ -127,7 +127,7 @@ export namespace chat {
         constructor(properties?: chat.IChatInfo);
 
         /** ChatInfo From. */
-        public From?: (common.IPlayerBaseInfo|null);
+        public From?: (common.IUserBaseInfo|null);
 
         /** ChatInfo Content. */
         public Content: string;
@@ -331,109 +331,109 @@ export namespace common {
         HongMeng = 4
     }
 
-    /** Properties of a PlayerBaseInfo. */
-    interface IPlayerBaseInfo {
+    /** Properties of a UserBaseInfo. */
+    interface IUserBaseInfo {
 
-        /** PlayerBaseInfo Guid */
-        Guid?: (string|null);
+        /** UserBaseInfo Uid */
+        Uid?: (string|null);
 
-        /** PlayerBaseInfo NickName */
+        /** UserBaseInfo NickName */
         NickName?: (string|null);
 
-        /** PlayerBaseInfo Gender */
+        /** UserBaseInfo Gender */
         Gender?: (common.Gender|null);
 
-        /** PlayerBaseInfo Avatar */
+        /** UserBaseInfo Avatar */
         Avatar?: (string|null);
     }
 
-    /** Represents a PlayerBaseInfo. */
-    class PlayerBaseInfo implements IPlayerBaseInfo {
+    /** Represents a UserBaseInfo. */
+    class UserBaseInfo implements IUserBaseInfo {
 
         /**
-         * Constructs a new PlayerBaseInfo.
+         * Constructs a new UserBaseInfo.
          * @param [properties] Properties to set
          */
-        constructor(properties?: common.IPlayerBaseInfo);
+        constructor(properties?: common.IUserBaseInfo);
 
-        /** PlayerBaseInfo Guid. */
-        public Guid: string;
+        /** UserBaseInfo Uid. */
+        public Uid: string;
 
-        /** PlayerBaseInfo NickName. */
+        /** UserBaseInfo NickName. */
         public NickName: string;
 
-        /** PlayerBaseInfo Gender. */
+        /** UserBaseInfo Gender. */
         public Gender: common.Gender;
 
-        /** PlayerBaseInfo Avatar. */
+        /** UserBaseInfo Avatar. */
         public Avatar: string;
 
         /**
-         * Creates a new PlayerBaseInfo instance using the specified properties.
+         * Creates a new UserBaseInfo instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns PlayerBaseInfo instance
+         * @returns UserBaseInfo instance
          */
-        public static create(properties?: common.IPlayerBaseInfo): common.PlayerBaseInfo;
+        public static create(properties?: common.IUserBaseInfo): common.UserBaseInfo;
 
         /**
-         * Encodes the specified PlayerBaseInfo message. Does not implicitly {@link common.PlayerBaseInfo.verify|verify} messages.
-         * @param message PlayerBaseInfo message or plain object to encode
+         * Encodes the specified UserBaseInfo message. Does not implicitly {@link common.UserBaseInfo.verify|verify} messages.
+         * @param message UserBaseInfo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: common.IPlayerBaseInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: common.IUserBaseInfo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified PlayerBaseInfo message, length delimited. Does not implicitly {@link common.PlayerBaseInfo.verify|verify} messages.
-         * @param message PlayerBaseInfo message or plain object to encode
+         * Encodes the specified UserBaseInfo message, length delimited. Does not implicitly {@link common.UserBaseInfo.verify|verify} messages.
+         * @param message UserBaseInfo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: common.IPlayerBaseInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: common.IUserBaseInfo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a PlayerBaseInfo message from the specified reader or buffer.
+         * Decodes a UserBaseInfo message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns PlayerBaseInfo
+         * @returns UserBaseInfo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): common.PlayerBaseInfo;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): common.UserBaseInfo;
 
         /**
-         * Decodes a PlayerBaseInfo message from the specified reader or buffer, length delimited.
+         * Decodes a UserBaseInfo message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns PlayerBaseInfo
+         * @returns UserBaseInfo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): common.PlayerBaseInfo;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): common.UserBaseInfo;
 
         /**
-         * Verifies a PlayerBaseInfo message.
+         * Verifies a UserBaseInfo message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a PlayerBaseInfo message from a plain object. Also converts values to their respective internal types.
+         * Creates a UserBaseInfo message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns PlayerBaseInfo
+         * @returns UserBaseInfo
          */
-        public static fromObject(object: { [k: string]: any }): common.PlayerBaseInfo;
+        public static fromObject(object: { [k: string]: any }): common.UserBaseInfo;
 
         /**
-         * Creates a plain object from a PlayerBaseInfo message. Also converts values to other types if specified.
-         * @param message PlayerBaseInfo
+         * Creates a plain object from a UserBaseInfo message. Also converts values to other types if specified.
+         * @param message UserBaseInfo
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: common.PlayerBaseInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: common.UserBaseInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this PlayerBaseInfo to JSON.
+         * Converts this UserBaseInfo to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
@@ -1200,187 +1200,355 @@ export namespace http {
 /** Namespace lobby. */
 export namespace lobby {
 
-    /** Properties of a ReqAuth. */
-    interface IReqAuth {
+    /** Properties of a ReqBind. */
+    interface IReqBind {
 
-        /** ReqAuth Token */
+        /** ReqBind Token */
         Token?: (string|null);
     }
 
-    /** Represents a ReqAuth. */
-    class ReqAuth implements IReqAuth {
+    /** Represents a ReqBind. */
+    class ReqBind implements IReqBind {
 
         /**
-         * Constructs a new ReqAuth.
+         * Constructs a new ReqBind.
          * @param [properties] Properties to set
          */
-        constructor(properties?: lobby.IReqAuth);
+        constructor(properties?: lobby.IReqBind);
 
-        /** ReqAuth Token. */
+        /** ReqBind Token. */
         public Token: string;
 
         /**
-         * Creates a new ReqAuth instance using the specified properties.
+         * Creates a new ReqBind instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns ReqAuth instance
+         * @returns ReqBind instance
          */
-        public static create(properties?: lobby.IReqAuth): lobby.ReqAuth;
+        public static create(properties?: lobby.IReqBind): lobby.ReqBind;
 
         /**
-         * Encodes the specified ReqAuth message. Does not implicitly {@link lobby.ReqAuth.verify|verify} messages.
-         * @param message ReqAuth message or plain object to encode
+         * Encodes the specified ReqBind message. Does not implicitly {@link lobby.ReqBind.verify|verify} messages.
+         * @param message ReqBind message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: lobby.IReqAuth, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: lobby.IReqBind, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified ReqAuth message, length delimited. Does not implicitly {@link lobby.ReqAuth.verify|verify} messages.
-         * @param message ReqAuth message or plain object to encode
+         * Encodes the specified ReqBind message, length delimited. Does not implicitly {@link lobby.ReqBind.verify|verify} messages.
+         * @param message ReqBind message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: lobby.IReqAuth, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: lobby.IReqBind, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a ReqAuth message from the specified reader or buffer.
+         * Decodes a ReqBind message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns ReqAuth
+         * @returns ReqBind
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): lobby.ReqAuth;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): lobby.ReqBind;
 
         /**
-         * Decodes a ReqAuth message from the specified reader or buffer, length delimited.
+         * Decodes a ReqBind message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns ReqAuth
+         * @returns ReqBind
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): lobby.ReqAuth;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): lobby.ReqBind;
 
         /**
-         * Verifies a ReqAuth message.
+         * Verifies a ReqBind message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a ReqAuth message from a plain object. Also converts values to their respective internal types.
+         * Creates a ReqBind message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns ReqAuth
+         * @returns ReqBind
          */
-        public static fromObject(object: { [k: string]: any }): lobby.ReqAuth;
+        public static fromObject(object: { [k: string]: any }): lobby.ReqBind;
 
         /**
-         * Creates a plain object from a ReqAuth message. Also converts values to other types if specified.
-         * @param message ReqAuth
+         * Creates a plain object from a ReqBind message. Also converts values to other types if specified.
+         * @param message ReqBind
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: lobby.ReqAuth, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: lobby.ReqBind, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this ReqAuth to JSON.
+         * Converts this ReqBind to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
     }
 
-    /** Properties of a RespAuth. */
-    interface IRespAuth {
+    /** Properties of a RespBind. */
+    interface IRespBind {
 
-        /** RespAuth ErrCode */
+        /** RespBind ErrCode */
         ErrCode?: (common.ErrorCode|null);
-
-        /** RespAuth BaseInfo */
-        BaseInfo?: (common.IPlayerBaseInfo|null);
     }
 
-    /** Represents a RespAuth. */
-    class RespAuth implements IRespAuth {
+    /** Represents a RespBind. */
+    class RespBind implements IRespBind {
 
         /**
-         * Constructs a new RespAuth.
+         * Constructs a new RespBind.
          * @param [properties] Properties to set
          */
-        constructor(properties?: lobby.IRespAuth);
+        constructor(properties?: lobby.IRespBind);
 
-        /** RespAuth ErrCode. */
+        /** RespBind ErrCode. */
         public ErrCode: common.ErrorCode;
 
-        /** RespAuth BaseInfo. */
-        public BaseInfo?: (common.IPlayerBaseInfo|null);
-
         /**
-         * Creates a new RespAuth instance using the specified properties.
+         * Creates a new RespBind instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns RespAuth instance
+         * @returns RespBind instance
          */
-        public static create(properties?: lobby.IRespAuth): lobby.RespAuth;
+        public static create(properties?: lobby.IRespBind): lobby.RespBind;
 
         /**
-         * Encodes the specified RespAuth message. Does not implicitly {@link lobby.RespAuth.verify|verify} messages.
-         * @param message RespAuth message or plain object to encode
+         * Encodes the specified RespBind message. Does not implicitly {@link lobby.RespBind.verify|verify} messages.
+         * @param message RespBind message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: lobby.IRespAuth, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: lobby.IRespBind, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified RespAuth message, length delimited. Does not implicitly {@link lobby.RespAuth.verify|verify} messages.
-         * @param message RespAuth message or plain object to encode
+         * Encodes the specified RespBind message, length delimited. Does not implicitly {@link lobby.RespBind.verify|verify} messages.
+         * @param message RespBind message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: lobby.IRespAuth, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: lobby.IRespBind, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a RespAuth message from the specified reader or buffer.
+         * Decodes a RespBind message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns RespAuth
+         * @returns RespBind
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): lobby.RespAuth;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): lobby.RespBind;
 
         /**
-         * Decodes a RespAuth message from the specified reader or buffer, length delimited.
+         * Decodes a RespBind message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns RespAuth
+         * @returns RespBind
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): lobby.RespAuth;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): lobby.RespBind;
 
         /**
-         * Verifies a RespAuth message.
+         * Verifies a RespBind message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a RespAuth message from a plain object. Also converts values to their respective internal types.
+         * Creates a RespBind message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns RespAuth
+         * @returns RespBind
          */
-        public static fromObject(object: { [k: string]: any }): lobby.RespAuth;
+        public static fromObject(object: { [k: string]: any }): lobby.RespBind;
 
         /**
-         * Creates a plain object from a RespAuth message. Also converts values to other types if specified.
-         * @param message RespAuth
+         * Creates a plain object from a RespBind message. Also converts values to other types if specified.
+         * @param message RespBind
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: lobby.RespAuth, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: lobby.RespBind, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this RespAuth to JSON.
+         * Converts this RespBind to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a ReqUserInfo. */
+    interface IReqUserInfo {
+    }
+
+    /** Represents a ReqUserInfo. */
+    class ReqUserInfo implements IReqUserInfo {
+
+        /**
+         * Constructs a new ReqUserInfo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: lobby.IReqUserInfo);
+
+        /**
+         * Creates a new ReqUserInfo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ReqUserInfo instance
+         */
+        public static create(properties?: lobby.IReqUserInfo): lobby.ReqUserInfo;
+
+        /**
+         * Encodes the specified ReqUserInfo message. Does not implicitly {@link lobby.ReqUserInfo.verify|verify} messages.
+         * @param message ReqUserInfo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: lobby.IReqUserInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ReqUserInfo message, length delimited. Does not implicitly {@link lobby.ReqUserInfo.verify|verify} messages.
+         * @param message ReqUserInfo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: lobby.IReqUserInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a ReqUserInfo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ReqUserInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): lobby.ReqUserInfo;
+
+        /**
+         * Decodes a ReqUserInfo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ReqUserInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): lobby.ReqUserInfo;
+
+        /**
+         * Verifies a ReqUserInfo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a ReqUserInfo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ReqUserInfo
+         */
+        public static fromObject(object: { [k: string]: any }): lobby.ReqUserInfo;
+
+        /**
+         * Creates a plain object from a ReqUserInfo message. Also converts values to other types if specified.
+         * @param message ReqUserInfo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: lobby.ReqUserInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ReqUserInfo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a RespUserInfo. */
+    interface IRespUserInfo {
+
+        /** RespUserInfo BaseInfo */
+        BaseInfo?: (common.IUserBaseInfo|null);
+    }
+
+    /** Represents a RespUserInfo. */
+    class RespUserInfo implements IRespUserInfo {
+
+        /**
+         * Constructs a new RespUserInfo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: lobby.IRespUserInfo);
+
+        /** RespUserInfo BaseInfo. */
+        public BaseInfo?: (common.IUserBaseInfo|null);
+
+        /**
+         * Creates a new RespUserInfo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns RespUserInfo instance
+         */
+        public static create(properties?: lobby.IRespUserInfo): lobby.RespUserInfo;
+
+        /**
+         * Encodes the specified RespUserInfo message. Does not implicitly {@link lobby.RespUserInfo.verify|verify} messages.
+         * @param message RespUserInfo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: lobby.IRespUserInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified RespUserInfo message, length delimited. Does not implicitly {@link lobby.RespUserInfo.verify|verify} messages.
+         * @param message RespUserInfo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: lobby.IRespUserInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a RespUserInfo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns RespUserInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): lobby.RespUserInfo;
+
+        /**
+         * Decodes a RespUserInfo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RespUserInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): lobby.RespUserInfo;
+
+        /**
+         * Verifies a RespUserInfo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a RespUserInfo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns RespUserInfo
+         */
+        public static fromObject(object: { [k: string]: any }): lobby.RespUserInfo;
+
+        /**
+         * Creates a plain object from a RespUserInfo message. Also converts values to other types if specified.
+         * @param message RespUserInfo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: lobby.RespUserInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this RespUserInfo to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
@@ -1852,394 +2020,6 @@ export namespace lobby {
 
         /**
          * Converts this RespChangePlayerInfo to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-    }
-}
-
-/** Namespace rpc. */
-export namespace rpc {
-
-    /** Properties of a ReqJoinChatGroup. */
-    interface IReqJoinChatGroup {
-
-        /** ReqJoinChatGroup Group */
-        Group?: (chat.ChatGroup|null);
-
-        /** ReqJoinChatGroup Tag */
-        Tag?: (string|null);
-
-        /** ReqJoinChatGroup Player */
-        Player?: (common.IPlayerBaseInfo|null);
-    }
-
-    /** Represents a ReqJoinChatGroup. */
-    class ReqJoinChatGroup implements IReqJoinChatGroup {
-
-        /**
-         * Constructs a new ReqJoinChatGroup.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: rpc.IReqJoinChatGroup);
-
-        /** ReqJoinChatGroup Group. */
-        public Group: chat.ChatGroup;
-
-        /** ReqJoinChatGroup Tag. */
-        public Tag: string;
-
-        /** ReqJoinChatGroup Player. */
-        public Player?: (common.IPlayerBaseInfo|null);
-
-        /**
-         * Creates a new ReqJoinChatGroup instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns ReqJoinChatGroup instance
-         */
-        public static create(properties?: rpc.IReqJoinChatGroup): rpc.ReqJoinChatGroup;
-
-        /**
-         * Encodes the specified ReqJoinChatGroup message. Does not implicitly {@link rpc.ReqJoinChatGroup.verify|verify} messages.
-         * @param message ReqJoinChatGroup message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: rpc.IReqJoinChatGroup, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified ReqJoinChatGroup message, length delimited. Does not implicitly {@link rpc.ReqJoinChatGroup.verify|verify} messages.
-         * @param message ReqJoinChatGroup message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: rpc.IReqJoinChatGroup, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a ReqJoinChatGroup message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns ReqJoinChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): rpc.ReqJoinChatGroup;
-
-        /**
-         * Decodes a ReqJoinChatGroup message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns ReqJoinChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): rpc.ReqJoinChatGroup;
-
-        /**
-         * Verifies a ReqJoinChatGroup message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a ReqJoinChatGroup message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns ReqJoinChatGroup
-         */
-        public static fromObject(object: { [k: string]: any }): rpc.ReqJoinChatGroup;
-
-        /**
-         * Creates a plain object from a ReqJoinChatGroup message. Also converts values to other types if specified.
-         * @param message ReqJoinChatGroup
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: rpc.ReqJoinChatGroup, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this ReqJoinChatGroup to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-    }
-
-    /** Properties of a RespJoinChatGroup. */
-    interface IRespJoinChatGroup {
-
-        /** RespJoinChatGroup ErrCode */
-        ErrCode?: (common.ErrorCode|null);
-    }
-
-    /** Represents a RespJoinChatGroup. */
-    class RespJoinChatGroup implements IRespJoinChatGroup {
-
-        /**
-         * Constructs a new RespJoinChatGroup.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: rpc.IRespJoinChatGroup);
-
-        /** RespJoinChatGroup ErrCode. */
-        public ErrCode: common.ErrorCode;
-
-        /**
-         * Creates a new RespJoinChatGroup instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns RespJoinChatGroup instance
-         */
-        public static create(properties?: rpc.IRespJoinChatGroup): rpc.RespJoinChatGroup;
-
-        /**
-         * Encodes the specified RespJoinChatGroup message. Does not implicitly {@link rpc.RespJoinChatGroup.verify|verify} messages.
-         * @param message RespJoinChatGroup message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: rpc.IRespJoinChatGroup, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified RespJoinChatGroup message, length delimited. Does not implicitly {@link rpc.RespJoinChatGroup.verify|verify} messages.
-         * @param message RespJoinChatGroup message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: rpc.IRespJoinChatGroup, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a RespJoinChatGroup message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns RespJoinChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): rpc.RespJoinChatGroup;
-
-        /**
-         * Decodes a RespJoinChatGroup message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns RespJoinChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): rpc.RespJoinChatGroup;
-
-        /**
-         * Verifies a RespJoinChatGroup message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a RespJoinChatGroup message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns RespJoinChatGroup
-         */
-        public static fromObject(object: { [k: string]: any }): rpc.RespJoinChatGroup;
-
-        /**
-         * Creates a plain object from a RespJoinChatGroup message. Also converts values to other types if specified.
-         * @param message RespJoinChatGroup
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: rpc.RespJoinChatGroup, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this RespJoinChatGroup to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-    }
-
-    /** Properties of a ReqLeaveChatGroup. */
-    interface IReqLeaveChatGroup {
-
-        /** ReqLeaveChatGroup Group */
-        Group?: (chat.ChatGroup|null);
-
-        /** ReqLeaveChatGroup Tag */
-        Tag?: (string|null);
-
-        /** ReqLeaveChatGroup PlayerGuid */
-        PlayerGuid?: (string|null);
-    }
-
-    /** Represents a ReqLeaveChatGroup. */
-    class ReqLeaveChatGroup implements IReqLeaveChatGroup {
-
-        /**
-         * Constructs a new ReqLeaveChatGroup.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: rpc.IReqLeaveChatGroup);
-
-        /** ReqLeaveChatGroup Group. */
-        public Group: chat.ChatGroup;
-
-        /** ReqLeaveChatGroup Tag. */
-        public Tag: string;
-
-        /** ReqLeaveChatGroup PlayerGuid. */
-        public PlayerGuid: string;
-
-        /**
-         * Creates a new ReqLeaveChatGroup instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns ReqLeaveChatGroup instance
-         */
-        public static create(properties?: rpc.IReqLeaveChatGroup): rpc.ReqLeaveChatGroup;
-
-        /**
-         * Encodes the specified ReqLeaveChatGroup message. Does not implicitly {@link rpc.ReqLeaveChatGroup.verify|verify} messages.
-         * @param message ReqLeaveChatGroup message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: rpc.IReqLeaveChatGroup, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified ReqLeaveChatGroup message, length delimited. Does not implicitly {@link rpc.ReqLeaveChatGroup.verify|verify} messages.
-         * @param message ReqLeaveChatGroup message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: rpc.IReqLeaveChatGroup, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a ReqLeaveChatGroup message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns ReqLeaveChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): rpc.ReqLeaveChatGroup;
-
-        /**
-         * Decodes a ReqLeaveChatGroup message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns ReqLeaveChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): rpc.ReqLeaveChatGroup;
-
-        /**
-         * Verifies a ReqLeaveChatGroup message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a ReqLeaveChatGroup message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns ReqLeaveChatGroup
-         */
-        public static fromObject(object: { [k: string]: any }): rpc.ReqLeaveChatGroup;
-
-        /**
-         * Creates a plain object from a ReqLeaveChatGroup message. Also converts values to other types if specified.
-         * @param message ReqLeaveChatGroup
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: rpc.ReqLeaveChatGroup, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this ReqLeaveChatGroup to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-    }
-
-    /** Properties of a RespLeaveChatGroup. */
-    interface IRespLeaveChatGroup {
-
-        /** RespLeaveChatGroup ErrCode */
-        ErrCode?: (common.ErrorCode|null);
-    }
-
-    /** Represents a RespLeaveChatGroup. */
-    class RespLeaveChatGroup implements IRespLeaveChatGroup {
-
-        /**
-         * Constructs a new RespLeaveChatGroup.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: rpc.IRespLeaveChatGroup);
-
-        /** RespLeaveChatGroup ErrCode. */
-        public ErrCode: common.ErrorCode;
-
-        /**
-         * Creates a new RespLeaveChatGroup instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns RespLeaveChatGroup instance
-         */
-        public static create(properties?: rpc.IRespLeaveChatGroup): rpc.RespLeaveChatGroup;
-
-        /**
-         * Encodes the specified RespLeaveChatGroup message. Does not implicitly {@link rpc.RespLeaveChatGroup.verify|verify} messages.
-         * @param message RespLeaveChatGroup message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: rpc.IRespLeaveChatGroup, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified RespLeaveChatGroup message, length delimited. Does not implicitly {@link rpc.RespLeaveChatGroup.verify|verify} messages.
-         * @param message RespLeaveChatGroup message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: rpc.IRespLeaveChatGroup, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a RespLeaveChatGroup message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns RespLeaveChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): rpc.RespLeaveChatGroup;
-
-        /**
-         * Decodes a RespLeaveChatGroup message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns RespLeaveChatGroup
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): rpc.RespLeaveChatGroup;
-
-        /**
-         * Verifies a RespLeaveChatGroup message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a RespLeaveChatGroup message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns RespLeaveChatGroup
-         */
-        public static fromObject(object: { [k: string]: any }): rpc.RespLeaveChatGroup;
-
-        /**
-         * Creates a plain object from a RespLeaveChatGroup message. Also converts values to other types if specified.
-         * @param message RespLeaveChatGroup
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: rpc.RespLeaveChatGroup, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this RespLeaveChatGroup to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };

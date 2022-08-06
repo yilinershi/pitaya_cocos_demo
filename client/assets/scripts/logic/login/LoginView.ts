@@ -1,6 +1,7 @@
 import { Button, Component, director, EditBox, find, Label, _decorator } from "cc";
 import { Pitaya } from "../../net/pitaya/Pitaya";
 import { LoginController } from "./LoginController";
+import { Session } from "./LoginModel";
 
 const { ccclass, property } = _decorator;
 
@@ -53,11 +54,13 @@ export class LoginView extends Component {
         localStorage.setItem("account", this._editBoxAccount.string)
         localStorage.setItem("password", this._editBoxPassword.string)
         await LoginController.OnLogin(this._editBoxAccount.string, this._editBoxPassword.string)
-        await LoginController.OnConnectorAuth()
+        await Pitaya.Init(Session.WsUrl.Host, Session.WsUrl.Port)
+        await LoginController.OnCallBind()
         director.loadScene("lobby", (err, scene) => {
             if (err != null) {
                 return
             }
+            LoginController.GetUserInfo()
         })
     }
 
