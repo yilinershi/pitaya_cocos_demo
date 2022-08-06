@@ -1,19 +1,11 @@
 {
-  "module": {
-    "mysql": {
-      "url": "root:123456@tcp(127.0.0.1:3306)/superhero?charset=utf8mb4&parseTime=True&loc=Local",
-      "max_idle_conn": 10,
-      "max_open_conn": 100,
-      "conn_max_life_time": 3600
-    },
-    "redis": {
-      "addr": "127.0.0.1:6379",
-      "password": "",
-      "pool_size": 30,
-      "min_idle_conn": 5,
-      "db": 1,
-      "expire": 10
-    }
+  "redis": {
+    "addr": "127.0.0.1:6379",
+    "password": "",
+    "pool_size": 30,
+    "min_idle_conn": 5,
+    "db": 0,
+    "expire": 10
   },
   "net": {
     "http": {
@@ -26,7 +18,7 @@
     },
     "ws": {
       "ip": "127.0.0.1",
-      "port": 3250
+      "port": 3260
     }
   }
 }

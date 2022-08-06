@@ -6,8 +6,8 @@ run_server_connector:
 run_server_lobby:
 	@go run main.go --type=Lobby
 
-run_server_http_gate:
-	@go run main.go  --type=HttpGate
+run_server_web:
+	@go run main.go  --type=Web
 
 run_server_chat:
 	@go run main.go  --type=Chat

@@ -16,7 +16,7 @@ message InputChatInfo{
 }
 
 message ChatInfo{
-  common.PlayerBaseInfo From = 1; //来自玩家的发言
+  common.UserBaseInfo From = 1; //来自玩家的发言
   string Content = 3;
 }
 

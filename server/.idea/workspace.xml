@@ -4,7 +4,50 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a057e441-f7eb-45eb-87cd-fc6e4ba348bb" name="变更" comment="" />
+    <list default="true" id="a057e441-f7eb-45eb-87cd-fc6e4ba348bb" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/modules/user/model/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/assets/scripts/logic/login/LoginController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/assets/scripts/logic/login/LoginController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/assets/scripts/logic/login/LoginView.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/assets/scripts/logic/login/LoginView.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/local/logs/project.log" beforeDir="false" afterPath="$PROJECT_DIR$/../client/local/logs/project.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/proto_js/proto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/proto_js/proto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/proto_js/proto.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/proto_js/proto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proto/chat.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../proto/chat.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proto/common.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../proto/common.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proto/lobby.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../proto/lobby.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proto/server_rpc.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/development.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connector" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/guid_generator.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/base.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/dao_account_info.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/dao_guid_generator.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/dao_player.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/init.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/base.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/player.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods/module_database/api.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods/module_database/database_storage.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods/module_redis/api.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods/module_redis/redis_lock.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods/module_redis/redis_storage.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/redisClient/redis_client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pb/pb_chat/chat.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pb/pb_chat/chat.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pb/pb_common/common.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pb/pb_common/common.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pb/pb_lobby/lobby.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pb/pb_lobby/lobby.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pb/pb_rpc/server_rpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pojo/base.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pojo/db_account_info.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pojo/db_guid_generator.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pojo/db_player.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/chat/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/chat/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/chat/remote.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/chat/remote.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/connector/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/connector/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/http_gate/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/web/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/lobby/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/lobby/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/service.go" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,36 +86,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/even/workspace/github/yilinershi/pitaya_cocos_demo/server",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/even/workspace/github/emaofan/pitaya_cocos_demo/server&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/redis_module" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/services" />
-      <recent name="$PROJECT_DIR$/model" />
-      <recent name="$PROJECT_DIR$/model/object" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/mods/database" />
+      <recent name="$PROJECT_DIR$/modules/account/model" />
+      <recent name="$PROJECT_DIR$/modules/register/model" />
+      <recent name="$PROJECT_DIR$/modules/idGenerator/model" />
+      <recent name="$PROJECT_DIR$/modules/user/model" />
+      <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 构建.connector">
+  <component name="RunManager" selected="Go 构建.lobby">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="server" />
       <working_directory value="$PROJECT_DIR$" />
@@ -90,7 +133,7 @@
       <package value="superhero_go_server" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <output_directory value="$PROJECT_DIR$" />
+      <output_directory value="$PROJECT_DIR$/bin" />
       <method v="2" />
     </configuration>
     <configuration name="connector" type="GoApplicationRunConfiguration" factoryName="Go Application">
@@ -101,18 +144,29 @@
       <package value="superhero_go_server" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <output_directory value="$PROJECT_DIR$" />
+      <output_directory value="$PROJECT_DIR$/bin" />
       <method v="2" />
     </configuration>
-    <configuration name="http" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <configuration name="lobby" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="server" />
       <working_directory value="$PROJECT_DIR$" />
-      <parameters value="--type=HttpGate" />
+      <parameters value="--type=Lobby" />
       <kind value="DIRECTORY" />
       <package value="superhero_go_server" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <output_directory value="$PROJECT_DIR$" />
+      <output_directory value="$PROJECT_DIR$/bin" />
+      <method v="2" />
+    </configuration>
+    <configuration name="web" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="server" />
+      <working_directory value="$PROJECT_DIR$" />
+      <parameters value="--type=Web" />
+      <kind value="DIRECTORY" />
+      <package value="superhero_go_server" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <output_directory value="$PROJECT_DIR$/bin" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -187,7 +241,8 @@
     </configuration>
     <list>
       <item itemvalue="Go 构建.chat" />
-      <item itemvalue="Go 构建.http" />
+      <item itemvalue="Go 构建.web" />
+      <item itemvalue="Go 构建.lobby" />
       <item itemvalue="Go 构建.connector" />
       <item itemvalue="Go 测试.superhero_go_server/services 中的 TestCallAuth" />
       <item itemvalue="Go 测试.superhero_go_server/services/connector 中的 TestCallAuth" />

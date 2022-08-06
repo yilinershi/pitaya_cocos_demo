@@ -21,7 +21,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type ReqAuth struct {
+type ReqBind struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -29,8 +29,8 @@ type ReqAuth struct {
 	Token string `protobuf:"bytes,1,opt,name=Token,proto3" json:"Token,omitempty"` //登录返回的token，带上
 }
 
-func (x *ReqAuth) Reset() {
-	*x = ReqAuth{}
+func (x *ReqBind) Reset() {
+	*x = ReqBind{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_lobby_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -38,13 +38,13 @@ func (x *ReqAuth) Reset() {
 	}
 }
 
-func (x *ReqAuth) String() string {
+func (x *ReqBind) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*ReqAuth) ProtoMessage() {}
+func (*ReqBind) ProtoMessage() {}
 
-func (x *ReqAuth) ProtoReflect() protoreflect.Message {
+func (x *ReqBind) ProtoReflect() protoreflect.Message {
 	mi := &file_lobby_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -56,29 +56,28 @@ func (x *ReqAuth) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use ReqAuth.ProtoReflect.Descriptor instead.
-func (*ReqAuth) Descriptor() ([]byte, []int) {
+// Deprecated: Use ReqBind.ProtoReflect.Descriptor instead.
+func (*ReqBind) Descriptor() ([]byte, []int) {
 	return file_lobby_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *ReqAuth) GetToken() string {
+func (x *ReqBind) GetToken() string {
 	if x != nil {
 		return x.Token
 	}
 	return ""
 }
 
-type RespAuth struct {
+type RespBind struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ErrCode  pb_common.ErrorCode       `protobuf:"varint,1,opt,name=ErrCode,proto3,enum=common.ErrorCode" json:"ErrCode,omitempty"`
-	BaseInfo *pb_common.PlayerBaseInfo `protobuf:"bytes,2,opt,name=BaseInfo,proto3" json:"BaseInfo,omitempty"` //玩家基础信息
+	ErrCode pb_common.ErrorCode `protobuf:"varint,1,opt,name=ErrCode,proto3,enum=common.ErrorCode" json:"ErrCode,omitempty"`
 }
 
-func (x *RespAuth) Reset() {
-	*x = RespAuth{}
+func (x *RespBind) Reset() {
+	*x = RespBind{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_lobby_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -86,13 +85,13 @@ func (x *RespAuth) Reset() {
 	}
 }
 
-func (x *RespAuth) String() string {
+func (x *RespBind) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*RespAuth) ProtoMessage() {}
+func (*RespBind) ProtoMessage() {}
 
-func (x *RespAuth) ProtoReflect() protoreflect.Message {
+func (x *RespBind) ProtoReflect() protoreflect.Message {
 	mi := &file_lobby_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -104,19 +103,97 @@ func (x *RespAuth) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use RespAuth.ProtoReflect.Descriptor instead.
-func (*RespAuth) Descriptor() ([]byte, []int) {
+// Deprecated: Use RespBind.ProtoReflect.Descriptor instead.
+func (*RespBind) Descriptor() ([]byte, []int) {
 	return file_lobby_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *RespAuth) GetErrCode() pb_common.ErrorCode {
+func (x *RespBind) GetErrCode() pb_common.ErrorCode {
 	if x != nil {
 		return x.ErrCode
 	}
 	return pb_common.ErrorCode_Default
 }
 
-func (x *RespAuth) GetBaseInfo() *pb_common.PlayerBaseInfo {
+type ReqUserInfo struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *ReqUserInfo) Reset() {
+	*x = ReqUserInfo{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_lobby_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReqUserInfo) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReqUserInfo) ProtoMessage() {}
+
+func (x *ReqUserInfo) ProtoReflect() protoreflect.Message {
+	mi := &file_lobby_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReqUserInfo.ProtoReflect.Descriptor instead.
+func (*ReqUserInfo) Descriptor() ([]byte, []int) {
+	return file_lobby_proto_rawDescGZIP(), []int{2}
+}
+
+type RespUserInfo struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	BaseInfo *pb_common.UserBaseInfo `protobuf:"bytes,1,opt,name=BaseInfo,proto3" json:"BaseInfo,omitempty"` //玩家基础信息
+}
+
+func (x *RespUserInfo) Reset() {
+	*x = RespUserInfo{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_lobby_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *RespUserInfo) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RespUserInfo) ProtoMessage() {}
+
+func (x *RespUserInfo) ProtoReflect() protoreflect.Message {
+	mi := &file_lobby_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RespUserInfo.ProtoReflect.Descriptor instead.
+func (*RespUserInfo) Descriptor() ([]byte, []int) {
+	return file_lobby_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *RespUserInfo) GetBaseInfo() *pb_common.UserBaseInfo {
 	if x != nil {
 		return x.BaseInfo
 	}
@@ -133,7 +210,7 @@ type ReqLobbyInfo struct {
 func (x *ReqLobbyInfo) Reset() {
 	*x = ReqLobbyInfo{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_lobby_proto_msgTypes[2]
+		mi := &file_lobby_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -146,7 +223,7 @@ func (x *ReqLobbyInfo) String() string {
 func (*ReqLobbyInfo) ProtoMessage() {}
 
 func (x *ReqLobbyInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_lobby_proto_msgTypes[2]
+	mi := &file_lobby_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -159,7 +236,7 @@ func (x *ReqLobbyInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReqLobbyInfo.ProtoReflect.Descriptor instead.
 func (*ReqLobbyInfo) Descriptor() ([]byte, []int) {
-	return file_lobby_proto_rawDescGZIP(), []int{2}
+	return file_lobby_proto_rawDescGZIP(), []int{4}
 }
 
 type RespLobbyInfo struct {
@@ -173,7 +250,7 @@ type RespLobbyInfo struct {
 func (x *RespLobbyInfo) Reset() {
 	*x = RespLobbyInfo{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_lobby_proto_msgTypes[3]
+		mi := &file_lobby_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -186,7 +263,7 @@ func (x *RespLobbyInfo) String() string {
 func (*RespLobbyInfo) ProtoMessage() {}
 
 func (x *RespLobbyInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_lobby_proto_msgTypes[3]
+	mi := &file_lobby_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -199,7 +276,7 @@ func (x *RespLobbyInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RespLobbyInfo.ProtoReflect.Descriptor instead.
 func (*RespLobbyInfo) Descriptor() ([]byte, []int) {
-	return file_lobby_proto_rawDescGZIP(), []int{3}
+	return file_lobby_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *RespLobbyInfo) GetInfos() []*RespLobbyInfo_LobbyInfo {
@@ -222,7 +299,7 @@ type ReqChangePlayerInfo struct {
 func (x *ReqChangePlayerInfo) Reset() {
 	*x = ReqChangePlayerInfo{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_lobby_proto_msgTypes[4]
+		mi := &file_lobby_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -235,7 +312,7 @@ func (x *ReqChangePlayerInfo) String() string {
 func (*ReqChangePlayerInfo) ProtoMessage() {}
 
 func (x *ReqChangePlayerInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_lobby_proto_msgTypes[4]
+	mi := &file_lobby_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -248,7 +325,7 @@ func (x *ReqChangePlayerInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReqChangePlayerInfo.ProtoReflect.Descriptor instead.
 func (*ReqChangePlayerInfo) Descriptor() ([]byte, []int) {
-	return file_lobby_proto_rawDescGZIP(), []int{4}
+	return file_lobby_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *ReqChangePlayerInfo) GetNickName() string {
@@ -277,13 +354,13 @@ type RespChangePlayerInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ErrCode pb_common.ErrorCode `protobuf:"varint,1,opt,name=ErrCode,proto3,enum=common.ErrorCode" json:"ErrCode,omitempty"`
+	ErrCode pb_common.ErrorCode `protobuf:"varint,1,opt,name=ErrCode,proto3,enum=common.ErrorCode" json:"ErrCode,omitempty"` //成功与否
 }
 
 func (x *RespChangePlayerInfo) Reset() {
 	*x = RespChangePlayerInfo{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_lobby_proto_msgTypes[5]
+		mi := &file_lobby_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -296,7 +373,7 @@ func (x *RespChangePlayerInfo) String() string {
 func (*RespChangePlayerInfo) ProtoMessage() {}
 
 func (x *RespChangePlayerInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_lobby_proto_msgTypes[5]
+	mi := &file_lobby_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -309,7 +386,7 @@ func (x *RespChangePlayerInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RespChangePlayerInfo.ProtoReflect.Descriptor instead.
 func (*RespChangePlayerInfo) Descriptor() ([]byte, []int) {
-	return file_lobby_proto_rawDescGZIP(), []int{5}
+	return file_lobby_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *RespChangePlayerInfo) GetErrCode() pb_common.ErrorCode {
@@ -332,7 +409,7 @@ type RespLobbyInfo_LobbyInfo struct {
 func (x *RespLobbyInfo_LobbyInfo) Reset() {
 	*x = RespLobbyInfo_LobbyInfo{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_lobby_proto_msgTypes[6]
+		mi := &file_lobby_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -345,7 +422,7 @@ func (x *RespLobbyInfo_LobbyInfo) String() string {
 func (*RespLobbyInfo_LobbyInfo) ProtoMessage() {}
 
 func (x *RespLobbyInfo_LobbyInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_lobby_proto_msgTypes[6]
+	mi := &file_lobby_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -358,7 +435,7 @@ func (x *RespLobbyInfo_LobbyInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RespLobbyInfo_LobbyInfo.ProtoReflect.Descriptor instead.
 func (*RespLobbyInfo_LobbyInfo) Descriptor() ([]byte, []int) {
-	return file_lobby_proto_rawDescGZIP(), []int{3, 0}
+	return file_lobby_proto_rawDescGZIP(), []int{5, 0}
 }
 
 func (x *RespLobbyInfo_LobbyInfo) GetGameId() uint32 {
@@ -387,40 +464,42 @@ var File_lobby_proto protoreflect.FileDescriptor
 var file_lobby_proto_rawDesc = []byte{
 	0x0a, 0x0b, 0x6c, 0x6f, 0x62, 0x62, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x05, 0x6c,
 	0x6f, 0x62, 0x62, 0x79, 0x1a, 0x0c, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x22, 0x1f, 0x0a, 0x07, 0x52, 0x65, 0x71, 0x41, 0x75, 0x74, 0x68, 0x12, 0x14, 0x0a,
+	0x74, 0x6f, 0x22, 0x1f, 0x0a, 0x07, 0x52, 0x65, 0x71, 0x42, 0x69, 0x6e, 0x64, 0x12, 0x14, 0x0a,
 	0x05, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x54, 0x6f,
-	0x6b, 0x65, 0x6e, 0x22, 0x6b, 0x0a, 0x08, 0x52, 0x65, 0x73, 0x70, 0x41, 0x75, 0x74, 0x68, 0x12,
+	0x6b, 0x65, 0x6e, 0x22, 0x37, 0x0a, 0x08, 0x52, 0x65, 0x73, 0x70, 0x42, 0x69, 0x6e, 0x64, 0x12,
 	0x2b, 0x0a, 0x07, 0x45, 0x72, 0x72, 0x43, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e,
 	0x32, 0x11, 0x2e, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x43,
-	0x6f, 0x64, 0x65, 0x52, 0x07, 0x45, 0x72, 0x72, 0x43, 0x6f, 0x64, 0x65, 0x12, 0x32, 0x0a, 0x08,
-	0x42, 0x61, 0x73, 0x65, 0x49, 0x6e, 0x66, 0x6f, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x16,
-	0x2e, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x42, 0x61,
-	0x73, 0x65, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x08, 0x42, 0x61, 0x73, 0x65, 0x49, 0x6e, 0x66, 0x6f,
-	0x22, 0x0e, 0x0a, 0x0c, 0x52, 0x65, 0x71, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x49, 0x6e, 0x66, 0x6f,
-	0x22, 0x9e, 0x01, 0x0a, 0x0d, 0x52, 0x65, 0x73, 0x70, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x49, 0x6e,
-	0x66, 0x6f, 0x12, 0x34, 0x0a, 0x05, 0x49, 0x6e, 0x66, 0x6f, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28,
-	0x0b, 0x32, 0x1e, 0x2e, 0x6c, 0x6f, 0x62, 0x62, 0x79, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x4c, 0x6f,
-	0x62, 0x62, 0x79, 0x49, 0x6e, 0x66, 0x6f, 0x2e, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x49, 0x6e, 0x66,
-	0x6f, 0x52, 0x05, 0x49, 0x6e, 0x66, 0x6f, 0x73, 0x1a, 0x57, 0x0a, 0x09, 0x4c, 0x6f, 0x62, 0x62,
-	0x79, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x16, 0x0a, 0x06, 0x47, 0x61, 0x6d, 0x65, 0x49, 0x64, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x06, 0x47, 0x61, 0x6d, 0x65, 0x49, 0x64, 0x12, 0x1a, 0x0a,
-	0x08, 0x47, 0x61, 0x6d, 0x65, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x08, 0x47, 0x61, 0x6d, 0x65, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x49, 0x73, 0x4f,
-	0x70, 0x65, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28, 0x08, 0x52, 0x06, 0x49, 0x73, 0x4f, 0x70, 0x65,
-	0x6e, 0x22, 0x71, 0x0a, 0x13, 0x52, 0x65, 0x71, 0x43, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x50, 0x6c,
-	0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x1a, 0x0a, 0x08, 0x4e, 0x69, 0x63, 0x6b,
-	0x4e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x4e, 0x69, 0x63, 0x6b,
-	0x4e, 0x61, 0x6d, 0x65, 0x12, 0x26, 0x0a, 0x06, 0x47, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x18, 0x02,
-	0x20, 0x01, 0x28, 0x0e, 0x32, 0x0e, 0x2e, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x47, 0x65,
-	0x6e, 0x64, 0x65, 0x72, 0x52, 0x06, 0x47, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x12, 0x16, 0x0a, 0x06,
-	0x41, 0x76, 0x61, 0x74, 0x61, 0x72, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x41, 0x76,
-	0x61, 0x74, 0x61, 0x72, 0x22, 0x43, 0x0a, 0x14, 0x52, 0x65, 0x73, 0x70, 0x43, 0x68, 0x61, 0x6e,
-	0x67, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x2b, 0x0a, 0x07,
-	0x45, 0x72, 0x72, 0x43, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x11, 0x2e,
-	0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x43, 0x6f, 0x64, 0x65,
-	0x52, 0x07, 0x45, 0x72, 0x72, 0x43, 0x6f, 0x64, 0x65, 0x42, 0x14, 0x5a, 0x12, 0x73, 0x65, 0x72,
-	0x76, 0x65, 0x72, 0x2f, 0x70, 0x62, 0x2f, 0x70, 0x62, 0x5f, 0x6c, 0x6f, 0x62, 0x62, 0x79, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x6f, 0x64, 0x65, 0x52, 0x07, 0x45, 0x72, 0x72, 0x43, 0x6f, 0x64, 0x65, 0x22, 0x0d, 0x0a, 0x0b,
+	0x52, 0x65, 0x71, 0x55, 0x73, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x22, 0x40, 0x0a, 0x0c, 0x52,
+	0x65, 0x73, 0x70, 0x55, 0x73, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x30, 0x0a, 0x08, 0x42,
+	0x61, 0x73, 0x65, 0x49, 0x6e, 0x66, 0x6f, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x14, 0x2e,
+	0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x42, 0x61, 0x73, 0x65, 0x49,
+	0x6e, 0x66, 0x6f, 0x52, 0x08, 0x42, 0x61, 0x73, 0x65, 0x49, 0x6e, 0x66, 0x6f, 0x22, 0x0e, 0x0a,
+	0x0c, 0x52, 0x65, 0x71, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x49, 0x6e, 0x66, 0x6f, 0x22, 0x9e, 0x01,
+	0x0a, 0x0d, 0x52, 0x65, 0x73, 0x70, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x49, 0x6e, 0x66, 0x6f, 0x12,
+	0x34, 0x0a, 0x05, 0x49, 0x6e, 0x66, 0x6f, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1e,
+	0x2e, 0x6c, 0x6f, 0x62, 0x62, 0x79, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x4c, 0x6f, 0x62, 0x62, 0x79,
+	0x49, 0x6e, 0x66, 0x6f, 0x2e, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x05,
+	0x49, 0x6e, 0x66, 0x6f, 0x73, 0x1a, 0x57, 0x0a, 0x09, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x49, 0x6e,
+	0x66, 0x6f, 0x12, 0x16, 0x0a, 0x06, 0x47, 0x61, 0x6d, 0x65, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x0d, 0x52, 0x06, 0x47, 0x61, 0x6d, 0x65, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x47, 0x61,
+	0x6d, 0x65, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x47, 0x61,
+	0x6d, 0x65, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x49, 0x73, 0x4f, 0x70, 0x65, 0x6e,
+	0x18, 0x03, 0x20, 0x01, 0x28, 0x08, 0x52, 0x06, 0x49, 0x73, 0x4f, 0x70, 0x65, 0x6e, 0x22, 0x71,
+	0x0a, 0x13, 0x52, 0x65, 0x71, 0x43, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65,
+	0x72, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x1a, 0x0a, 0x08, 0x4e, 0x69, 0x63, 0x6b, 0x4e, 0x61, 0x6d,
+	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x4e, 0x69, 0x63, 0x6b, 0x4e, 0x61, 0x6d,
+	0x65, 0x12, 0x26, 0x0a, 0x06, 0x47, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x18, 0x02, 0x20, 0x01, 0x28,
+	0x0e, 0x32, 0x0e, 0x2e, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x47, 0x65, 0x6e, 0x64, 0x65,
+	0x72, 0x52, 0x06, 0x47, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x12, 0x16, 0x0a, 0x06, 0x41, 0x76, 0x61,
+	0x74, 0x61, 0x72, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x41, 0x76, 0x61, 0x74, 0x61,
+	0x72, 0x22, 0x43, 0x0a, 0x14, 0x52, 0x65, 0x73, 0x70, 0x43, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x50,
+	0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x2b, 0x0a, 0x07, 0x45, 0x72, 0x72,
+	0x43, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x11, 0x2e, 0x63, 0x6f, 0x6d,
+	0x6d, 0x6f, 0x6e, 0x2e, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x43, 0x6f, 0x64, 0x65, 0x52, 0x07, 0x45,
+	0x72, 0x72, 0x43, 0x6f, 0x64, 0x65, 0x42, 0x14, 0x5a, 0x12, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72,
+	0x2f, 0x70, 0x62, 0x2f, 0x70, 0x62, 0x5f, 0x6c, 0x6f, 0x62, 0x62, 0x79, 0x62, 0x06, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -435,30 +514,32 @@ func file_lobby_proto_rawDescGZIP() []byte {
 	return file_lobby_proto_rawDescData
 }
 
-var file_lobby_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
+var file_lobby_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_lobby_proto_goTypes = []interface{}{
-	(*ReqAuth)(nil),                  // 0: lobby.ReqAuth
-	(*RespAuth)(nil),                 // 1: lobby.RespAuth
-	(*ReqLobbyInfo)(nil),             // 2: lobby.ReqLobbyInfo
-	(*RespLobbyInfo)(nil),            // 3: lobby.RespLobbyInfo
-	(*ReqChangePlayerInfo)(nil),      // 4: lobby.ReqChangePlayerInfo
-	(*RespChangePlayerInfo)(nil),     // 5: lobby.RespChangePlayerInfo
-	(*RespLobbyInfo_LobbyInfo)(nil),  // 6: lobby.RespLobbyInfo.LobbyInfo
-	(pb_common.ErrorCode)(0),         // 7: common.ErrorCode
-	(*pb_common.PlayerBaseInfo)(nil), // 8: common.PlayerBaseInfo
-	(pb_common.Gender)(0),            // 9: common.Gender
+	(*ReqBind)(nil),                 // 0: lobby.ReqBind
+	(*RespBind)(nil),                // 1: lobby.RespBind
+	(*ReqUserInfo)(nil),             // 2: lobby.ReqUserInfo
+	(*RespUserInfo)(nil),            // 3: lobby.RespUserInfo
+	(*ReqLobbyInfo)(nil),            // 4: lobby.ReqLobbyInfo
+	(*RespLobbyInfo)(nil),           // 5: lobby.RespLobbyInfo
+	(*ReqChangePlayerInfo)(nil),     // 6: lobby.ReqChangePlayerInfo
+	(*RespChangePlayerInfo)(nil),    // 7: lobby.RespChangePlayerInfo
+	(*RespLobbyInfo_LobbyInfo)(nil), // 8: lobby.RespLobbyInfo.LobbyInfo
+	(pb_common.ErrorCode)(0),        // 9: common.ErrorCode
+	(*pb_common.UserBaseInfo)(nil),  // 10: common.UserBaseInfo
+	(pb_common.Gender)(0),           // 11: common.Gender
 }
 var file_lobby_proto_depIdxs = []int32{
-	7, // 0: lobby.RespAuth.ErrCode:type_name -> common.ErrorCode
-	8, // 1: lobby.RespAuth.BaseInfo:type_name -> common.PlayerBaseInfo
-	6, // 2: lobby.RespLobbyInfo.Infos:type_name -> lobby.RespLobbyInfo.LobbyInfo
-	9, // 3: lobby.ReqChangePlayerInfo.Gender:type_name -> common.Gender
-	7, // 4: lobby.RespChangePlayerInfo.ErrCode:type_name -> common.ErrorCode
-	5, // [5:5] is the sub-list for method output_type
-	5, // [5:5] is the sub-list for method input_type
-	5, // [5:5] is the sub-list for extension type_name
-	5, // [5:5] is the sub-list for extension extendee
-	0, // [0:5] is the sub-list for field type_name
+	9,  // 0: lobby.RespBind.ErrCode:type_name -> common.ErrorCode
+	10, // 1: lobby.RespUserInfo.BaseInfo:type_name -> common.UserBaseInfo
+	8,  // 2: lobby.RespLobbyInfo.Infos:type_name -> lobby.RespLobbyInfo.LobbyInfo
+	11, // 3: lobby.ReqChangePlayerInfo.Gender:type_name -> common.Gender
+	9,  // 4: lobby.RespChangePlayerInfo.ErrCode:type_name -> common.ErrorCode
+	5,  // [5:5] is the sub-list for method output_type
+	5,  // [5:5] is the sub-list for method input_type
+	5,  // [5:5] is the sub-list for extension type_name
+	5,  // [5:5] is the sub-list for extension extendee
+	0,  // [0:5] is the sub-list for field type_name
 }
 
 func init() { file_lobby_proto_init() }
@@ -468,7 +549,7 @@ func file_lobby_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_lobby_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReqAuth); i {
+			switch v := v.(*ReqBind); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -480,7 +561,7 @@ func file_lobby_proto_init() {
 			}
 		}
 		file_lobby_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RespAuth); i {
+			switch v := v.(*RespBind); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -492,7 +573,7 @@ func file_lobby_proto_init() {
 			}
 		}
 		file_lobby_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReqLobbyInfo); i {
+			switch v := v.(*ReqUserInfo); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -504,7 +585,7 @@ func file_lobby_proto_init() {
 			}
 		}
 		file_lobby_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RespLobbyInfo); i {
+			switch v := v.(*RespUserInfo); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -516,7 +597,7 @@ func file_lobby_proto_init() {
 			}
 		}
 		file_lobby_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReqChangePlayerInfo); i {
+			switch v := v.(*ReqLobbyInfo); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -528,7 +609,7 @@ func file_lobby_proto_init() {
 			}
 		}
 		file_lobby_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RespChangePlayerInfo); i {
+			switch v := v.(*RespLobbyInfo); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -540,6 +621,30 @@ func file_lobby_proto_init() {
 			}
 		}
 		file_lobby_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReqChangePlayerInfo); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_lobby_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*RespChangePlayerInfo); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_lobby_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RespLobbyInfo_LobbyInfo); i {
 			case 0:
 				return &v.state
@@ -558,7 +663,7 @@ func file_lobby_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_lobby_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   7,
+			NumMessages:   9,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

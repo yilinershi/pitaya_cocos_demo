@@ -1,16 +1,19 @@
 syntax = "proto3";
 package lobby;
 
-option go_package = "server/pb/pb_lobby";       //这里是go的编译选项
-import "common.proto";      //如果用到了依赖，proto3需要指定依赖哪个proto文件
+option go_package = "server/pb/pb_lobby"; //这里是go的编译选项
+import "common.proto"; //如果用到了依赖，proto3需要指定依赖哪个proto文件
 
-message ReqAuth {
+message ReqBind {
   string Token = 1; //登录返回的token，带上
 }
 
-message RespAuth {
-  common.ErrorCode ErrCode = 1;
-  common.PlayerBaseInfo BaseInfo=2;   //玩家基础信息
+message RespBind { common.ErrorCode ErrCode = 1; }
+
+message ReqUserInfo {}
+
+message RespUserInfo {
+  common.UserBaseInfo BaseInfo = 1; //玩家基础信息
 }
 
 //获取大厅信息
@@ -25,12 +28,12 @@ message RespLobbyInfo {
   repeated LobbyInfo Infos = 1;
 }
 
-message ReqChangePlayerInfo{
+message ReqChangePlayerInfo {
   string NickName = 1;
   common.Gender Gender = 2;
   string Avatar = 3;
 }
 
-message RespChangePlayerInfo{
-  common.ErrorCode ErrCode = 1;
+message RespChangePlayerInfo { 
+  common.ErrorCode ErrCode = 1; //成功与否
 }
