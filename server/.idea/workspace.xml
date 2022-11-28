@@ -5,48 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a057e441-f7eb-45eb-87cd-fc6e4ba348bb" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/modules/user/model/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/assets/scripts/logic/login/LoginController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/assets/scripts/logic/login/LoginController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/assets/scripts/logic/login/LoginView.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/assets/scripts/logic/login/LoginView.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/local/logs/project.log" beforeDir="false" afterPath="$PROJECT_DIR$/../client/local/logs/project.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/proto_js/proto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/proto_js/proto.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/proto_js/proto.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/proto_js/proto.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proto/chat.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../proto/chat.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proto/common.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../proto/common.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proto/lobby.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../proto/lobby.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proto/server_rpc.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/development.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connector" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/guid_generator.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/base.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/dao_account_info.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/dao_guid_generator.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/dao_player.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/init.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/base.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/player.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/module_database/api.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/module_database/database_storage.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/module_redis/api.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/module_redis/redis_lock.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/module_redis/redis_storage.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/redisClient/redis_client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pb/pb_chat/chat.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pb/pb_chat/chat.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pb/pb_common/common.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pb/pb_common/common.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pb/pb_lobby/lobby.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pb/pb_lobby/lobby.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pb/pb_rpc/server_rpc.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/base.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/db_account_info.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/db_guid_generator.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/db_player.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/chat/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/chat/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/chat/remote.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/chat/remote.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/connector/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/connector/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/http_gate/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/web/login.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/lobby/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/lobby/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/http_gate_test.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,20 +21,12 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file:///opt/homebrew/Cellar/go/1.18/libexec" />
+  <component name="GOROOT" url="file:///usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/go/pkg/mod/github.com/topfreegames/pitaya@v1.1.9/client/client.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/go/pkg/mod/github.com/topfreegames/pitaya@v1.1.9/conn/message/message.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/go/pkg/mod/github.com/topfreegames/pitaya@v1.1.9/conn/message/message_encoder.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/go/pkg/mod/github.com/topfreegames/pitaya@v1.1.9/conn/message/message_test.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/go/pkg/mod/github.com/topfreegames/pitaya@v1.1.9/conn/message/mocks/message_encoder.go" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/services/connector/handler.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/test/http_gate_test.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file:///opt/homebrew/Cellar/go/1.18/libexec/src/runtime/panic.go" root0="SKIP_INSPECTION" />
-    <setting file="file:///opt/homebrew/Cellar/go/1.18/libexec/src/testing/testing.go" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -86,22 +39,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/even/workspace/github/emaofan/pitaya_cocos_demo/server&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/ming/WorkSpace/GITHUB/yilinershi/pitaya_cocos_demo/server",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test" />
@@ -261,6 +214,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>

@@ -31,10 +31,10 @@ func main() {
 	serverType = flag.String("type", "", "the server type")
 	flag.Parse()
 	//启动服务器
-	Start()
+	start()
 }
 
-func Start() {
+func start() {
 	defer pitaya.Shutdown()
 	//这里配置解析器，可以选择json或protobuf
 	pitaya.SetSerializer(protobuf.NewSerializer())
@@ -107,12 +107,12 @@ func Start() {
 	pitaya.Start()
 }
 
-//配置分为两种，一种是viper对应的本地配置，一种是pitaya的系统配置
+// 配置分为两种，一种是viper对应的本地配置，一种是pitaya的系统配置
 func setConfig() *viper.Viper {
-	//1.从conifg文件中读取本地配置
+	//1.从config文件中读取本地配置
 	configs := readConfig()
 
-	//2.通过pitya设置pitaya的系统配置，pitaya的系统配置的key是已存在的，且有默认值,key可以查官网
+	//2.通过pitaya设置pitaya的系统配置，pitaya的系统配置的key是已存在的，且有默认值,key可以查官网
 	configs.Set("pitaya.handler.messages.compression", false)
 	return configs
 }
@@ -141,7 +141,7 @@ func registerPublicModule() {
 	pitaya.RegisterModule(redisClient.NewManager(), constants.ModuleReids)
 }
 
-//各服务器，按需要，加载相应模块
+// 各服务器，按需要，加载相应模块
 func registerPrivateModule() {
 	switch *serverType {
 	case "Web":
