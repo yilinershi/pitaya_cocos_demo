@@ -53,26 +53,26 @@ func start() {
 		remote := connector.NewRemote()
 		pitaya.RegisterRemote(remote, component.WithName("Remote"))
 		pitaya.Configure(true, *serverType, pitaya.Cluster, meta, configs)
-		break
+
 	case "Lobby": //大厅服务器,为长连接服务器
 		handler := lobby.NewHandler()
 		pitaya.Register(handler, component.WithName("Handler"))
 		pitaya.Configure(false, *serverType, pitaya.Cluster, meta, configs)
-		break
+
 	case "Web":
 		handler := web.NewHandler()
 		pitaya.Register(handler, component.WithName("Handler"))
 		pitaya.Configure(false, *serverType, pitaya.Cluster, meta, configs)
-		break
+
 	case "Chat":
 		handler := chat.NewHandler()
 		pitaya.Register(handler, component.WithName("Handler"))
 		remote := chat.NewRemote()
 		pitaya.RegisterRemote(remote, component.WithName("Remote"))
 		pitaya.Configure(false, *serverType, pitaya.Cluster, meta, configs)
-		break
+
 	default:
-		fmt.Printf("error serverType = %s\n", serverType)
+		fmt.Printf("error serverType = %s\n", *serverType)
 		return
 	}
 	//挂载一下组信息 这里是使用Etcd来存放组信息 可以使用进程内存
